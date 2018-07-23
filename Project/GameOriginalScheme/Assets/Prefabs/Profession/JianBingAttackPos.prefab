@@ -51,10 +51,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236070579deea6e45a0462e561988f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bingAni: {fileID: 0}
+  m_attackSource: {fileID: 0}
+  m_attackRange: {fileID: 0}
   startTime: 0.3
   attackPos: {fileID: 4272220020107136}
   enemies:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   damage: 10
   attackRange: 1

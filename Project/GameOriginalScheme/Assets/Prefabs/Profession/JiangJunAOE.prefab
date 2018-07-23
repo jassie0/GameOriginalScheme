@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0986be953d0b22469cff48a7404e1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bingAni: {fileID: 0}
   m_attackSource: {fileID: 0}
   m_attackRange: {fileID: 0}
   coolDownTime: 0
@@ -118,7 +119,7 @@ MonoBehaviour:
   endPos: {fileID: 4383070526606638}
   enemies:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   damage: 30
 --- !u!114 &114389794353270770
 MonoBehaviour:
