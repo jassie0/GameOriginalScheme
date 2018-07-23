@@ -43,11 +43,9 @@ public class EnemyMelee : MonoBehaviour {
 
 		if (closestPlayer != null) {
 			Vector2 dir = (closestPlayer.transform.position - transform.position).normalized;
-			Debug.Log ("aa" + dir.x);
 			Vector2 targetPos = enemy.position + dir * enemySpeed * Time.deltaTime;
 			enemy.MovePosition (targetPos);
 			float disToTarget = Vector2.Distance (closestPlayer.transform.position, this.transform.position);
-			Debug.Log (disToTarget);
 			if (disToTarget < meleeAttack.GetComponent<MeleeAttack> ().attackRange + 1) {
 				enemyAttack = true;
 				meleeAttack.GetComponent<MeleeAttack> ().Attack ();

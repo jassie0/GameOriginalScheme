@@ -2,89 +2,84 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Skill
-{
-    Arrow,
-    Melee,
-    None
-}
-
-public enum EnimyType
-{
-    JiGuangJianBing,
-    JiGuangQiangBing,
-    JingYingBing,
-    CiBaoBing
-}
-
 public class SkillBox : MonoBehaviour
 {
-    public BingBase m_bing;
+    private BaseSoldier m_soldier;
     public bool m_isOn = false;
-    public Direction m_defaultDirection;
+    public GameObject m_swordSoldier;
+    public GameObject m_archerSoldier;
+    public GameObject m_generalSoldier;
 
-    public GameObject m_jianBing;
-    public GameObject m_nuBing;
-    public GameObject m_jiangJunBing;
-
-
-    public virtual void UseSkill(Direction direction)
+    private Direction m_nowDirection;
+    public Direction NowDirection   //士兵目前方位
     {
-        if (m_isOn && m_bing != null)
-        {
-            m_bing.UseSkill(direction);
-        }
-
+        get { return m_nowDirection; }
     }
 
-    public virtual void Init(Profession pro, Direction defaultDir)
+    public void SetDirection(Direction direction)
+    {
+        m_nowDirection = direction;
+        if (m_soldier != null)
+        {
+            m_soldier.SetDirection(direction);
+        }
+    }
+
+    public virtual void UseSkill()
+    {
+        if (m_isOn && m_soldier != null)
+        {
+            m_soldier.UseSkill();
+        }
+    }
+
+    public virtual void Init(Profession pro)
     {
         m_isOn = true;
 
-        m_defaultDirection = defaultDir;
-
-        if (m_jianBing == null || m_nuBing == null || m_jiangJunBing == null)
+        if (m_swordSoldier == null || m_archerSoldier == null || m_generalSoldier == null)
         {
             Debug.LogError("兵种未配置");
         }
 
-        if (pro == Profession.JianBing)
+        if (pro == Profession.SwordSoldier)
         {
-            CreateBing(m_jianBing);
+            CreateSoldier(m_swordSoldier);
         }
-        else if (pro == Profession.NuBing)
+        else if (pro == Profession.ArcherSoldier)
         {
-            CreateBing(m_nuBing);
+            CreateSoldier(m_archerSoldier);
         }
-        else if (pro == Profession.JiangJunBing)
+        else if (pro == Profession.GeneralSoldier)
         {
-            CreateBing(m_jiangJunBing);
-        }
-    }
-
-    private void CreateBing(GameObject bingObj)
-    {
-        m_bing = Instantiate(bingObj, this.transform.position, Quaternion.identity, this.transform).GetComponent<BingBase>();
-        if (m_bing != null)
-        {
-            m_bing.Init(m_defaultDirection);
+            CreateSoldier(m_generalSoldier);
         }
     }
 
     public virtual void Relese()
     {
-        if (m_bing != null)
+        if (m_soldier != null)
         {
-            BingBase bing = m_bing.GetComponent<BingBase>();
-            if (m_bing != null)
+            BaseSoldier bing = m_soldier.GetComponent<BaseSoldier>();
+            if (m_soldier != null)
             {
                 bing.Release();
             }
 
-            Destroy(m_bing);
-            m_bing = null;
+            Destroy(m_soldier);
+            m_soldier = null;
         }
 
         m_isOn = false;
     }
+
+    private void CreateSoldier(GameObject bingObj)
+    {
+        m_soldier = Instantiate(bingObj, this.transform.position, Quaternion.identity, this.transform).GetComponent<BaseSoldier>();
+        if (m_soldier != null)
+        {
+            m_soldier.Init(m_nowDirection);
+        }
+    }
+
 }

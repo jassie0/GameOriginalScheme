@@ -18,7 +18,7 @@ public class DingBox : MonoBehaviour
             }
 
             PlayerController kingController = kingObj.GetComponent<PlayerController>();
-            bool isOn = kingController.GetSodier(m_Profession);
+            bool isOn = kingController.GetSoldier(m_Profession);
             if(isOn)
             {
                 SoundManager.PlaySound("dingBox");

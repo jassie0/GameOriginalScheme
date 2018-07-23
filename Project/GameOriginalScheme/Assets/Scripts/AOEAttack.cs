@@ -15,6 +15,8 @@ public class AOEAttack : MonoBehaviour {
 	public Transform endPos;
 	public LayerMask enemies;
 	public float damage;
+    private Direction m_direction = Direction.Up;
+
 	// Use this for initialization
 	void Start () {
         m_attackRange.gameObject.SetActive(false);
@@ -33,12 +35,19 @@ public class AOEAttack : MonoBehaviour {
 		} 
 	}
 
-    public void Attack(Direction dir)
+    public void SetDirection(Direction direction)
+    {
+        m_direction = direction;
+    }
+
+    public void Attack(Direction direction)
     {
         if (coolDownTime > 0)
         {
             return;
         }
+
+        RotateAroundPivot(direction, transform);
 
         Collider2D[] enemiesToDamage = Physics2D.OverlapAreaAll(startPos.position, endPos.position, enemies);
 
@@ -54,7 +63,7 @@ public class AOEAttack : MonoBehaviour {
         }
         if(m_bingAni)
         {
-            PlayAnimation(dir);
+            PlayAnimation(m_direction);
         }
 
         StartCoroutine(SetAttackRange());
@@ -91,5 +100,27 @@ public class AOEAttack : MonoBehaviour {
 
         m_bingAni.SetTrigger("Attacking");
 
+    }
+
+    public void RotateAroundPivot(Direction direction, Transform nubing)
+    {
+        if (direction == Direction.Up)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (direction == Direction.Right)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, -90);
+        }
+        else if (direction == Direction.Down)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, -180);
+            //nubing.Rotate(0, 0, -180);
+        }
+        else if (direction == Direction.Left)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, -270);
+            //nubing.Rotate(0, 0, -270);
+        }
     }
 }

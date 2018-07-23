@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114252224013820476}
   - component: {fileID: 114517559157389306}
   m_Layer: 0
-  m_Name: NuBingSkill
+  m_Name: Arrow
   m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

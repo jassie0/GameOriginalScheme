@@ -90,7 +90,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1504510140163580
 GameObject:
   m_ObjectHideFlags: 1
@@ -119,8 +119,8 @@ GameObject:
   - component: {fileID: 61485331601255494}
   - component: {fileID: 114636419621759450}
   - component: {fileID: 82945696469702540}
-  m_Layer: 8
-  m_Name: JiangJun
+  m_Layer: 9
+  m_Name: GeneralSoldier
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +152,6 @@ GameObject:
   - component: {fileID: 4960232981701970}
   - component: {fileID: 95814578256495388}
   - component: {fileID: 212913819672390760}
-  - component: {fileID: 114901989448967230}
   m_Layer: 0
   m_Name: General
   m_TagString: Untagged
@@ -180,7 +179,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1813633381695374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.273468, y: -42.50158, z: 0}
+  m_LocalPosition: {x: 15.34, y: -1.5467075, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4960232981701970}
@@ -197,7 +196,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1310185528417022}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 2.46, z: 0}
+  m_LocalPosition: {x: -1.6, y: 5.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4918678118399608}
@@ -224,7 +223,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1278050987145430}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.51, y: -2.49, z: 0}
+  m_LocalPosition: {x: 1.56, y: -0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4918678118399608}
@@ -250,8 +249,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1488571026741998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: -0.024, y: 2.853, z: 0}
+  m_LocalScale: {x: 3.1823957, y: 5.934332, z: 1}
   m_Children: []
   m_Father: {fileID: 4918678118399608}
   m_RootOrder: 2
@@ -365,7 +364,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -389,7 +388,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &82945696469702540
 AudioSource:
   m_ObjectHideFlags: 1
@@ -512,12 +511,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1813633381695374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0842db81401d34530868205aa37bbfca, type: 3}
+  m_Script: {fileID: 11500000, guid: 27fd77c96abd0814b97800bf6e1b1dc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_skillPrefab: {fileID: 1779990667383500, guid: 9b415d3d999903447a5c2e9d97292990,
-    type: 2}
-  m_defaultDirection: 0
   m_aoeAttack: {fileID: 114776237728104322}
 --- !u!114 &114776237728104322
 MonoBehaviour:
@@ -534,24 +530,13 @@ MonoBehaviour:
   m_attackSource: {fileID: 82945696469702540}
   m_attackRange: {fileID: 212223793890224018}
   coolDownTime: 0
-  startTime: 10
+  startTime: 1
   startPos: {fileID: 4360366800187506}
   endPos: {fileID: 4681858469026924}
   enemies:
     serializedVersion: 2
     m_Bits: 256
   damage: 30
---- !u!114 &114901989448967230
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1853273639280446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89c43ab7c2e365a4684a380b6deabd60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212223793890224018
 SpriteRenderer:
   m_ObjectHideFlags: 1

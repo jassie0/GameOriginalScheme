@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 114306672799412106}
   - component: {fileID: 114389794353270770}
   m_Layer: 0
-  m_Name: JiangJunAOE
+  m_Name: AOEAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
