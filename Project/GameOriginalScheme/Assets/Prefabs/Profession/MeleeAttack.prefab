@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4272220020107136}
   - component: {fileID: 114124220363129808}
   m_Layer: 0
-  m_Name: JianBingAttackPos
+  m_Name: MeleeAttack
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -51,6 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236070579deea6e45a0462e561988f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bingAni: {fileID: 0}
+  m_attackSource: {fileID: 0}
+  m_attackRange: {fileID: 0}
   startTime: 0.3
   attackPos: {fileID: 4272220020107136}
   enemies:

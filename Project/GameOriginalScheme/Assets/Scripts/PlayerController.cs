@@ -9,7 +9,7 @@ public enum Direction
 	Right,
 	Down,
 	Left,
-	Max
+    Max
 }
 
 public class PlayerController : MonoBehaviour
@@ -17,7 +17,8 @@ public class PlayerController : MonoBehaviour
 	public float speed;
 	public float rotateSpeed;
 	public GameObject moveDes;
-	public SkillBox[] soldiers;
+   
+	public SkillBox[] m_skillBox;
 	public float angle = 1;
 	public float m_radius = 2f;
 
@@ -46,25 +47,18 @@ public class PlayerController : MonoBehaviour
 
 	void Start()
 	{
-		//GetSodier(Profession.JianBing);
-		//GetSodier(Profession.NuBing);
-		//GetSodier(Profession.JiangJunBing);
-
 		Time.timeScale = 1;
 		animator = animSprite.GetComponent<Animator> ();
 	}
-
-
 
 	void FixedUpdate()
 	{
 
 		if(NeedToRotate())
 		{
-			for (int i = 0; i < soldiers.Length; i++)
+			for (int i = 0; i < m_skillBox.Length; i++)
 			{
-				soldiers[i].transform.position = RotateAroundPivot(soldiers[i].transform.position, transform.position, Quaternion.Euler(0, 0, angle * m_rotateDirection));
-
+				m_skillBox[i].transform.position = RotateAroundPivot(m_skillBox[i].transform.position, transform.position, Quaternion.Euler(0, 0, angle * m_rotateDirection));
 			}
 		}
 
@@ -73,7 +67,7 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetMouseButtonDown(0))
 		{
 			target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			Debug.Log(Input.mousePosition);
+			//Debug.Log(Input.mousePosition);
 			target.z = transform.position.z;
 
 			if (isMoving == false)
@@ -122,26 +116,26 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.W))
 		{
 			SkillBox skillBox = m_skillBoxDic[Direction.Up];
-			skillBox.UseSkill(m_targetKey);
+			skillBox.UseSkill();
 
 		}
 
 		if (Input.GetKeyDown(KeyCode.D))
 		{
 			SkillBox skillBox = m_skillBoxDic[Direction.Right];
-			skillBox.UseSkill(m_targetKey);
+			skillBox.UseSkill();
 		}
 
 		if (Input.GetKeyDown(KeyCode.S))
 		{
 			SkillBox skillBox = m_skillBoxDic[Direction.Down];
-			skillBox.UseSkill(m_targetKey);
+			skillBox.UseSkill();
 		}
 
 		if (Input.GetKeyDown(KeyCode.A))
 		{
 			SkillBox skillBox = m_skillBoxDic[Direction.Left];
-			skillBox.UseSkill(m_targetKey);
+			skillBox.UseSkill();
 		}
 
 		animator.SetFloat ("WalkX", Input.GetAxisRaw("Horizontal"));
@@ -151,14 +145,15 @@ public class PlayerController : MonoBehaviour
 		animator.SetFloat ("LastMoveY", lastMove.y);     
 	}
 
-	public bool GetSodier(Profession profession)
+	public bool GetSoldier(Profession profession)
 	{
-		for (int i = 0; i < soldiers.Length; i++)
+		for (int i = 0; i < m_skillBox.Length; i++)
 		{
-			if(!soldiers[i].m_isOn)
+			if(!m_skillBox[i].m_isOn)
 			{
-				soldiers[i].Init(profession, (Direction)i);
-				return true;
+                m_skillBox[i].Init(profession);
+                //m_skillBox[i].Init(profession, (Direction)i);
+                return true;
 			}
 		}
 
@@ -172,17 +167,17 @@ public class PlayerController : MonoBehaviour
 		if(isRight)
 		{
 			dirNum += 1;
-			if (dirNum > 3)
+			if (dirNum > (int)Direction.Left)
 			{
-				dirNum -= 4;
+				dirNum -= (int)Direction.Max;
 			}
 		}
 		else
 		{
 			dirNum -= 1;
-			if (dirNum < 0)
+			if (dirNum < (int)Direction.Up)
 			{
-				dirNum += 4;
+				dirNum += (int)Direction.Max;
 			}
 		}
 
@@ -193,31 +188,51 @@ public class PlayerController : MonoBehaviour
 	{
 		if (targetKey == Direction.Up)
 		{
-			m_skillBoxDic[Direction.Up] = soldiers[0];
-			m_skillBoxDic[Direction.Right] = soldiers[1];
-			m_skillBoxDic[Direction.Down] = soldiers[2];
-			m_skillBoxDic[Direction.Left] = soldiers[3];
-		}
+            m_skillBox[0].SetDirection(Direction.Up);
+            m_skillBox[1].SetDirection(Direction.Right);
+            m_skillBox[2].SetDirection(Direction.Down);
+            m_skillBox[3].SetDirection(Direction.Left);
+
+            m_skillBoxDic[Direction.Up] = m_skillBox[0];
+            m_skillBoxDic[Direction.Right] = m_skillBox[1];
+            m_skillBoxDic[Direction.Down] = m_skillBox[2];
+            m_skillBoxDic[Direction.Left] = m_skillBox[3];
+        }
 		else if (targetKey == Direction.Right)
 		{
-			m_skillBoxDic[Direction.Up] = soldiers[3];
-			m_skillBoxDic[Direction.Right] = soldiers[0];
-			m_skillBoxDic[Direction.Down] = soldiers[1];
-			m_skillBoxDic[Direction.Left] = soldiers[2];
-		}
+            m_skillBox[3].SetDirection(Direction.Up);
+            m_skillBox[0].SetDirection(Direction.Right);
+            m_skillBox[1].SetDirection(Direction.Down);
+            m_skillBox[2].SetDirection(Direction.Left);
+
+            m_skillBoxDic[Direction.Up] = m_skillBox[3];
+            m_skillBoxDic[Direction.Right] = m_skillBox[0];
+            m_skillBoxDic[Direction.Down] = m_skillBox[1];
+            m_skillBoxDic[Direction.Left] = m_skillBox[2];
+        }
 		else if (targetKey == Direction.Down)
 		{
-			m_skillBoxDic[Direction.Up] = soldiers[2];
-			m_skillBoxDic[Direction.Right] = soldiers[3];
-			m_skillBoxDic[Direction.Down] = soldiers[0];
-			m_skillBoxDic[Direction.Left] = soldiers[1];
+            m_skillBox[2].SetDirection(Direction.Up);
+            m_skillBox[3].SetDirection(Direction.Right);
+            m_skillBox[0].SetDirection(Direction.Down);
+            m_skillBox[1].SetDirection(Direction.Left);
+
+            m_skillBoxDic[Direction.Up] = m_skillBox[2];
+			m_skillBoxDic[Direction.Right] = m_skillBox[3];
+			m_skillBoxDic[Direction.Down] = m_skillBox[0];
+			m_skillBoxDic[Direction.Left] = m_skillBox[1];
 		}
 		else if (targetKey == Direction.Left)
 		{
-			m_skillBoxDic[Direction.Up] = soldiers[1];
-			m_skillBoxDic[Direction.Right] = soldiers[2];
-			m_skillBoxDic[Direction.Down] = soldiers[3];
-			m_skillBoxDic[Direction.Left] = soldiers[0];
+            m_skillBox[1].SetDirection(Direction.Up);
+            m_skillBox[2].SetDirection(Direction.Right);
+            m_skillBox[3].SetDirection(Direction.Down);
+            m_skillBox[0].SetDirection(Direction.Left);
+
+            m_skillBoxDic[Direction.Up] = m_skillBox[1];
+			m_skillBoxDic[Direction.Right] = m_skillBox[2];
+			m_skillBoxDic[Direction.Down] = m_skillBox[3];
+			m_skillBoxDic[Direction.Left] = m_skillBox[0];
 		}
 	}
 
@@ -229,17 +244,17 @@ public class PlayerController : MonoBehaviour
 		m_currentPosition.Add(Direction.Right, Vector3.right * m_radius);
 
 
-		m_skillBoxDic.Add(Direction.Up, soldiers[0]);
-		m_skillBoxDic.Add(Direction.Right, soldiers[1]);
-		m_skillBoxDic.Add(Direction.Down, soldiers[2]);
-		m_skillBoxDic.Add(Direction.Left, soldiers[3]);
+		m_skillBoxDic.Add(Direction.Up, m_skillBox[0]);
+		m_skillBoxDic.Add(Direction.Right, m_skillBox[1]);
+		m_skillBoxDic.Add(Direction.Down, m_skillBox[2]);
+		m_skillBoxDic.Add(Direction.Left, m_skillBox[3]);
 	}
 
 
 
 	private bool NeedToRotate()
 	{
-		Vector3 m_targetSkillBox = soldiers[0].transform.localPosition;
+		Vector3 m_targetSkillBox = m_skillBox[0].transform.localPosition;
 		Vector3 m_currectSkillBox = m_currentPosition[m_targetKey];
 		float lenth = Vector3.Distance(m_targetSkillBox, m_currectSkillBox);
 		if (lenth > m_Distance)
@@ -261,9 +276,4 @@ public class PlayerController : MonoBehaviour
 		onDeath.Invoke ();
 	}
 
-	//	void OnCollisionEnter2D (Collision2D other) {
-	//		if (other.collider.tag == "Enemy") {
-	//			GetComponent<CharacterHealth> ().TakeDamage(10);
-	//		} 
-	//	}
 }

@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 114306672799412106}
   - component: {fileID: 114389794353270770}
   m_Layer: 0
-  m_Name: JiangJunAOE
+  m_Name: AOEAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0986be953d0b22469cff48a7404e1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bingAni: {fileID: 0}
   m_attackSource: {fileID: 0}
   m_attackRange: {fileID: 0}
   coolDownTime: 0
