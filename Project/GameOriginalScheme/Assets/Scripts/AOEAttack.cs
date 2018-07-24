@@ -16,22 +16,27 @@ public class AOEAttack : MonoBehaviour {
 	public LayerMask enemies;
 	public float damage;
     private Direction m_direction = Direction.Up;
+	public GameObject charSprite;
+
 
 	// Use this for initialization
 	void Start () {
         m_attackRange.gameObject.SetActive(false);
+		charSprite.GetComponent<SpritesOutline> ().outlineSize = 16;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (coolDownTime > -20)
+        if (coolDownTime > 0)
         {
             coolDownTime -= Time.deltaTime;
+			charSprite.GetComponent<SpritesOutline> ().outlineSize = 0;
         }
 		else 
         {
-			coolDownTime -= Time.deltaTime;
+			//coolDownTime -= Time.deltaTime;
+			charSprite.GetComponent<SpritesOutline> ().outlineSize = 16;
 		} 
 	}
 
@@ -42,20 +47,20 @@ public class AOEAttack : MonoBehaviour {
 
     public void Attack(Direction direction)
     {
-        if (coolDownTime > 0)
-        {
-            return;
-        }
-
+		if (coolDownTime > 0) {
+			return;
+		} 
         RotateAroundPivot(direction, transform);
 
-        Collider2D[] enemiesToDamage = Physics2D.OverlapAreaAll(startPos.position, endPos.position, enemies);
+		charSprite.GetComponent<SpritesOutline> ().outlineSize = 16;
+		Collider2D[] enemiesToDamage = Physics2D.OverlapAreaAll (startPos.position, endPos.position, enemies);
 
-        for (int i = 0; i < enemiesToDamage.Length; i++)
-        {
-            enemiesToDamage[i].GetComponent<CharacterHealth>().TakeDamage(damage);
-        }
-        coolDownTime = startTime;
+		for (int i = 0; i < enemiesToDamage.Length; i++) {
+			enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
+		}
+
+		coolDownTime = startTime;
+
 
         if (m_attackSource != null)
         {

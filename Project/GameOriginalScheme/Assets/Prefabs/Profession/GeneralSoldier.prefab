@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 4960232981701970}
   - component: {fileID: 95814578256495388}
   - component: {fileID: 212913819672390760}
+  - component: {fileID: 114495168387786426}
   m_Layer: 0
   m_Name: General
   m_TagString: Untagged
@@ -486,6 +487,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114495168387786426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853273639280446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c782952899b8b147a264544ad9b3432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 1, g: 0.99999994, b: 0.16206896, a: 1}
+  outlineSize: 16
 --- !u!114 &114636419621759450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -530,13 +544,14 @@ MonoBehaviour:
   m_attackSource: {fileID: 82945696469702540}
   m_attackRange: {fileID: 212223793890224018}
   coolDownTime: 0
-  startTime: 1
+  startTime: 10
   startPos: {fileID: 4360366800187506}
   endPos: {fileID: 4681858469026924}
   enemies:
     serializedVersion: 2
     m_Bits: 512
   damage: 30
+  charSprite: {fileID: 1853273639280446}
 --- !u!212 &212223793890224018
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -727,7 +742,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3e5881020f8bcde4f8da6297ebfe8280, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -748,7 +763,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 58edc220c56177944bb48d7cdc6c9af4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.32758623, b: 0.32758623, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

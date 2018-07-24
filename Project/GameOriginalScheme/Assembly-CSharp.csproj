@@ -84,6 +84,7 @@
      <Compile Include="Assets\Scripts\SoldierAnim.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\SpawnController.cs" />
+     <Compile Include="Assets\Scripts\SpritesOutline.cs" />
      <Compile Include="Assets\Scripts\StartPlay.cs" />
      <Compile Include="Assets\sumMusic\Sample\SumMusicMultiSceneTest.cs" />
      <Compile Include="Assets\sumMusic\Sample\SumMusicSampleMenu.cs" />
@@ -91,6 +92,7 @@
      <Compile Include="Assets\sumMusic\Scripts\SumMusicButton.cs" />
      <Compile Include="Assets\sumMusic\Scripts\SumMusicButtonImage.cs" />
      <None Include="Assets\sumMusic\README.md.txt" />
+     <None Include="Assets\Material\Outline.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
