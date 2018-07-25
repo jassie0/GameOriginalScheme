@@ -17,12 +17,15 @@ public class AOEAttack : MonoBehaviour {
 	public float damage;
     private Direction m_direction = Direction.Up;
 	public GameObject charSprite;
+	public Material defaultMaterial;
+	public Material outlineMaterial;
 
 
 	// Use this for initialization
 	void Start () {
         m_attackRange.gameObject.SetActive(false);
-		charSprite.GetComponent<SpritesOutline> ().outlineSize = 16;
+		//charSprite.GetComponent<SpritesOutline> ().outlineSize = 16;
+		charSprite.GetComponent<SpriteRenderer> ().material = outlineMaterial;
 	}
 	
 	// Update is called once per frame
@@ -31,12 +34,14 @@ public class AOEAttack : MonoBehaviour {
         if (coolDownTime > 0)
         {
             coolDownTime -= Time.deltaTime;
-			charSprite.GetComponent<SpritesOutline> ().outlineSize = 0;
+			//charSprite.GetComponent<SpritesOutline> ().outlineSize = 0;
+			charSprite.GetComponent<SpriteRenderer> ().material = defaultMaterial;
         }
 		else 
         {
 			//coolDownTime -= Time.deltaTime;
-			charSprite.GetComponent<SpritesOutline> ().outlineSize = 16;
+			//charSprite.GetComponent<SpritesOutline> ().outlineSize = 16;
+			charSprite.GetComponent<SpriteRenderer> ().material = outlineMaterial;
 		} 
 	}
 

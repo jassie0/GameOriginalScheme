@@ -161,6 +161,44 @@ Prefab:
       propertyPath: startTime
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 212913819672390760, guid: 4ef19144a9fd1494db9645719c66e59f,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212913819672390760, guid: 4ef19144a9fd1494db9645719c66e59f,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212913819672390760, guid: 4ef19144a9fd1494db9645719c66e59f,
+        type: 2}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960232981701970, guid: 4ef19144a9fd1494db9645719c66e59f, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.10000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960232981701970, guid: 4ef19144a9fd1494db9645719c66e59f, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212913819672390760, guid: 4ef19144a9fd1494db9645719c66e59f,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e5881020f8bcde4f8da6297ebfe8280, type: 2}
+    - target: {fileID: 114776237728104322, guid: 4ef19144a9fd1494db9645719c66e59f,
+        type: 2}
+      propertyPath: defaultMaterial
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 114776237728104322, guid: 4ef19144a9fd1494db9645719c66e59f,
+        type: 2}
+      propertyPath: outlineMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e5881020f8bcde4f8da6297ebfe8280, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ef19144a9fd1494db9645719c66e59f, type: 2}
   m_IsPrefabParent: 0

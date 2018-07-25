@@ -280,7 +280,7 @@ Transform:
   m_GameObject: {fileID: 1853273639280446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.10000001, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 4333496151225994}
   m_RootOrder: 0
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_attackSource: {fileID: 82945696469702540}
   m_attackRange: {fileID: 212223793890224018}
   coolDownTime: 0
-  startTime: 10
+  startTime: 20
   startPos: {fileID: 4360366800187506}
   endPos: {fileID: 4681858469026924}
   enemies:
@@ -552,6 +552,8 @@ MonoBehaviour:
     m_Bits: 512
   damage: 30
   charSprite: {fileID: 1853273639280446}
+  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  outlineMaterial: {fileID: 2100000, guid: 3e5881020f8bcde4f8da6297ebfe8280, type: 2}
 --- !u!212 &212223793890224018
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -763,7 +765,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 58edc220c56177944bb48d7cdc6c9af4, type: 3}
-  m_Color: {r: 1, g: 0.32758623, b: 0.32758623, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
