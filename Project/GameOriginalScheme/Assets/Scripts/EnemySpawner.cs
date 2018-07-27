@@ -6,6 +6,8 @@ public class EnemySpawner : MonoBehaviour {
 	public GameObject MeleeEnemyPrefab;
 
 	public Vector2 center;
+
+	//private Vector2 center;
 	public Vector2 size;
 
 	public GameObject[] enemies;
@@ -16,14 +18,20 @@ public class EnemySpawner : MonoBehaviour {
 	public int startWait;
 	public bool stop;
 	public int spawnTime = 0;
+	//public Vector2 detectRange;
+	//public LayerMask players;
 
 	int randomEnemy;
 
 
 	// Use this for initialization
 	void Start () {
-		spawnWait = spawnFirstWait;
-		StartCoroutine (SpawnerWait ());
+//		Collider2D[] player = Physics2D.OverlapBoxAll (center, detectRange, 90f, players);
+//		if (player.Length > 0) {
+//			spawnWait = spawnFirstWait;
+//			StartCoroutine (SpawnerWait ());
+//		}
+		//center = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -51,5 +59,17 @@ public class EnemySpawner : MonoBehaviour {
 	void OnDrawGizmosSelected () {
 		Gizmos.color = new Color (1, 0, 0, 0.5f);
 		Gizmos.DrawWireCube (center, size);
+
+//		Gizmos.color = Color.blue;
+//		Gizmos.DrawWireCube (center, detectRange);
 	}
+
+	void OnTriggerEnter2D (Collider2D other) {
+		if (other.tag == "Player") {
+			spawnWait = spawnFirstWait;
+			StartCoroutine (SpawnerWait ());
+		}
+	}
+
+
 }

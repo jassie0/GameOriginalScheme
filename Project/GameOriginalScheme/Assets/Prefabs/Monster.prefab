@@ -321,7 +321,7 @@ MonoBehaviour:
   checkRadius: 10
   checkLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 256
   enemySpeed: 1
   meleeAttack: {fileID: 1297315102005432}
 --- !u!114 &114632788155947890
