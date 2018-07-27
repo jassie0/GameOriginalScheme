@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Arrow
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - 
   - Player
   - Enemy
-  - 
-  - 
+  - Wall
+  - Property
   - 
   - 
   - 
