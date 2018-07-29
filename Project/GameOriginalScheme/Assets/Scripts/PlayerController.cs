@@ -36,6 +36,13 @@ public class PlayerController : MonoBehaviour
 	public delegate void MyDelegate ();
 	public event MyDelegate onDeath;
 
+	public float knockback;
+	public float knockbackLength;
+	public float knockbackCount;
+	public bool knockFromRight;
+
+	private Rigidbody2D playerRigidbody;
+
 	public GameObject animSprite;
 	Animator animator;
 
@@ -137,6 +144,22 @@ public class PlayerController : MonoBehaviour
 			SkillBox skillBox = m_skillBoxDic[Direction.Left];
 			skillBox.UseSkill();
 		}
+
+		if (knockbackCount <= 0) {
+			playerRigidbody.velocity = new Vector2 (speed, playerRigidbody.velocity.y); 
+
+		} else {
+			if(knockFromRight){
+				playerRigidbody.velocity = new Vector2 (-knockback, knockback);
+			}
+			if(!knockFromRight) {
+				playerRigidbody.velocity = new Vector2 (knockback, knockback);
+			}
+
+			knockbackCount -= Time.deltaTime;
+		}
+
+
 
 		animator.SetFloat ("WalkX", Input.GetAxisRaw("Horizontal"));
 		animator.SetFloat ("WalkY", Input.GetAxisRaw("Vertical"));

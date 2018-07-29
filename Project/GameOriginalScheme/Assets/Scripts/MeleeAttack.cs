@@ -68,6 +68,7 @@ public class MeleeAttack : MonoBehaviour {
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
             enemiesToDamage[i].GetComponent<CharacterHealth>().TakeDamage(damage);
+
         }
 
         timeBtwAttack = startTime;
