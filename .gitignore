@@ -7,6 +7,7 @@ Library/
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
+.vs/
 ExportedObj/
 obj/
 *.svd
@@ -31,6 +32,3 @@ ehthumbs.db
 Thumbs.db
 Project/GameOriginalScheme/GameOriginalScheme.csproj
 Project/GameOriginalScheme/GameOriginalScheme.sln
-Project/GameOriginalScheme/GameOriginalScheme.csproj
-Project/GameOriginalScheme/.vs/GameOriginalScheme/v15/Server/sqlite3/storage.ide-shm
-*.ide-shm
