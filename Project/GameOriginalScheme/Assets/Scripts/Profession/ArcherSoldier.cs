@@ -7,25 +7,36 @@ public class ArcherSoldier : BaseSoldier {
     public GameObject m_arrowPrefab;
     public Animator m_soldierAnimator;
     public AudioSource m_attackSource;
-    Transform m_arrow;
-    Direction m_dir;
+    public const float m_cdTime = 1.5f;
+    private float m_cdCount = 0;
+    private Direction m_dir;
 
     public ArcherSoldier()
     {
         m_profession = Profession.ArcherSoldier;
     }
 
+    void Update()
+    {
+        if (m_cdCount > 0)
+        {
+            m_cdCount -= Time.deltaTime;
+        }
+    }
+
     public override void UseSkill()
     {
         base.UseSkill();
 
-        if(m_arrow != null)
+        if (m_cdCount > 0)
         {
             return;
         }
 
-        m_arrow = Instantiate(m_arrowPrefab, this.transform.position, this.transform.rotation).transform;
-        RotateAroundPivot(m_nowDirection, m_arrow);
+        m_cdCount = m_cdTime;
+
+        Transform arrow = Instantiate(m_arrowPrefab, this.transform.position, this.transform.rotation).transform;
+        RotateAroundPivot(m_nowDirection, arrow);
 
         if (m_attackSource != null)
         {
@@ -71,7 +82,7 @@ public class ArcherSoldier : BaseSoldier {
     {
         if (direction == Direction.Up)
         {
-
+            nubing.Rotate(0, 0, 0);
         }
         else if (direction == Direction.Right)
         {
