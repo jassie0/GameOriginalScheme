@@ -57,7 +57,8 @@ public class PlayerController : MonoBehaviour
 	{
 		Time.timeScale = 1;
 		animator = animSprite.GetComponent<Animator> ();
-	}
+        ResetSkillBoxDic(m_targetKey);
+    }
 
 	void FixedUpdate()
 	{
