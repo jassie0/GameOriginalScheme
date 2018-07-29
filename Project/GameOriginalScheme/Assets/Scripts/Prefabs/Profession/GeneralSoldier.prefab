@@ -116,9 +116,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4333496151225994}
   - component: {fileID: 114771180798720680}
-  - component: {fileID: 61485331601255494}
   - component: {fileID: 114636419621759450}
   - component: {fileID: 82945696469702540}
+  - component: {fileID: 70805174650834056}
   m_Layer: 9
   m_Name: GeneralSoldier
   m_TagString: Player
@@ -285,8 +285,8 @@ Transform:
   m_Father: {fileID: 4333496151225994}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61485331601255494
-BoxCollider2D:
+--- !u!70 &70805174650834056
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -298,18 +298,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.5}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.67, y: 1.45}
+  m_Direction: 0
 --- !u!82 &82009719988184178
 AudioSource:
   m_ObjectHideFlags: 1

@@ -39,8 +39,8 @@ GameObject:
   - component: {fileID: 114235115571021746}
   - component: {fileID: 50787039973976290}
   - component: {fileID: 114564923046414046}
-  - component: {fileID: 61510443378435266}
   - component: {fileID: 82264181966129160}
+  - component: {fileID: 70964869493456210}
   m_Layer: 8
   m_Name: King
   m_TagString: Player
@@ -270,11 +270,11 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1171878511745506}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000000
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -383,8 +383,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
---- !u!61 &61510443378435266
-BoxCollider2D:
+--- !u!70 &70964869493456210
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -396,18 +396,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.57, y: 16.84}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.5}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.6, y: 1.45}
+  m_Direction: 0
 --- !u!82 &82264181966129160
 AudioSource:
   m_ObjectHideFlags: 1

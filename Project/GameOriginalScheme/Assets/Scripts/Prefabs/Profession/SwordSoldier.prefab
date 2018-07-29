@@ -101,9 +101,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4333496151225994}
   - component: {fileID: 114666087964699466}
-  - component: {fileID: 61222001205410368}
   - component: {fileID: 114410013329660880}
   - component: {fileID: 82743725359479036}
+  - component: {fileID: 70313876869057708}
   m_Layer: 8
   m_Name: SwordSoldier
   m_TagString: Player
@@ -224,8 +224,8 @@ Transform:
   m_Father: {fileID: 4535832509277358}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61222001205410368
-BoxCollider2D:
+--- !u!70 &70313876869057708
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -236,19 +236,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.06}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.5}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.64, y: 1.56}
+  m_Direction: 0
 --- !u!82 &82364779258604332
 AudioSource:
   m_ObjectHideFlags: 1
@@ -464,7 +454,6 @@ MonoBehaviour:
   healthBar: {fileID: 4641406604747450}
   healthPercent: 0
   barOriginScale: 1
-  hurtSoundName: 
 --- !u!114 &114666087964699466
 MonoBehaviour:
   m_ObjectHideFlags: 1
