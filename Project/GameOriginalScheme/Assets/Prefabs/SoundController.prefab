@@ -1459,8 +1459,10 @@ MonoBehaviour:
   soilderDie: {fileID: 82384305682185618}
   kingActHurt: {fileID: 82173986588397992}
   kingArrowHurt: {fileID: 82797639778494382}
-  soldierActHurt: {fileID: 82660580637843484}
-  soldierAttack: {fileID: 82632922593395508}
+  soldierActHurt: {fileID: 82364779258604332, guid: 0ff7a132783c74e1dbcb60640e7a196c,
+    type: 2}
+  soldierAttack: {fileID: 82743725359479036, guid: 0ff7a132783c74e1dbcb60640e7a196c,
+    type: 2}
   generalAttack: {fileID: 82504023207023420}
   laserGun: {fileID: 82837132702879398}
   laserKnife: {fileID: 82878083411074778}
