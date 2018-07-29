@@ -60,18 +60,32 @@ public class PlayerController : MonoBehaviour
         ResetSkillBoxDic(m_targetKey);
     }
 
-	void FixedUpdate()
+	void Update()
 	{
 
-		if(NeedToRotate())
-		{
-			for (int i = 0; i < m_skillBox.Length; i++)
-			{
-				m_skillBox[i].transform.position = RotateAroundPivot(m_skillBox[i].transform.position, transform.position, Quaternion.Euler(0, 0, angle * m_rotateDirection));
-			}
-		}
+        if (NeedToRotate())
+        {
+            for (int i = 0; i < m_skillBox.Length; i++)
+            {
+                m_skillBox[i].transform.position = RotateAroundPivot(m_skillBox[i].transform.position, transform.position, Quaternion.Euler(0, 0, angle * m_rotateDirection));
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                m_targetKey = GetNextDirection(false);
+                ResetSkillBoxDic(m_targetKey);
+                m_rotateDirection = 1;
 
-
+            }
+            else if (Input.GetKeyDown(KeyCode.E))
+            {
+                m_targetKey = GetNextDirection(true);
+                ResetSkillBoxDic(m_targetKey);
+                m_rotateDirection = -1;
+            }
+        }
 
 		if (Input.GetMouseButtonDown(0))
 		{
@@ -120,19 +134,8 @@ public class PlayerController : MonoBehaviour
         }
         
 
-		if (Input.GetKeyDown(KeyCode.Q))
-		{
-			m_targetKey = GetNextDirection(false);
-			ResetSkillBoxDic(m_targetKey);
-			m_rotateDirection = 1;
 
-		}
-		else if (Input.GetKeyDown(KeyCode.E))
-		{
-			m_targetKey = GetNextDirection(true);
-			ResetSkillBoxDic(m_targetKey);
-			m_rotateDirection = -1;
-		}
+
 
 		if (Input.GetKeyDown(KeyCode.W))
 		{
