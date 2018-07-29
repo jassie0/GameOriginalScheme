@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4571226757559254}
   - component: {fileID: 82117453736879070}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HurtSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4244658015075750}
   - component: {fileID: 212681182942194696}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: healthbar_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4664962143897004}
   - component: {fileID: 212645221209179238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: healthbar_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 61741612943897290}
   - component: {fileID: 114295898666784790}
   - component: {fileID: 82623488133479824}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: ArcherSoldier
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4166740469230074}
   - component: {fileID: 95578363183184402}
   - component: {fileID: 212430681058225402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,6 +398,7 @@ MonoBehaviour:
   healthBar: {fileID: 4244658015075750}
   healthPercent: 0
   barOriginScale: 1
+  hurtSoundName: 
 --- !u!212 &212430681058225402
 SpriteRenderer:
   m_ObjectHideFlags: 1

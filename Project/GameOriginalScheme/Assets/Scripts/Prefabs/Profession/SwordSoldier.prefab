@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4861644391798310}
   - component: {fileID: 82364779258604332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HurtSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4535832509277358}
   - component: {fileID: 114276839482376628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: JianBingAttackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,8 +53,7 @@ GameObject:
   - component: {fileID: 4551586588449598}
   - component: {fileID: 95654185377678570}
   - component: {fileID: 212009488100847954}
-  - component: {fileID: 114382392553265668}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Soldier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4806867983736338}
   - component: {fileID: 212166799103112558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: healthbar_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4641406604747450}
   - component: {fileID: 212956269352419194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: healthbar_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +104,7 @@ GameObject:
   - component: {fileID: 61222001205410368}
   - component: {fileID: 114410013329660880}
   - component: {fileID: 82743725359479036}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: SwordSoldier
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -121,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4991122398528388}
   - component: {fileID: 212059239993847512}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +134,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1813633381695374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.78, y: 1.49, z: 0}
+  m_LocalPosition: {x: 14.876799, y: -15.112665, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4806867983736338}
@@ -305,7 +304,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -329,7 +328,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &82743725359479036
 AudioSource:
   m_ObjectHideFlags: 1
@@ -448,17 +447,6 @@ MonoBehaviour:
     m_Bits: 512
   damage: 10
   attackRange: 1.8
---- !u!114 &114382392553265668
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1371033089779398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89c43ab7c2e365a4684a380b6deabd60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114410013329660880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -476,6 +464,7 @@ MonoBehaviour:
   healthBar: {fileID: 4641406604747450}
   healthPercent: 0
   barOriginScale: 1
+  hurtSoundName: 
 --- !u!114 &114666087964699466
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -265,7 +265,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -289,7 +289,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!95 &95823449630726132
 Animator:
   serializedVersion: 3
@@ -345,6 +345,7 @@ MonoBehaviour:
     m_Bits: 512
   damage: 10
   attackRange: 1.5
+  soundName: 
 --- !u!114 &114866888025699910
 MonoBehaviour:
   m_ObjectHideFlags: 1

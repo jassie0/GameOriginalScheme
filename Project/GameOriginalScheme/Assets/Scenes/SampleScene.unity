@@ -154,7 +154,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1813633381695374, guid: 4ef19144a9fd1494db9645719c66e59f, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ef19144a9fd1494db9645719c66e59f, type: 2}
@@ -318,60 +318,23 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 1716324161364480, guid: 931a92892879b4c5d84a3163efb904f2, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82418803307825214, guid: 931a92892879b4c5d84a3163efb904f2,
+    - target: {fileID: 114488625200556258, guid: 931a92892879b4c5d84a3163efb904f2,
         type: 2}
-      propertyPath: panLevelCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82418803307825214, guid: 931a92892879b4c5d84a3163efb904f2,
+      propertyPath: Volume
+      value: 
+      objectReference: {fileID: 1960811917}
+    - target: {fileID: 114331450931088838, guid: 931a92892879b4c5d84a3163efb904f2,
         type: 2}
-      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82551706686656510, guid: 931a92892879b4c5d84a3163efb904f2,
+      propertyPath: soldierAttack
+      value: 
+      objectReference: {fileID: 82743725359479036, guid: 0ff7a132783c74e1dbcb60640e7a196c,
         type: 2}
-      propertyPath: panLevelCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82551706686656510, guid: 931a92892879b4c5d84a3163efb904f2,
+    - target: {fileID: 114331450931088838, guid: 931a92892879b4c5d84a3163efb904f2,
         type: 2}
-      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82804712031790186, guid: 931a92892879b4c5d84a3163efb904f2,
+      propertyPath: soldierActHurt
+      value: 
+      objectReference: {fileID: 82364779258604332, guid: 0ff7a132783c74e1dbcb60640e7a196c,
         type: 2}
-      propertyPath: panLevelCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82804712031790186, guid: 931a92892879b4c5d84a3163efb904f2,
-        type: 2}
-      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82076026264625098, guid: 931a92892879b4c5d84a3163efb904f2,
-        type: 2}
-      propertyPath: panLevelCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82076026264625098, guid: 931a92892879b4c5d84a3163efb904f2,
-        type: 2}
-      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82148024106009676, guid: 931a92892879b4c5d84a3163efb904f2,
-        type: 2}
-      propertyPath: panLevelCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82148024106009676, guid: 931a92892879b4c5d84a3163efb904f2,
-        type: 2}
-      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 931a92892879b4c5d84a3163efb904f2, type: 2}
   m_IsPrefabParent: 0
@@ -849,26 +812,6 @@ Prefab:
     - target: {fileID: 4894305122803302, guid: e31f4c40b4ee0e04f9eb495c2316e66d, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114235115571021746, guid: e31f4c40b4ee0e04f9eb495c2316e66d,
-        type: 2}
-      propertyPath: deathFlag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114235115571021746, guid: e31f4c40b4ee0e04f9eb495c2316e66d,
-        type: 2}
-      propertyPath: knockback
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114235115571021746, guid: e31f4c40b4ee0e04f9eb495c2316e66d,
-        type: 2}
-      propertyPath: knockbackLength
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114235115571021746, guid: e31f4c40b4ee0e04f9eb495c2316e66d,
-        type: 2}
-      propertyPath: knockbackCount
-      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e31f4c40b4ee0e04f9eb495c2316e66d, type: 2}
@@ -1581,29 +1524,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1249430458 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1716324161364480, guid: 931a92892879b4c5d84a3163efb904f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 218488059}
---- !u!82 &1249430460 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82418803307825214, guid: 931a92892879b4c5d84a3163efb904f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 218488059}
---- !u!114 &1249430462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1249430458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0538681e40983bc43894c54a814dbbd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Volume: {fileID: 1960811917}
-  music: {fileID: 1249430460}
 --- !u!1 &1442178588
 GameObject:
   m_ObjectHideFlags: 0

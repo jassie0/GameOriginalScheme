@@ -14,6 +14,7 @@ public class MeleeAttack : MonoBehaviour {
 	public LayerMask enemies;
     public float damage;
 	public float attackRange;
+	//public string soundName;
 
 	void Start () 
     {
@@ -50,7 +51,7 @@ public class MeleeAttack : MonoBehaviour {
         {
             m_attackSource.Play();
         }
-
+		//SoundManager.PlaySound(soundName);
 
         StartCoroutine(SetAttackRange());
     }
@@ -77,6 +78,7 @@ public class MeleeAttack : MonoBehaviour {
         {
             m_attackSource.Play();
         }
+		//SoundManager.PlaySound(soundName);
 
         if (m_bingAni)
         {

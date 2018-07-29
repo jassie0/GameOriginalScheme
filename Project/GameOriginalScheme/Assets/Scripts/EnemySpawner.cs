@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour {
-	public GameObject MeleeEnemyPrefab;
+	//public GameObject MeleeEnemyPrefab;
 
 	public Vector2 center;
 

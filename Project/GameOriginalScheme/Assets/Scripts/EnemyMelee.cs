@@ -23,6 +23,7 @@ public class EnemyMelee : MonoBehaviour {
 		animator = gameObject.GetComponentInChildren<Animator> ();
 		//meleeAttack = GameObject.GetComponent <MeleeAttack> ();
 		player = GameObject.Find ("King");
+		//meleeAttack.GetComponent<MeleeAttack> ().soundName = "laserKnife";
 	}
 	
 	// Update is called once per frame
@@ -51,7 +52,7 @@ public class EnemyMelee : MonoBehaviour {
 			if (disToTarget < meleeAttack.GetComponent<MeleeAttack> ().attackRange + 1) {
 				enemyAttack = true;
 				meleeAttack.GetComponent<MeleeAttack> ().Attack ();
-				player.GetComponent<PlayerController> ().knockbackCount = player.GetComponent<PlayerController> ().knockbackLength;
+				//player.GetComponent<PlayerController> ().knockbackCount = player.GetComponent<PlayerController> ().knockbackLength;
 			} else {
 				enemyAttack = false;
 			}

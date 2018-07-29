@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4431279179135520}
   - component: {fileID: 212957566168930710}
   - component: {fileID: 95673813038845592}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4636973801967848}
   - component: {fileID: 212142303796557958}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: healthbar_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4697064802027356}
   - component: {fileID: 212547020852994852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: healthbar_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,6 +530,10 @@ MonoBehaviour:
   playerMoving: 0
   lastMove: {x: 0, y: 0}
   deathFlag: 0
+  knockback: 10
+  knockbackLength: 0.2
+  knockbackCount: 0.2
+  knockFromRight: 0
   animSprite: {fileID: 1106828085926234}
 --- !u!114 &114342543262628448
 MonoBehaviour:

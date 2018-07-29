@@ -65,9 +65,11 @@ public class EnemyShooter : MonoBehaviour {
 
 					timeBtwShoot = startTime;
 
-					if (shootSource != null) {
-						shootSource.Play ();
-					}
+//					if (shootSource != null) {
+//						shootSource.Play ();
+//					}
+
+					//SoundManager.PlaySound("laserGun");
 					//laser.GetComponent<Arrow> ().speed = laserSpeed;
 					//obj.transform.Rotate(closestPlayer.transform.position - transform.position);
 

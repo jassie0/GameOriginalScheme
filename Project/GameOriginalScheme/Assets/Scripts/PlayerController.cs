@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 	public float knockbackCount;
 	public bool knockFromRight;
 
-	private Rigidbody2D playerRigidbody;
+	//private Rigidbody2D playerRigidbody;
 
 	public GameObject animSprite;
 	Animator animator;
@@ -158,24 +158,24 @@ public class PlayerController : MonoBehaviour
 			skillBox.UseSkill();
 		}
 
-		if (knockbackCount <= 0) {
-			playerRigidbody.velocity = new Vector2 (speed, playerRigidbody.velocity.y); 
+//		if (knockbackCount <= 0) {
+//			m_playerRigidbody.velocity = new Vector2 (speed, m_playerRigidbody.velocity.y); 
+//
+//		} else {
+//			if(knockFromRight){
+//				m_playerRigidbody.velocity = new Vector2 (-knockback, knockback);
+//			}
+//			if(!knockFromRight) {
+//				m_playerRigidbody.velocity = new Vector2 (knockback, knockback);
+//			}
+//
+//			knockbackCount -= Time.deltaTime;
+//		}
 
-		} else {
-			if(knockFromRight){
-				playerRigidbody.velocity = new Vector2 (-knockback, knockback);
-			}
-			if(!knockFromRight) {
-				playerRigidbody.velocity = new Vector2 (knockback, knockback);
-			}
-
-			knockbackCount -= Time.deltaTime;
-		}
 
 
-
-		animator.SetFloat ("WalkX", Input.GetAxisRaw("Horizontal"));
-		animator.SetFloat ("WalkY", Input.GetAxisRaw("Vertical"));
+		animator.SetFloat ("WalkX", h);
+		animator.SetFloat ("WalkY", v);
 		animator.SetBool ("PlayerMoving", playerMoving);
 		animator.SetFloat ("LastMoveX", lastMove.x);
 		animator.SetFloat ("LastMoveY", lastMove.y);     

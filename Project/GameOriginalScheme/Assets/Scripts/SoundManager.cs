@@ -1,4 +1,4 @@
-﻿﻿using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +16,14 @@ public class SoundManager : MonoBehaviour {
     public AudioSource getSoilder;
     public AudioSource kingDie;
     public AudioSource soilderDie;
+	public AudioSource kingActHurt;
+	public AudioSource kingArrowHurt;
+	public AudioSource soldierActHurt;
+	public AudioSource soldierAttack;
+	public AudioSource generalAttack;
+	public AudioSource laserGun;
+	public AudioSource laserKnife;
+	public AudioSource stoneMoving;
     //public AudioSource zidanBingAttack;
     //public AudioSource getSoilder;
     //public AudioSource getDing;
@@ -50,8 +58,18 @@ public class SoundManager : MonoBehaviour {
             {"dingBox", dingBox },
             {"getSoilder", getSoilder },
             {"kingDie", kingDie },
-            {"soilderDie", soilderDie }
-            /*            {"move", move },
+            {"soilderDie", soilderDie },
+			{"kingActHurt", kingActHurt },
+			{"kingArrowHurt", kingArrowHurt },
+			{"soldierActHurt", soldierActHurt },
+			{"soldierAttack", soldierAttack },
+			{"generalAttack", generalAttack },
+			{"laserGun", laserGun },
+			{"laserKnife", laserKnife },
+			{"stoneMoving", stoneMoving }
+
+
+            /*          {"move", move },
                         {"pickup", pickup },
                         {"reload", reload },
                         {"pistolShot", pistolShot },
