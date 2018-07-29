@@ -303,7 +303,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AlphaText.cs" />
     <Compile Include="Assets\Scripts\AOEAttack.cs" />
-    <Compile Include="Assets\Scripts\ArchorAnim.cs" />
     <Compile Include="Assets\Scripts\Arrow.cs" />
     <Compile Include="Assets\Scripts\BowAttack.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
