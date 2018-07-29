@@ -24,6 +24,7 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource laserGun;
 	public AudioSource laserKnife;
 	public AudioSource stoneMoving;
+	public AudioSource archorAttack;
     //public AudioSource zidanBingAttack;
     //public AudioSource getSoilder;
     //public AudioSource getDing;
@@ -66,6 +67,7 @@ public class SoundManager : MonoBehaviour {
 			{"generalAttack", generalAttack },
 			{"laserGun", laserGun },
 			{"laserKnife", laserKnife },
+			{"archorAttack", archorAttack },
 			{"stoneMoving", stoneMoving }
 
 

@@ -47,11 +47,11 @@ public class MeleeAttack : MonoBehaviour {
 
         timeBtwAttack = startTime;
 
-        if (m_attackSource != null)
-        {
-            m_attackSource.Play();
-        }
-		//SoundManager.PlaySound(soundName);
+//        if (m_attackSource != null)
+//        {
+//            m_attackSource.Play();
+//        }
+		SoundManager.PlaySound("laserKnife");
 
         StartCoroutine(SetAttackRange());
     }
@@ -74,11 +74,11 @@ public class MeleeAttack : MonoBehaviour {
 
         timeBtwAttack = startTime;
 
-        if (m_attackSource != null)
-        {
-            m_attackSource.Play();
-        }
-		//SoundManager.PlaySound(soundName);
+//        if (m_attackSource != null)
+//        {
+//            m_attackSource.Play();
+//        }
+		SoundManager.PlaySound("soldierAttack");
 
         if (m_bingAni)
         {

@@ -27,10 +27,11 @@ public class ArcherSoldier : BaseSoldier {
         m_arrow = Instantiate(m_arrowPrefab, this.transform.position, this.transform.rotation).transform;
         RotateAroundPivot(m_nowDirection, m_arrow);
 
-        if (m_attackSource != null)
-        {
-            m_attackSource.Play();
-        }
+//        if (m_attackSource != null)
+//        {
+//            m_attackSource.Play();
+//        }
+		SoundManager.PlaySound("archorAttack");
 
         if (m_soldierAnimator)
         {
