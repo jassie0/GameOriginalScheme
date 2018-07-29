@@ -335,6 +335,12 @@ Prefab:
       value: 
       objectReference: {fileID: 82364779258604332, guid: 0ff7a132783c74e1dbcb60640e7a196c,
         type: 2}
+    - target: {fileID: 114331450931088838, guid: 931a92892879b4c5d84a3163efb904f2,
+        type: 2}
+      propertyPath: generalAttack
+      value: 
+      objectReference: {fileID: 82945696469702540, guid: 4ef19144a9fd1494db9645719c66e59f,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 931a92892879b4c5d84a3163efb904f2, type: 2}
   m_IsPrefabParent: 0

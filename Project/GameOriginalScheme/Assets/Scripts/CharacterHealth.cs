@@ -11,7 +11,7 @@ public class CharacterHealth : MonoBehaviour {
 	public Transform healthBar;
 	public float healthPercent;
 	public float barOriginScale;
-	public string hurtSoundName;
+	//public string hurtSoundName;
 	// Use this for initialization
 	void Start () {
 		health = maxHealth;
@@ -37,8 +37,9 @@ public class CharacterHealth : MonoBehaviour {
         
 		health -= damage;
         if (m_hurtSource != null)
-        {
-			SoundManager.PlaySound (hurtSoundName);
+        {	
+			m_hurtSource.Play();
+			//SoundManager.PlaySound (hurtSoundName);
         }
 		//Debug.Log ("aaaa");
 	}
