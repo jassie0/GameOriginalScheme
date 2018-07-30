@@ -372,6 +372,7 @@ MonoBehaviour:
     type: 2}
   m_soldierAnimator: {fileID: 95578363183184402}
   m_attackSource: {fileID: 82623488133479824}
+  m_cdTime: 1.5
 --- !u!114 &114295898666784790
 MonoBehaviour:
   m_ObjectHideFlags: 1

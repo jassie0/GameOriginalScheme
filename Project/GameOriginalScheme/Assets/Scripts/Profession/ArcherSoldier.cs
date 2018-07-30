@@ -7,7 +7,7 @@ public class ArcherSoldier : BaseSoldier {
     public GameObject m_arrowPrefab;
     public Animator m_soldierAnimator;
     public AudioSource m_attackSource;
-    public const float m_cdTime = 1.5f;
+    public float m_cdTime = 1.5f;
     private float m_cdCount = 0;
     private Direction m_dir;
 

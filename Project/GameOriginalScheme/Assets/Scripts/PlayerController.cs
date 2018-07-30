@@ -47,7 +47,6 @@ public class PlayerController : MonoBehaviour
 	public GameObject animSprite;
 	Animator animator;
 
-
 	void Awake()
 	{
 		InitCurrentPosition();
