@@ -67,10 +67,12 @@ public class AOEAttack : MonoBehaviour {
 		coolDownTime = startTime;
 
 
-        if (m_attackSource != null)
-        {
-            m_attackSource.Play();
-        }
+//        if (m_attackSource != null)
+//        {
+//            m_attackSource.Play();
+//        }
+		SoundManager.PlaySound("generalAttack");
+
         if(m_bingAni)
         {
             PlayAnimation(m_direction);

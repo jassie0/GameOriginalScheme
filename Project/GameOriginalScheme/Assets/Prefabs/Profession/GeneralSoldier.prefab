@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4918678118399608}
   - component: {fileID: 114776237728104322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: JiangJunAOE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4681858469026924}
   - component: {fileID: 212409764925534184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: endPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4360366800187506}
   - component: {fileID: 212953695308404572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: startPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4558581384552278}
   - component: {fileID: 212502573651975658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: healthbar_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4752775535061694}
   - component: {fileID: 212223793890224018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4724477145517132}
   - component: {fileID: 212384355847817008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: healthbar_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 114636419621759450}
   - component: {fileID: 82945696469702540}
   - component: {fileID: 70805174650834056}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: GeneralSoldier
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4065873657429068}
   - component: {fileID: 82009719988184178}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HurtSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 212913819672390760}
   - component: {fileID: 114495168387786426}
   - component: {fileID: 114201979470242654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: General
   m_TagString: Untagged
   m_Icon: {fileID: 0}

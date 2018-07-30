@@ -231,24 +231,6 @@ Prefab:
       propertyPath: Volume
       value: 
       objectReference: {fileID: 1960811917}
-    - target: {fileID: 114331450931088838, guid: 931a92892879b4c5d84a3163efb904f2,
-        type: 2}
-      propertyPath: soldierAttack
-      value: 
-      objectReference: {fileID: 82743725359479036, guid: 0ff7a132783c74e1dbcb60640e7a196c,
-        type: 2}
-    - target: {fileID: 114331450931088838, guid: 931a92892879b4c5d84a3163efb904f2,
-        type: 2}
-      propertyPath: soldierActHurt
-      value: 
-      objectReference: {fileID: 82364779258604332, guid: 0ff7a132783c74e1dbcb60640e7a196c,
-        type: 2}
-    - target: {fileID: 114331450931088838, guid: 931a92892879b4c5d84a3163efb904f2,
-        type: 2}
-      propertyPath: generalAttack
-      value: 
-      objectReference: {fileID: 82945696469702540, guid: 4ef19144a9fd1494db9645719c66e59f,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 931a92892879b4c5d84a3163efb904f2, type: 2}
   m_IsPrefabParent: 0
@@ -1117,8 +1099,8 @@ RectTransform:
   m_Father: {fileID: 623764261}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0.22, y: 0}
+  m_AnchorMax: {x: 0.22, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1935,7 +1917,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.22
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2104,7 +2086,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0.22, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

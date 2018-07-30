@@ -18,10 +18,11 @@ public class ChangeVolume : MonoBehaviour {
 	public AudioSource laserGun;
 	public AudioSource laserKnife;
 	public AudioSource stoneMoving;
-
+	public AudioSource archorAttack;
 	// Update is called once per frame
 	void Start () {
-		Volume.value = PlayerPrefs.GetFloat ("MusicVolume");
+		//Volume.value = PlayerPrefs.GetFloat ("MusicVolume");
+		Volume.value = 0.45f;
 	}
 
 	void Update () {
@@ -38,7 +39,7 @@ public class ChangeVolume : MonoBehaviour {
 		laserGun.volume = Volume.value;
 		laserKnife.volume = Volume.value;
 		stoneMoving.volume = Volume.value;
-
+		archorAttack.volume = Volume.value;
 	}
 
 	public void VolumePrefs () {

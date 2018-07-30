@@ -68,6 +68,7 @@ public class EnemyShooter : MonoBehaviour {
 //					if (shootSource != null) {
 //						shootSource.Play ();
 //					}
+					SoundManager.PlaySound("laserGun");
 
 					//SoundManager.PlaySound("laserGun");
 					//laser.GetComponent<Arrow> ().speed = laserSpeed;

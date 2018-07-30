@@ -36,11 +36,16 @@ public class CharacterHealth : MonoBehaviour {
 	public void TakeDamage (float damage) {
         
 		health -= damage;
-        if (m_hurtSource != null)
-        {	
-			m_hurtSource.Play();
-			//SoundManager.PlaySound (hurtSoundName);
-        }
+//        if (m_hurtSource != null)
+//        {	
+//			m_hurtSource.Play();
+//	
+//        }
+		if (gameObject.name == "King") {
+			SoundManager.PlaySound ("kingActHurt");
+		} else {
+			SoundManager.PlaySound ("soldierActHurt");
+		}
 		//Debug.Log ("aaaa");
 	}
 }
