@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio for Mac
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOriginalScheme", "GameOriginalScheme.csproj", "{3188E14A-66A8-ACA2-D44C-281CF99D3F7B}"
 EndProject
 Global
