@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         ResetSkillBoxDic(m_targetKey);
     }
 
-	void Update()
+	void FixedUpdate()
 	{
 
         if (NeedToRotate())
