@@ -12,7 +12,7 @@ public enum Direction
     Max
 }
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour 
 {
     public Rigidbody2D m_playerRigidbody;
 	public float speed;
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 	public float m_radius = 2f;
 
 	private bool isMoving;
-	private Vector3 target;
+	//private Vector3 target;
 	private Direction m_targetKey = Direction.Up;
 	private Dictionary<Direction, Vector3> m_currentPosition = new Dictionary<Direction, Vector3>();
 	private const float m_Distance = 0.05f;
@@ -34,13 +34,10 @@ public class PlayerController : MonoBehaviour
 	public bool playerMoving;
 	public Vector2 lastMove;
 	public bool deathFlag;
-	public delegate void MyDelegate ();
-	public event MyDelegate onDeath;
 
-	public float knockback;
-	public float knockbackLength;
-	public float knockbackCount;
-	public bool knockFromRight;
+
+
+
 
 	//private Rigidbody2D playerRigidbody;
 
@@ -59,7 +56,7 @@ public class PlayerController : MonoBehaviour
         ResetSkillBoxDic(m_targetKey);
     }
 
-	void Update()
+	void FixedUpdate()
 	{
 
         if (NeedToRotate())
@@ -86,23 +83,23 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-		if (Input.GetMouseButtonDown(0))
-		{
-			target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			//Debug.Log(Input.mousePosition);
-			target.z = transform.position.z;
+//		if (Input.GetMouseButtonDown(0))
+//		{
+//			target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+//			//Debug.Log(Input.mousePosition);
+//			target.z = transform.position.z;
+//
+//			if (isMoving == false)
+//				isMoving = true;
+//
+//			Instantiate(moveDes, target, Quaternion.identity);
+//		}
 
-			if (isMoving == false)
-				isMoving = true;
-
-			Instantiate(moveDes, target, Quaternion.identity);
-		}
-
-
-		if (isMoving == true)
-		{
-			transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-		}
+//
+//		if (isMoving == true)
+//		{
+//			transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+//		}
 
 		playerMoving = false;
 
@@ -161,19 +158,7 @@ public class PlayerController : MonoBehaviour
 			skillBox.UseSkill();
 		}
 
-//		if (knockbackCount <= 0) {
-//			m_playerRigidbody.velocity = new Vector2 (speed, m_playerRigidbody.velocity.y); 
-//
-//		} else {
-//			if(knockFromRight){
-//				m_playerRigidbody.velocity = new Vector2 (-knockback, knockback);
-//			}
-//			if(!knockFromRight) {
-//				m_playerRigidbody.velocity = new Vector2 (knockback, knockback);
-//			}
-//
-//			knockbackCount -= Time.deltaTime;
-//		}
+
 
 
 
@@ -311,8 +296,6 @@ public class PlayerController : MonoBehaviour
 		return angle * (point - pivot) + pivot;
 	}
 
-	void Death(){
-		onDeath.Invoke ();
-	}
+
 
 }

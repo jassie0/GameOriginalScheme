@@ -52,6 +52,7 @@ public class EnemyMelee : MonoBehaviour {
 			if (disToTarget < meleeAttack.GetComponent<MeleeAttack> ().attackRange + 1) {
 				enemyAttack = true;
 				meleeAttack.GetComponent<MeleeAttack> ().Attack ();
+	
 				//player.GetComponent<PlayerController> ().knockbackCount = player.GetComponent<PlayerController> ().knockbackLength;
 			} else {
 				enemyAttack = false;

@@ -335,6 +335,7 @@ MonoBehaviour:
     m_Bits: 256
   damage: 10
   attackRange: 1.5
+  hitForce: 6
 --- !u!114 &114866888025699910
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -14,11 +14,13 @@ public class MeleeAttack : MonoBehaviour {
 	public LayerMask enemies;
     public float damage;
 	public float attackRange;
+	public float hitForce = 1;
 	//public string soundName;
+	private GameObject player;
 
 	void Start () 
     {
-
+		player = GameObject.Find ("King");
 	}
 	
 	void Update () 
@@ -43,6 +45,12 @@ public class MeleeAttack : MonoBehaviour {
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
             enemiesToDamage[i].GetComponent<CharacterHealth>().TakeDamage(damage);
+			Vector2 pushDir =   enemiesToDamage[i].transform.position - transform.position;
+			pushDir =- pushDir.normalized;
+			Debug.Log (pushDir);
+			if (enemiesToDamage [i].tag == "Player" ) {
+				player.GetComponent<Rigidbody2D> ().AddForce (-pushDir * hitForce * 100000000);
+			}
         }
 
         timeBtwAttack = startTime;

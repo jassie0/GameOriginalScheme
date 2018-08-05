@@ -390,6 +390,7 @@ MonoBehaviour:
   healthBar: {fileID: 4244658015075750}
   healthPercent: 0
   barOriginScale: 1
+  characterSprite: {fileID: 212430681058225402}
 --- !u!114 &114500890480671340
 MonoBehaviour:
   m_ObjectHideFlags: 1

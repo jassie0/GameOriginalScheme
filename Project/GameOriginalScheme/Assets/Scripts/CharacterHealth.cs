@@ -13,6 +13,13 @@ public class CharacterHealth : MonoBehaviour {
 	public float barOriginScale;
 	//public string hurtSoundName;
 	// Use this for initialization
+	public SpriteRenderer characterSprite;
+
+	public bool invincible = false;
+
+	static readonly float invincilityTime = 1f;
+	static readonly float flickerTime = 0.1f;
+
 	void Start () {
 		health = maxHealth;
 	}
@@ -35,17 +42,43 @@ public class CharacterHealth : MonoBehaviour {
 
 	public void TakeDamage (float damage) {
         
-		health -= damage;
-//        if (m_hurtSource != null)
-//        {	
-//			m_hurtSource.Play();
-//	
-//        }
-		if (gameObject.name == "King") {
-			SoundManager.PlaySound ("kingActHurt");
-		} else {
-			SoundManager.PlaySound ("soldierActHurt");
+		if (!invincible) {
+			health -= damage;
+			
+	//        if (m_hurtSource != null)
+	//        {	
+	//			m_hurtSource.Play();
+	//	
+	//        }
+			if (gameObject.name == "King") {
+				SoundManager.PlaySound ("kingActHurt");
+			} else {
+				SoundManager.PlaySound ("soldierActHurt");
+			}
+
+			if (health > 0 && gameObject.tag == "Player") {
+				StartCoroutine (Flash());
+			}
 		}
-		//Debug.Log ("aaaa");
+	}
+
+	IEnumerator Flash() {
+		float time = 0f;
+
+		bool showSprite = false;
+
+		invincible = true;
+		while (time < invincilityTime) {
+			characterSprite.enabled = showSprite;
+
+			yield return new WaitForSeconds (flickerTime);
+			showSprite = !showSprite;
+
+			time = time + flickerTime;
+		}
+
+		characterSprite.enabled = true;
+
+		invincible = false;
 	}
 }

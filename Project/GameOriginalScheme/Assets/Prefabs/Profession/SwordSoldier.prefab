@@ -438,6 +438,7 @@ MonoBehaviour:
     m_Bits: 512
   damage: 10
   attackRange: 1.8
+  hitForce: 6
 --- !u!114 &114410013329660880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -455,6 +456,7 @@ MonoBehaviour:
   healthBar: {fileID: 4641406604747450}
   healthPercent: 0
   barOriginScale: 1
+  characterSprite: {fileID: 212009488100847954}
 --- !u!114 &114666087964699466
 MonoBehaviour:
   m_ObjectHideFlags: 1
