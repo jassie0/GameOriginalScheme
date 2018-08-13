@@ -272,6 +272,33 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="DemiLib">
+      <HintPath>Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DemiEditor">
+      <HintPath>Assets/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenProEditor">
+      <HintPath>Assets/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>C:/Users/Administrator/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
@@ -301,42 +328,51 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AlphaText.cs" />
-    <Compile Include="Assets\Scripts\AOEAttack.cs" />
-    <Compile Include="Assets\Scripts\ArchorAnim.cs" />
-    <Compile Include="Assets\Scripts\Arrow.cs" />
-    <Compile Include="Assets\Scripts\BowAttack.cs" />
-    <Compile Include="Assets\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\ChangeVolume.cs" />
-    <Compile Include="Assets\Scripts\CharacterHealth.cs" />
-    <Compile Include="Assets\Scripts\DesPoint.cs" />
-    <Compile Include="Assets\Scripts\DingBox.cs" />
-    <Compile Include="Assets\Scripts\DistCompare.cs" />
-    <Compile Include="Assets\Scripts\DistoryThisAfterAWhile.cs" />
-    <Compile Include="Assets\Scripts\EnemyElite.cs" />
-    <Compile Include="Assets\Scripts\EnemyMelee.cs" />
-    <Compile Include="Assets\Scripts\EnemyShooter.cs" />
-    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
-    <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\Scripts\GameHelp.cs" />
-    <Compile Include="Assets\Scripts\LaserBullet.cs" />
-    <Compile Include="Assets\Scripts\LevelManager.cs" />
-    <Compile Include="Assets\Scripts\MeleeAttack.cs" />
-    <Compile Include="Assets\Scripts\MonsterController.cs" />
-    <Compile Include="Assets\Scripts\MonsterManager.cs" />
-    <Compile Include="Assets\Scripts\PauseGame.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Profession\ArcherSoldier.cs" />
-    <Compile Include="Assets\Scripts\Profession\BaseSoldier.cs" />
-    <Compile Include="Assets\Scripts\Profession\GeneralSoldier.cs" />
-    <Compile Include="Assets\Scripts\Profession\GeneralSoldierAttack.cs" />
-    <Compile Include="Assets\Scripts\Profession\SwordSoldier.cs" />
-    <Compile Include="Assets\Scripts\SkillBox.cs" />
-    <Compile Include="Assets\Scripts\SoldierAnim.cs" />
-    <Compile Include="Assets\Scripts\SoundManager.cs" />
-    <Compile Include="Assets\Scripts\SpawnController.cs" />
-    <Compile Include="Assets\Scripts\SpritesOutline.cs" />
-    <Compile Include="Assets\Scripts\StartPlay.cs" />
+    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+    <Compile Include="Assets\Scripts\CGame.cs" />
+    <Compile Include="Assets\Scripts\Common\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Common\DesPoint.cs" />
+    <Compile Include="Assets\Scripts\Common\MonoBehaviourEX.cs" />
+    <Compile Include="Assets\Scripts\Common\MonoBeHaviourEXS.cs" />
+    <Compile Include="Assets\Scripts\Common\SpritesOutline.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyMelee.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyShooter.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\Enemy\MonsterControl.cs" />
+    <Compile Include="Assets\Scripts\Enemy\RandomMonsterSpawn.cs" />
+    <Compile Include="Assets\Scripts\Fight\AOEAttack.cs" />
+    <Compile Include="Assets\Scripts\Fight\Arrow.cs" />
+    <Compile Include="Assets\Scripts\Fight\BowAttack.cs" />
+    <Compile Include="Assets\Scripts\Fight\DistCompare.cs" />
+    <Compile Include="Assets\Scripts\Fight\LaserBullet.cs" />
+    <Compile Include="Assets\Scripts\Fight\MeleeAttack.cs" />
+    <Compile Include="Assets\Scripts\GameLoop.cs" />
+    <Compile Include="Assets\Scripts\Player\ArchorAnim.cs" />
+    <Compile Include="Assets\Scripts\Player\CharacterHealth.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerControl.cs" />
+    <Compile Include="Assets\Scripts\Player\SoldierBox.cs" />
+    <Compile Include="Assets\Scripts\Property\DingBox.cs" />
+    <Compile Include="Assets\Scripts\SceneState\BattleState.cs" />
+    <Compile Include="Assets\Scripts\SceneState\ISceneState.cs" />
+    <Compile Include="Assets\Scripts\SceneState\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\SceneState\SceneStateController.cs" />
+    <Compile Include="Assets\Scripts\SceneState\StartState.cs" />
+    <Compile Include="Assets\Scripts\Soldier\ArcherSoldier.cs" />
+    <Compile Include="Assets\Scripts\Soldier\BaseSoldier.cs" />
+    <Compile Include="Assets\Scripts\Soldier\GeneralSoldier.cs" />
+    <Compile Include="Assets\Scripts\Soldier\GeneralSoldierAttack.cs" />
+    <Compile Include="Assets\Scripts\Soldier\SwordSoldier.cs" />
+    <Compile Include="Assets\Scripts\Sound\ChangeVolume.cs" />
+    <Compile Include="Assets\Scripts\Sound\SoundComponent.cs" />
+    <Compile Include="Assets\Scripts\Sound\SoundSystem.cs" />
+    <Compile Include="Assets\Scripts\UI\AlphaText.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseGame.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseMain.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseOption.cs" />
+    <Compile Include="Assets\Scripts\UI\StartPlay.cs" />
+    <Compile Include="Assets\Scripts\UI\UIComponent.cs" />
+    <Compile Include="Assets\Scripts\UI\UISystem.cs" />
+    <Compile Include="Assets\Scripts\UI\UIWindow.cs" />
     <Compile Include="Assets\sumMusic\Sample\SumMusicMultiSceneTest.cs" />
     <Compile Include="Assets\sumMusic\Sample\SumMusicSampleMenu.cs" />
     <Compile Include="Assets\sumMusic\Scripts\SumMusic.cs" />
@@ -344,6 +380,18 @@
     <Compile Include="Assets\sumMusic\Scripts\SumMusicButtonImage.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Demigiant\DOTween\DOTween.XML" />
+    <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
+    <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
+    <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
+    <None Include="Assets\Demigiant\DOTween\Editor\DOTweenEditor.XML" />
+    <None Include="Assets\Demigiant\DOTween\readme.txt" />
+    <None Include="Assets\Demigiant\DOTweenPro\DOTweenPro.XML" />
+    <None Include="Assets\Demigiant\DOTweenPro\Editor\DOTweenProEditor.XML" />
+    <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
+    <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
+    <None Include="Assets\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
+    <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
     <None Include="Assets\Material\Outline.shader" />
     <None Include="Assets\sumMusic\README.md.txt" />
   </ItemGroup>
