@@ -72,6 +72,24 @@ public class MeleeAttack : MonoBehaviour {
             return;
         }
 
+        SoundManager.PlaySound("soldierAttack");
+
+        if (m_bingAni)
+        {
+            PlayAnimation(dir);
+        }
+
+        timeBtwAttack = startTime;
+    }
+
+	void OnDrawGizmosSelected() 
+    {
+		Gizmos.color = Color.red;
+		Gizmos.DrawWireSphere (attackPos.position, attackRange);
+	}
+
+    public void TakeDamage()
+    {
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemies);
 
         for (int i = 0; i < enemiesToDamage.Length; i++)
@@ -80,27 +98,8 @@ public class MeleeAttack : MonoBehaviour {
 
         }
 
-        timeBtwAttack = startTime;
-
-//        if (m_attackSource != null)
-//        {
-//            m_attackSource.Play();
-//        }
-		SoundManager.PlaySound("soldierAttack");
-
-        if (m_bingAni)
-        {
-            PlayAnimation(dir);
-        }
-
         StartCoroutine(SetAttackRange());
     }
-
-	void OnDrawGizmosSelected() 
-    {
-		Gizmos.color = Color.red;
-		Gizmos.DrawWireSphere (attackPos.position, attackRange);
-	}
 
     IEnumerator SetAttackRange()
     {

@@ -45,11 +45,6 @@ public class CharacterHealth : MonoBehaviour {
 		if (!invincible) {
 			health -= damage;
 			
-	//        if (m_hurtSource != null)
-	//        {	
-	//			m_hurtSource.Play();
-	//	
-	//        }
 			if (gameObject.name == "King") {
 				SoundManager.PlaySound ("kingActHurt");
 			} else {
