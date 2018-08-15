@@ -20,8 +20,8 @@ public class MeleeAttack : MonoBehaviour {
 
 	void Start () 
     {
-		player = GameObject.Find ("King");
-	}
+		player = GameController.instance.Player;
+    }
 	
 	void Update () 
     {

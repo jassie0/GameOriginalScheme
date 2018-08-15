@@ -25,9 +25,9 @@ public class EnemyMelee : MonoBehaviour {
 		enemy = this.GetComponent<Rigidbody2D> ();
 		animator = gameObject.GetComponentInChildren<Animator> ();
 		//meleeAttack = GameObject.GetComponent <MeleeAttack> ();
-		player = GameObject.Find ("King");
-		//meleeAttack.GetComponent<MeleeAttack> ().soundName = "laserKnife";
-	}
+		player = GameController.instance.Player;
+        //meleeAttack.GetComponent<MeleeAttack> ().soundName = "laserKnife";
+    }
 	
 	// Update is called once per frame
 	void Update () {
