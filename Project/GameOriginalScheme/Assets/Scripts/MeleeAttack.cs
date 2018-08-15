@@ -59,7 +59,7 @@ public class MeleeAttack : MonoBehaviour {
 //        {
 //            m_attackSource.Play();
 //        }
-		SoundManager.PlaySound("laserKnife");
+		SoundManager.instance.PlaySound("laserKnife");
 
         StartCoroutine(SetAttackRange());
     }
@@ -72,7 +72,7 @@ public class MeleeAttack : MonoBehaviour {
             return;
         }
 
-        SoundManager.PlaySound("soldierAttack");
+        SoundManager.instance.PlaySound("soldierAttack");
 
         if (m_bingAni)
         {

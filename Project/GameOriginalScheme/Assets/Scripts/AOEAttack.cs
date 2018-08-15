@@ -58,7 +58,7 @@ public class AOEAttack : MonoBehaviour {
 
         RotateAroundPivot(direction, transform);
 
-        SoundManager.PlaySound("generalAttack");
+        SoundManager.instance.PlaySound("generalAttack");
 
         if (m_bingAni)
         {

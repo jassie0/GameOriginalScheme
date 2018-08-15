@@ -29,7 +29,7 @@ public class CharacterHealth : MonoBehaviour {
 		healthPercent = health/maxHealth;
 		healthBar.localScale = new Vector3 (healthPercent * barOriginScale,1 ,1);
 		if (health <= 0 ) {
-            SoundManager.PlaySound("soilderDie");
+            SoundManager.instance.PlaySound("soilderDie");
             SkillBox skillBox = this.GetComponentInParent<SkillBox>();
             if(skillBox != null)
             {
@@ -46,9 +46,9 @@ public class CharacterHealth : MonoBehaviour {
 			health -= damage;
 			
 			if (gameObject.name == "King") {
-				SoundManager.PlaySound ("kingActHurt");
+				SoundManager.instance.PlaySound ("kingActHurt");
 			} else {
-				SoundManager.PlaySound ("soldierActHurt");
+				SoundManager.instance.PlaySound ("soldierActHurt");
 			}
 
 			if (health > 0 && gameObject.tag == "Player") {

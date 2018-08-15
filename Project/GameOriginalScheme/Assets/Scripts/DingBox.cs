@@ -21,8 +21,8 @@ public class DingBox : MonoBehaviour
             bool isOn = kingController.GetSoldier(m_Profession);
             if(isOn)
             {
-                SoundManager.PlaySound("dingBox");
-                SoundManager.PlaySound("getSoilder");
+                SoundManager.instance.PlaySound("dingBox");
+                SoundManager.instance.PlaySound("getSoilder");
                 Destroy(this.gameObject);
             }
         }
