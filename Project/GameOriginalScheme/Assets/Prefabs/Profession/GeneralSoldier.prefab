@@ -520,6 +520,7 @@ MonoBehaviour:
   healthPercent: 0
   barOriginScale: 1
   characterSprite: {fileID: 212913819672390760}
+  invincible: 0
 --- !u!114 &114771180798720680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -552,7 +553,7 @@ MonoBehaviour:
   endPos: {fileID: 4681858469026924}
   enemies:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 4608
   damage: 30
   charSprite: {fileID: 1853273639280446}
   defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
