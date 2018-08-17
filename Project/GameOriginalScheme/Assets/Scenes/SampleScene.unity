@@ -498,31 +498,13 @@ GameObject:
   m_Component:
   - component: {fileID: 479670481}
   - component: {fileID: 479670480}
-  - component: {fileID: 479670479}
-  - component: {fileID: 479670482}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &479670479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 479670478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f0932367f6664b9d87029764d58268d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _monsterPerfab: {fileID: 1766681647734650, guid: fc8f11747644b432da6d7cb2b0c572eb,
-    type: 2}
-  _radius: 10
-  _minTime: 0
-  _maxTime: 5
+  m_IsActive: 1
 --- !u!114 &479670480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,17 +529,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &479670482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 479670478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8727d38906ebe4b71b3154b18e155d7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &512608145
 Prefab:
   m_ObjectHideFlags: 0
@@ -1840,6 +1811,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 2069952847}
   optionMenu: {fileID: 845384468}
+  m_sound: {fileID: 1960811917}
+  m_bgMusic: {fileID: 0}
 --- !u!1 &1806562155
 GameObject:
   m_ObjectHideFlags: 0
