@@ -89,7 +89,6 @@ GameObject:
   - component: {fileID: 95578363183184402}
   - component: {fileID: 212430681058225402}
   - component: {fileID: 114500890480671340}
-  - component: {fileID: 114428243382738682}
   m_Layer: 8
   m_Name: Archer
   m_TagString: Untagged
@@ -392,19 +391,6 @@ MonoBehaviour:
   healthPercent: 0
   barOriginScale: 1
   characterSprite: {fileID: 212430681058225402}
-  invincible: 0
---- !u!114 &114428243382738682
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1942139455416340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d27e76bb202ee478a6e3a41cfdc30f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_archerSoldier: {fileID: 114003383136546092}
 --- !u!114 &114500890480671340
 MonoBehaviour:
   m_ObjectHideFlags: 1

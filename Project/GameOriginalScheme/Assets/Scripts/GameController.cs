@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
-    public static GameController instance;
-    //
-    void Awake()
-    {
-        instance = this;
-        _player = GameObject.Find("King");
-    }
+//	private GameObject[] _players;
+//	public MonsterManager _monsterManager;
+//    public GameHelp _gameHelp;
+//
+//	public static GameController instance;
+//
+//	void Awake () 
+//    {
+//		instance = this;
+//	}
+//
+//	void Start()
+//	{
+//		
+//		_players = GameObject.FindGameObjectsWithTag ("Player");
+//		foreach (GameObject p in _players) {
+//			_monsterManager.CreateMonster (p);
+//		}
+//
+//	}
 
-    private GameObject _player;
-    public GameObject Player { get { return _player; } }
 
+	void Start(){
+	
+	}
+	public void PlayerDied(){
+	
+	}
+
+	IEnumerator RestartLevel() {
+		yield return new WaitForSeconds (1f);
+	}
 }

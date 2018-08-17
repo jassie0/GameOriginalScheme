@@ -54,7 +54,6 @@ GameObject:
   - component: {fileID: 95654185377678570}
   - component: {fileID: 212009488100847954}
   - component: {fileID: 114927548556834086}
-  - component: {fileID: 114478131810031648}
   m_Layer: 8
   m_Name: Soldier
   m_TagString: Untagged
@@ -459,21 +458,6 @@ MonoBehaviour:
   barOriginScale: 1
   characterSprite: {fileID: 212009488100847954}
   invincible: 0
-<<<<<<< HEAD
-=======
---- !u!114 &114478131810031648
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1371033089779398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd59015a85cd9f945a4c5a334585d27c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MeleeAttack: {fileID: 114276839482376628}
->>>>>>> e23f5e0f0179947827ceb5fe1ed37ecbdbe458f9
 --- !u!114 &114666087964699466
 MonoBehaviour:
   m_ObjectHideFlags: 1

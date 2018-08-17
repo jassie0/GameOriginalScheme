@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class GeneralSoldierAttack : MonoBehaviour {
 
-    public AOEAttack m_AOEAttack;
-
-    public void TakeAOE()
+    public void GeneralAttack()
     {
-        if (m_AOEAttack != null)
-        {
-            m_AOEAttack.TakeAttackRange();
-        }
+        Debug.Log("Attackg");
     }
 }

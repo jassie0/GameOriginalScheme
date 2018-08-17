@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 4923000622436458}
   - component: {fileID: 82418803307825214}
   - component: {fileID: 114331450931088838}
+  - component: {fileID: 114488625200556258}
   m_Layer: 0
   m_Name: SoundController
   m_TagString: Untagged
@@ -498,7 +499,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -578,7 +579,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -658,7 +659,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -738,7 +739,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -818,7 +819,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -898,7 +899,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -978,7 +979,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1058,7 +1059,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1138,7 +1139,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1218,7 +1219,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1298,7 +1299,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1378,7 +1379,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1458,7 +1459,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1538,7 +1539,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1562,7 +1563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4fdb72076b1452abfb48a992975806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgMusic: {fileID: 82418803307825214}
   dingBox: {fileID: 82804712031790186}
   getSoilder: {fileID: 82076026264625098}
   kingDie: {fileID: 82148024106009676}
@@ -1570,6 +1570,32 @@ MonoBehaviour:
   kingActHurt: {fileID: 82173986588397992}
   kingArrowHurt: {fileID: 82797639778494382}
   soldierActHurt: {fileID: 82660580637843484}
+  soldierAttack: {fileID: 82632922593395508}
+  generalAttack: {fileID: 82504023207023420}
+  laserGun: {fileID: 82837132702879398}
+  laserKnife: {fileID: 82878083411074778}
+  stoneMoving: {fileID: 82551706686656510}
+  archorAttack: {fileID: 82696901091053576}
+--- !u!114 &114488625200556258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1716324161364480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0538681e40983bc43894c54a814dbbd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Volume: {fileID: 0}
+  music: {fileID: 82418803307825214}
+  GetDing: {fileID: 82804712031790186}
+  getSoldier: {fileID: 82076026264625098}
+  kingDie: {fileID: 82148024106009676}
+  soldierDie: {fileID: 82384305682185618}
+  kingActHurt: {fileID: 82173986588397992}
+  soldierActHurt: {fileID: 82660580637843484}
+  kingArrowHurt: {fileID: 82797639778494382}
   soldierAttack: {fileID: 82632922593395508}
   generalAttack: {fileID: 82504023207023420}
   laserGun: {fileID: 82837132702879398}

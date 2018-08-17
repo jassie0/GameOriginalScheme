@@ -9,7 +9,7 @@ public class LaserBullet : MonoBehaviour {
 	public float damage;
 	// Use this for initialization
 	void Start () {		
-		player = GameController.instance.Player.transform;
+		player = GameObject.Find ("King").transform;
 		target = new Vector2 (player.transform.position.x, player.transform.position.y);
 	}
 	
