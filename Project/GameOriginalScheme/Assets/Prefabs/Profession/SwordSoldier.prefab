@@ -459,7 +459,6 @@ MonoBehaviour:
   barOriginScale: 1
   characterSprite: {fileID: 212009488100847954}
 <<<<<<< HEAD
-<<<<<<< HEAD
   invincible: 0
 <<<<<<< HEAD
 =======
@@ -476,8 +475,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MeleeAttack: {fileID: 114276839482376628}
 >>>>>>> e23f5e0f0179947827ceb5fe1ed37ecbdbe458f9
-=======
->>>>>>> parent of 0c7c0df... 机关控制的移动平台
 =======
 >>>>>>> parent of 0c7c0df... 机关控制的移动平台
 --- !u!114 &114666087964699466

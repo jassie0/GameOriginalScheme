@@ -58,7 +58,6 @@ public class AOEAttack : MonoBehaviour {
 
 		RotateAroundPivot(direction, transform);
 
-<<<<<<< HEAD
 		SoundManager.instance.PlaySound("generalAttack");
 
 <<<<<<< HEAD
@@ -81,10 +80,6 @@ public class AOEAttack : MonoBehaviour {
 				enemiesToDamage [i].GetComponent<PullBar> ().StateChange ();
 			}
 
-=======
-		for (int i = 0; i < enemiesToDamage.Length; i++) {
-			enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
->>>>>>> parent of 0c7c0df... 机关控制的移动平台
 =======
 		for (int i = 0; i < enemiesToDamage.Length; i++) {
 			enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
