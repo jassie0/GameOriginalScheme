@@ -78,10 +78,12 @@
      <Compile Include="Assets\Scripts\PauseGame.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Profession\ArcherSoldier.cs" />
+     <Compile Include="Assets\Scripts\Profession\ArcherSoldierAttack.cs" />
      <Compile Include="Assets\Scripts\Profession\BaseSoldier.cs" />
      <Compile Include="Assets\Scripts\Profession\GeneralSoldier.cs" />
      <Compile Include="Assets\Scripts\Profession\GeneralSoldierAttack.cs" />
      <Compile Include="Assets\Scripts\Profession\SwordSoldier.cs" />
+     <Compile Include="Assets\Scripts\Profession\SwordSoldierAttack.cs" />
      <Compile Include="Assets\Scripts\PullBar.cs" />
      <Compile Include="Assets\Scripts\SkillBox.cs" />
      <Compile Include="Assets\Scripts\SoldierAnim.cs" />
@@ -89,6 +91,7 @@
      <Compile Include="Assets\Scripts\SpawnController.cs" />
      <Compile Include="Assets\Scripts\SpritesOutline.cs" />
      <Compile Include="Assets\Scripts\StartPlay.cs" />
+     <Compile Include="Assets\Scripts\SwordEnemyAttack.cs" />
      <Compile Include="Assets\sumMusic\Sample\SumMusicMultiSceneTest.cs" />
      <Compile Include="Assets\sumMusic\Sample\SumMusicSampleMenu.cs" />
      <Compile Include="Assets\sumMusic\Scripts\SumMusic.cs" />
