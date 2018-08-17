@@ -71,7 +71,8 @@ public class MeleeAttack : MonoBehaviour {
         {
             return;
         }
-			
+
+<<<<<<< HEAD
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemies);
 
         for (int i = 0; i < enemiesToDamage.Length; i++)
@@ -90,10 +91,10 @@ public class MeleeAttack : MonoBehaviour {
 //        {
 //            m_attackSource.Play();
 //        }
-		//SoundManager.PlaySound("soldierAttack");
-
+		SoundManager.PlaySound("soldierAttack");
+=======
         SoundManager.instance.PlaySound("soldierAttack");
-
+>>>>>>> e23f5e0f0179947827ceb5fe1ed37ecbdbe458f9
 
         if (m_bingAni)
         {
