@@ -435,7 +435,7 @@ MonoBehaviour:
   attackPos: {fileID: 4535832509277358}
   enemies:
     serializedVersion: 2
-    m_Bits: 4608
+    m_Bits: 512
   damage: 10
   attackRange: 1.8
   hitForce: 6
@@ -457,7 +457,6 @@ MonoBehaviour:
   healthPercent: 0
   barOriginScale: 1
   characterSprite: {fileID: 212009488100847954}
-  invincible: 0
 --- !u!114 &114666087964699466
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -7,8 +7,6 @@ TagManager:
   - Enemy
   - Arrow
   - Wall
-  - Device
-  - MovingPlatform
   layers:
   - Default
   - TransparentFX
@@ -22,7 +20,7 @@ TagManager:
   - Enemy
   - Wall
   - Property
-  - Device
+  - 
   - 
   - 
   - 
