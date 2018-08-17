@@ -60,6 +60,7 @@ public class AOEAttack : MonoBehaviour {
 
 		SoundManager.instance.PlaySound("generalAttack");
 
+<<<<<<< HEAD
 		if (m_bingAni)
 		{
 			PlayAnimation(m_direction);
@@ -79,6 +80,10 @@ public class AOEAttack : MonoBehaviour {
 				enemiesToDamage [i].GetComponent<PullBar> ().StateChange ();
 			}
 
+=======
+		for (int i = 0; i < enemiesToDamage.Length; i++) {
+			enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
+>>>>>>> parent of 0c7c0df... 机关控制的移动平台
 		}
 
 		coolDownTime = startTime;

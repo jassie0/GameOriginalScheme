@@ -74,7 +74,6 @@
      <Compile Include="Assets\Scripts\MeleeAttack.cs" />
      <Compile Include="Assets\Scripts\MonsterController.cs" />
      <Compile Include="Assets\Scripts\MonsterManager.cs" />
-     <Compile Include="Assets\Scripts\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts\PauseGame.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Profession\ArcherSoldier.cs" />
@@ -83,8 +82,11 @@
      <Compile Include="Assets\Scripts\Profession\GeneralSoldier.cs" />
      <Compile Include="Assets\Scripts\Profession\GeneralSoldierAttack.cs" />
      <Compile Include="Assets\Scripts\Profession\SwordSoldier.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Profession\SwordSoldierAttack.cs" />
      <Compile Include="Assets\Scripts\PullBar.cs" />
+=======
+>>>>>>> parent of 0c7c0df... 机关控制的移动平台
      <Compile Include="Assets\Scripts\SkillBox.cs" />
      <Compile Include="Assets\Scripts\SoldierAnim.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />

@@ -76,11 +76,7 @@ public class MeleeAttack : MonoBehaviour {
 
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-			if (enemiesToDamage[i].tag != "Device") {
-				enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
-			}else {
-				enemiesToDamage [i].GetComponent<PullBar> ().StateChange ();
-			}
+            enemiesToDamage[i].GetComponent<CharacterHealth>().TakeDamage(damage);
 
         }
 
