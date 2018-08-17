@@ -7,7 +7,7 @@ public class ArchorAnim : MonoBehaviour {
 	Animator animator;
 	// Use this for initialization
 	void Start () {
-		GameObject King = GameObject.Find ("King");
+        GameObject King = GameController.instance.Player;
 		playerController = King.GetComponent<PlayerController> ();
 		animator = GetComponent<Animator> ();
 	}

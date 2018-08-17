@@ -20,8 +20,8 @@ public class MeleeAttack : MonoBehaviour {
 
 	void Start () 
     {
-		player = GameObject.Find ("King");
-	}
+		player = GameController.instance.Player;
+    }
 	
 	void Update () 
     {
@@ -59,7 +59,7 @@ public class MeleeAttack : MonoBehaviour {
 //        {
 //            m_attackSource.Play();
 //        }
-		SoundManager.PlaySound("laserKnife");
+		SoundManager.instance.PlaySound("laserKnife");
 
         StartCoroutine(SetAttackRange());
     }
@@ -72,6 +72,7 @@ public class MeleeAttack : MonoBehaviour {
             return;
         }
 
+<<<<<<< HEAD
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemies);
 
         for (int i = 0; i < enemiesToDamage.Length; i++)
@@ -91,13 +92,16 @@ public class MeleeAttack : MonoBehaviour {
 //            m_attackSource.Play();
 //        }
 		SoundManager.PlaySound("soldierAttack");
+=======
+        SoundManager.instance.PlaySound("soldierAttack");
+>>>>>>> e23f5e0f0179947827ceb5fe1ed37ecbdbe458f9
 
         if (m_bingAni)
         {
             PlayAnimation(dir);
         }
 
-        StartCoroutine(SetAttackRange());
+        timeBtwAttack = startTime;
     }
 
 	void OnDrawGizmosSelected() 
@@ -105,6 +109,19 @@ public class MeleeAttack : MonoBehaviour {
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere (attackPos.position, attackRange);
 	}
+
+    public void TakeDamage()
+    {
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemies);
+
+        for (int i = 0; i < enemiesToDamage.Length; i++)
+        {
+            enemiesToDamage[i].GetComponent<CharacterHealth>().TakeDamage(damage);
+
+        }
+
+        StartCoroutine(SetAttackRange());
+    }
 
     IEnumerator SetAttackRange()
     {

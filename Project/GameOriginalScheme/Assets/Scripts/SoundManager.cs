@@ -9,117 +9,108 @@ public class SoundManager : MonoBehaviour {
     private void Awake()
     {
         instance = this;
-    }
+        bgMusic = this.GetComponent<AudioSource>();
 
-//    public AudioSource soilderDie;
-    public AudioSource dingBox;
-    public AudioSource getSoilder;
-    public AudioSource kingDie;
-    public AudioSource soilderDie;
-	public AudioSource kingActHurt;
-	public AudioSource kingArrowHurt;
-	public AudioSource soldierActHurt;
-	public AudioSource soldierAttack;
-	public AudioSource generalAttack;
-	public AudioSource laserGun;
-	public AudioSource laserKnife;
-	public AudioSource stoneMoving;
-	public AudioSource archorAttack;
-    //public AudioSource zidanBingAttack;
-    //public AudioSource getSoilder;
-    //public AudioSource getDing;
 
-/*    public AudioSource move;
-
-    public AudioSource reload;
-    public AudioSource pistolShot;
-    public AudioSource shotGunShot;
-    public AudioSource jumpGunShot;
-
-    public AudioSource dieKnife;
-    public AudioSource boom;
-    public AudioSource dieSpine;
-    public AudioSource bossmiss;
-    public AudioSource teleporter;
-    public AudioSource bossfail;
-    public AudioSource bossattack;
-    public AudioSource missshotgun;
-    public AudioSource misslonggun;
-
-    public AudioSource BeAttacked0, BeAttacked1;*/
-    // Use this for initialization
-
-    static Dictionary<string, AudioSource> dict;
-
-    void Start()
-    {
         dict = new Dictionary<string, AudioSource>()
         {
-            
             {"dingBox", dingBox },
             {"getSoilder", getSoilder },
             {"kingDie", kingDie },
             {"soilderDie", soilderDie },
-			{"kingActHurt", kingActHurt },
-			{"kingArrowHurt", kingArrowHurt },
-			{"soldierActHurt", soldierActHurt },
-			{"soldierAttack", soldierAttack },
-			{"generalAttack", generalAttack },
-			{"laserGun", laserGun },
-			{"laserKnife", laserKnife },
-			{"archorAttack", archorAttack },
-			{"stoneMoving", stoneMoving }
-
-
-            /*          {"move", move },
-                        {"pickup", pickup },
-                        {"reload", reload },
-                        {"pistolShot", pistolShot },
-                        {"shotGunShot", shotGunShot },
-                        {"jumpGunShot", jumpGunShot},
-                        {"dieKnife", dieKnife},
-                        {"boom", boom},
-                        {"dieSpine", dieSpine },
-                        {"teleporter", teleporter },
-                        {"bossfail",bossfail },
-                        {"bossattack",bossattack },
-                        {"missshotgun",missshotgun },
-                        {"misslonggun",misslonggun },
-                        {"bossmiss",bossmiss },
-                        {"beattacked0",BeAttacked0 },
-                        {"beattacked1", BeAttacked1}
-                    };*/
+            {"kingActHurt", kingActHurt },
+            {"kingArrowHurt", kingArrowHurt },
+            {"soldierActHurt", soldierActHurt },
+            {"soldierAttack", soldierAttack },
+            {"generalAttack", generalAttack },
+            {"laserGun", laserGun },
+            {"laserKnife", laserKnife },
+            {"archorAttack", archorAttack },
+            {"stoneMoving", stoneMoving }
         };
     }
 
+    public AudioSource bgMusic;
+    public AudioSource dingBox;
+    public AudioSource getSoilder;
+    public AudioSource kingDie;
+    public AudioSource soilderDie;
+    public AudioSource kingActHurt;
+    public AudioSource kingArrowHurt;
+    public AudioSource soldierActHurt;
+    public AudioSource soldierAttack;
+    public AudioSource generalAttack;
+    public AudioSource laserGun;
+    public AudioSource laserKnife;
+    public AudioSource stoneMoving;
+    public AudioSource archorAttack;
 
-    public static void PlaySound(string soundName) 
+    private Dictionary<string, AudioSource> dict;
+
+
+    //播放声音
+    public void PlaySound(string soundName)
     {
-
+        if (!dict.ContainsKey(soundName))
+        {
+            return;
+        }
         dict[soundName].Play();
-        /*
-        if (soundName == "move")
-        {
-            AudioSource source = gameObject.AddComponent<AudioSource>();
-            source.clip = dict["move"].clip;
-            source.volume = dict["move"].volume;
-            source.pitch = dict["move"].pitch;
-            source.Play();
-            Destroy(source, source.clip.length);
-        }
-        else if (soundName == "bossattack")
-        {
+    }
 
-            AudioSource source = gameObject.AddComponent<AudioSource>();
-            source.clip = dict["bossattack"].clip;
-            source.volume = dict["bossattack"].volume;
-            source.pitch = dict["bossattack"].pitch;
-            source.Play();
-            Destroy(source, source.clip.length);
-        }
-        else
+    public void SetBgMusicVolume(float volume)
+    {
+        bgMusic.volume = volume;
+        SetMusicVolumePrefs(volume);
+    }
+
+    //设置所有声音
+    public void SetSoundVolume(float volume)
+    {
+        foreach (AudioSource v in dict.Values)
         {
-            
-        }*/
+            v.volume = volume;
+        }
+
+        SetSoundVolumePrefs(volume);
+
+    }
+
+    //设置单声音
+    public void SetSingleVolume(string soundName, float volume)
+    {
+        if (!dict.ContainsKey(soundName))
+        {
+            return;
+        }
+        dict[soundName].volume = volume;
+    }
+
+    public void SetMusicVolumePrefs(float volume)
+    {
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+    }
+
+    public void SetSoundVolumePrefs(float volume)
+    {
+        PlayerPrefs.SetFloat("SoundVolume", volume);
+    }
+
+    public float GetMusicVolumePrefs()
+    {
+        if (!PlayerPrefs.HasKey("MusicVolume"))
+        {
+            return 1f;
+        }
+        return PlayerPrefs.GetFloat("MusicVolume");
+    }
+
+    public float GetSoundVolumePrefs()
+    {
+        if (!PlayerPrefs.HasKey("SoundVolume"))
+        {
+            return 1f;
+        }
+        return PlayerPrefs.GetFloat("SoundVolume");
     }
 }
