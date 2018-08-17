@@ -84,8 +84,11 @@
      <Compile Include="Assets\Scripts\Profession\SwordSoldier.cs" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Profession\SwordSoldierAttack.cs" />
      <Compile Include="Assets\Scripts\PullBar.cs" />
+=======
+>>>>>>> parent of 0c7c0df... 机关控制的移动平台
 =======
 >>>>>>> parent of 0c7c0df... 机关控制的移动平台
 =======
