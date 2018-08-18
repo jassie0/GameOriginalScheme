@@ -12,7 +12,7 @@ public class GameLoop : MonoBehaviour
     void Awake()
     {
         // 切換場景不會被刪除
-        DontDestroyOnLoad(this.gameObject);
+        GameObject.DontDestroyOnLoad(this.gameObject);
 
         // 亂數種子
         //UnityEngine.Random.seed =(int)DateTime.Now.Ticks;
@@ -22,7 +22,7 @@ public class GameLoop : MonoBehaviour
     void Start()
     {
         // 設定起始的場景
-        m_SceneStateController.SetState(new StartState(m_SceneStateController), "Start");
+        m_SceneStateController.SetState(new StartState(m_SceneStateController), "");
     }
 
     // Update is called once per frame
