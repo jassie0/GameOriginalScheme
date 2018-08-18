@@ -61,7 +61,11 @@ public class AOEAttack : MonoBehaviour {
 		Collider2D[] enemiesToDamage = Physics2D.OverlapAreaAll (startPos.position, endPos.position, enemies);
 
 		for (int i = 0; i < enemiesToDamage.Length; i++) {
-			enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
+			if (enemiesToDamage[i].tag != "Device") {
+				enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
+			}else {
+				enemiesToDamage [i].GetComponent<PullBar> ().StateChange ();
+			}
 		}
 
 		coolDownTime = startTime;

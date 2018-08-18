@@ -185,7 +185,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1106828085926234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.72, y: -1.32, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 4894305122803302}
@@ -275,7 +275,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1000000
-  m_LinearDrag: 0
+  m_LinearDrag: 10
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -520,10 +520,6 @@ MonoBehaviour:
   playerMoving: 0
   lastMove: {x: 0, y: 0}
   deathFlag: 0
-  knockback: 10
-  knockbackLength: 0.2
-  knockbackCount: 0.2
-  knockFromRight: 0
   animSprite: {fileID: 1106828085926234}
 --- !u!114 &114342543262628448
 MonoBehaviour:
@@ -560,6 +556,8 @@ MonoBehaviour:
   healthBar: {fileID: 4636973801967848}
   healthPercent: 1
   barOriginScale: 1
+  characterSprite: {fileID: 212957566168930710}
+  invincible: 0
 --- !u!114 &114641404249699516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -911,7 +909,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ff06ac37b95142c4da2d5d738810e5b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
