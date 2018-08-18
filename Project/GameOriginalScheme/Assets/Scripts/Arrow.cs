@@ -30,7 +30,11 @@ public class Arrow : MonoBehaviour {
 				Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll (attackPos.position, attackRange, enemies);
 				for (int i = 0; i < enemiesToDamage.Length; i++) 
                 {
-					enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
+					if (enemiesToDamage[i].tag != "Device") {
+						enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
+					}else {
+						enemiesToDamage [i].GetComponent<PullBar> ().StateChange ();
+					}
 				}
 				Destroy (gameObject);
 				timeBtwAttack = startTime;
