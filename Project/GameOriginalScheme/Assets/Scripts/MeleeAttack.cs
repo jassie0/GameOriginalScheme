@@ -72,23 +72,6 @@ public class MeleeAttack : MonoBehaviour {
             return;
         }
 
-        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemies);
-
-        for (int i = 0; i < enemiesToDamage.Length; i++)
-        {
-			if (enemiesToDamage[i].tag != "Device") {
-				enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
-			}else {
-				enemiesToDamage [i].GetComponent<PullBar> ().StateChange ();
-			}
-        }
-
-        timeBtwAttack = startTime;
-
-//        if (m_attackSource != null)
-//        {
-//            m_attackSource.Play();
-//        }
 		SoundManager.PlaySound("soldierAttack");
 
         if (m_bingAni)
@@ -96,7 +79,7 @@ public class MeleeAttack : MonoBehaviour {
             PlayAnimation(dir);
         }
 
-        StartCoroutine(SetAttackRange());
+        timeBtwAttack = startTime;
     }
 
 	void OnDrawGizmosSelected() 
@@ -115,6 +98,20 @@ public class MeleeAttack : MonoBehaviour {
         yield return new WaitForSeconds(0.2f);
         m_attackRange.gameObject.SetActive(false);
     }
+
+    public void TakeDamage()
+    {
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemies);
+
+        for (int i = 0; i < enemiesToDamage.Length; i++)
+        {
+            enemiesToDamage[i].GetComponent<CharacterHealth>().TakeDamage(damage);
+
+        }
+
+        StartCoroutine(SetAttackRange());
+    }
+
 
     public void PlayAnimation(Direction curDirection)
     {

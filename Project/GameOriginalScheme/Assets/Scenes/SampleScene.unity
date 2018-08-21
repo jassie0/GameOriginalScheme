@@ -679,11 +679,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4894305122803302, guid: e31f4c40b4ee0e04f9eb495c2316e66d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.1
+      value: -46.44
       objectReference: {fileID: 0}
     - target: {fileID: 4894305122803302, guid: e31f4c40b4ee0e04f9eb495c2316e66d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -15.1
+      value: -44.69
       objectReference: {fileID: 0}
     - target: {fileID: 4894305122803302, guid: e31f4c40b4ee0e04f9eb495c2316e66d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -709,21 +709,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 50787039973976290, guid: e31f4c40b4ee0e04f9eb495c2316e66d,
-        type: 2}
-      propertyPath: m_LinearDrag
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114235115571021746, guid: e31f4c40b4ee0e04f9eb495c2316e66d,
-        type: 2}
-      propertyPath: characterSprite
-      value: 
-      objectReference: {fileID: 1180862736}
-    - target: {fileID: 114564923046414046, guid: e31f4c40b4ee0e04f9eb495c2316e66d,
-        type: 2}
-      propertyPath: characterSprite
-      value: 
-      objectReference: {fileID: 1180862736}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e31f4c40b4ee0e04f9eb495c2316e66d, type: 2}
   m_IsPrefabParent: 0
@@ -1360,11 +1345,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1050770872}
---- !u!212 &1180862736 stripped
-SpriteRenderer:
-  m_PrefabParentObject: {fileID: 212957566168930710, guid: e31f4c40b4ee0e04f9eb495c2316e66d,
-    type: 2}
-  m_PrefabInternal: {fileID: 744517589}
 --- !u!1 &1193457410
 GameObject:
   m_ObjectHideFlags: 0

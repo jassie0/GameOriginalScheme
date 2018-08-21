@@ -35,13 +35,6 @@ public class ArcherSoldier : BaseSoldier {
 
         m_cdCount = m_cdTime;
 
-        Transform arrow = Instantiate(m_arrowPrefab, this.transform.position, this.transform.rotation).transform;
-        RotateAroundPivot(m_nowDirection, arrow);
-
-//        if (m_attackSource != null)
-//        {
-//            m_attackSource.Play();
-//        }
 		SoundManager.PlaySound("archorAttack");
 
         if (m_soldierAnimator)
@@ -49,6 +42,13 @@ public class ArcherSoldier : BaseSoldier {
             PlayAnimation(m_nowDirection);
         }
     }
+
+    public void SendArrow()
+    {
+        Transform arrow = Instantiate(m_arrowPrefab, this.transform.position, this.transform.rotation).transform;
+        RotateAroundPivot(m_nowDirection, arrow);
+    }
+
 
     public override void Init(Direction dir)
     {

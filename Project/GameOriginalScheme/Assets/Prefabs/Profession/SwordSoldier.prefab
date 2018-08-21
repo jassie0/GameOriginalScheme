@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 95654185377678570}
   - component: {fileID: 212009488100847954}
   - component: {fileID: 114927548556834086}
+  - component: {fileID: 114570717632517130}
   m_Layer: 8
   m_Name: Soldier
   m_TagString: Untagged
@@ -135,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1813633381695374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.876799, y: -15.112665, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4806867983736338}
@@ -458,6 +459,18 @@ MonoBehaviour:
   barOriginScale: 1
   characterSprite: {fileID: 212009488100847954}
   invincible: 0
+--- !u!114 &114570717632517130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1371033089779398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1105a8d4bf00849048f05922ea56578a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MeleeAttack: {fileID: 114276839482376628}
 --- !u!114 &114666087964699466
 MonoBehaviour:
   m_ObjectHideFlags: 1

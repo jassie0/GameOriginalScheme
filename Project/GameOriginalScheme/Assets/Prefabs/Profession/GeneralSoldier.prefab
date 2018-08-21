@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 212913819672390760}
   - component: {fileID: 114495168387786426}
   - component: {fileID: 114201979470242654}
+  - component: {fileID: 114848118478881996}
   m_Layer: 8
   m_Name: General
   m_TagString: Untagged
@@ -181,7 +182,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1813633381695374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.548607, y: -41.17358, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4960232981701970}
@@ -558,6 +559,18 @@ MonoBehaviour:
   charSprite: {fileID: 1853273639280446}
   defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   outlineMaterial: {fileID: 2100000, guid: 3e5881020f8bcde4f8da6297ebfe8280, type: 2}
+--- !u!114 &114848118478881996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853273639280446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 583576eece123674283407eb5ff9fd01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AOEAttack: {fileID: 114776237728104322}
 --- !u!212 &212223793890224018
 SpriteRenderer:
   m_ObjectHideFlags: 1

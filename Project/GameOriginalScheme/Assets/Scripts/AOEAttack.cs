@@ -55,26 +55,9 @@ public class AOEAttack : MonoBehaviour {
 		if (coolDownTime > 0) {
 			return;
 		} 
+       
         RotateAroundPivot(direction, transform);
 
-		charSprite.GetComponent<SpritesOutline> ().outlineSize = 16;
-		Collider2D[] enemiesToDamage = Physics2D.OverlapAreaAll (startPos.position, endPos.position, enemies);
-
-		for (int i = 0; i < enemiesToDamage.Length; i++) {
-			if (enemiesToDamage[i].tag != "Device") {
-				enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
-			}else {
-				enemiesToDamage [i].GetComponent<PullBar> ().StateChange ();
-			}
-		}
-
-		coolDownTime = startTime;
-
-
-//        if (m_attackSource != null)
-//        {
-//            m_attackSource.Play();
-//        }
 		SoundManager.PlaySound("generalAttack");
 
         if(m_bingAni)
@@ -82,8 +65,23 @@ public class AOEAttack : MonoBehaviour {
             PlayAnimation(m_direction);
         }
 
+    }
+
+    public void TakeAttackRange()
+    {
+        charSprite.GetComponent<SpritesOutline>().outlineSize = 16;
+        Collider2D[] enemiesToDamage = Physics2D.OverlapAreaAll(startPos.position, endPos.position, enemies);
+
+        for (int i = 0; i < enemiesToDamage.Length; i++)
+        {
+            enemiesToDamage[i].GetComponent<CharacterHealth>().TakeDamage(damage);
+        }
+
+        coolDownTime = startTime;
+
         StartCoroutine(SetAttackRange());
     }
+
 
     IEnumerator SetAttackRange()
     {
