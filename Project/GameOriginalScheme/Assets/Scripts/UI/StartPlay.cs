@@ -4,34 +4,38 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StartPlay : UIWindow {
-
+public class StartPlay : UIWindow 
+{
 	public AudioClip sfxButton;
-
-	private bool oneshotSfx;
-
 	public GameObject loadingScreen;
 	public Slider slider;
 	public Text progressText;
-	// Update is called once per frame
-	void Update () {
 
-		//if press any key jump to gameplay scene
-		if(Input.anyKeyDown)
-		{
-			if(!oneshotSfx)
-			{
-				AudioSource.PlayClipAtPoint(sfxButton,Vector3.zero);
-				StartCoroutine (LoadAsyn());
-				oneshotSfx = true;
-			}
+    private bool oneshotSfx = true;
 
+    private void OnEnable()
+    {
+        oneshotSfx = true;
+    }
 
-		}
+    private void OnDisable()
+    {
+        oneshotSfx = false;
+    }
 
+    private void Update () 
+    {
+        if(oneshotSfx)
+        {
+            if (Input.anyKeyDown)
+            {
+                AudioSource.PlayClipAtPoint(sfxButton, Vector3.zero);
+                UIControl.instance.OpenWindow(UI_TYPE.SelectMode);
+                //StartCoroutine (LoadAsyn());
+                oneshotSfx = false;
+            }
+        }
 	}
-
-
 
 	IEnumerator LoadAsyn (){
 		AsyncOperation operation = SceneManager.LoadSceneAsync (1);

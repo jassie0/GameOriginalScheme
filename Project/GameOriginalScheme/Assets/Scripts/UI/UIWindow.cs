@@ -3,22 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class UIWindow : MonoBehaviour {
+public class UIWindow : MonoBehaviour 
+{
+    public UI_TYPE TYPE;
+    //public UI_TYPE TYPE { get { return m_type; } set { m_type = value; }}
 
-    public UI_TYPE m_type;
-
-    public void InitType(UI_TYPE type)
-    {
-        m_type = type;
-    }
-
-    public virtual void OpenWindow()
+    public virtual void Open()
     {
         this.gameObject.SetActive(true);
     }
 
-    public virtual void CloseWindow()
+    public virtual void Close()
     {
         this.gameObject.SetActive(false);
+    }
+
+    public virtual void SetWindow()
+    {
+        
+    }
+
+    public virtual void SetWindow(string data)
+    {
+        
     }
 }

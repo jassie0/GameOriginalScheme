@@ -12,7 +12,7 @@ public enum Direction
     Max
 }
 
-public class PlayerController : MonoBehaviour 
+public class PlayerController : MonoSingleton<PlayerController>  
 {
     public Rigidbody2D m_playerRigidbody;
 	public float speed;
@@ -37,10 +37,12 @@ public class PlayerController : MonoBehaviour
 
 	public GameObject animSprite;
 	Animator animator;
+    static GameObject _player;
 
 	void Awake()
 	{
 		InitCurrentPosition();
+        _player = gameObject;
 	}
 
 	void Start()
@@ -162,6 +164,11 @@ public class PlayerController : MonoBehaviour
 		animator.SetFloat ("LastMoveX", lastMove.x);
 		animator.SetFloat ("LastMoveY", lastMove.y);     
 	}
+
+    public static GameObject GetPlayerObject()
+    {
+        return _player;
+    }
 
 	public bool GetSoldier(Profession profession)
 	{

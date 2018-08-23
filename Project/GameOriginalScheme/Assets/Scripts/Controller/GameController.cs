@@ -9,10 +9,53 @@ public class GameController : MonoBehaviour
     void Awake()
     {
         instance = this;
-        _player = GameController.instance.Player;
+        InitLevel();
     }
 
-    private GameObject _player;
-    public GameObject Player { get { return _player; } }
+    private static bool _inFightScene = false;
+    private static int _nowScene = 0;
+
+    public void SetNowScene(int number)
+    {
+        _nowScene = number;
+    }
+
+    public void OpenNewScene()
+    {
+        int openScene = PlayerPrefs.GetInt("Level");
+        if(_nowScene >= openScene)
+        {
+            PlayerPrefs.SetInt("Level", _nowScene + 1);
+        }
+    }
+
+    public void SetInFightScene(bool isIn)
+    {
+        _inFightScene = isIn;
+    }
+
+    private void InitLevel()
+    {
+        if(!PlayerPrefs.HasKey("Level"))
+        {
+            PlayerPrefs.SetInt("Level", 1);
+        }
+    }
+
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (_inFightScene)
+            {
+                UIControl.instance.OpenWindow(UI_TYPE.PauseMain);
+            }
+
+        }
+
+    }
+
 
 }

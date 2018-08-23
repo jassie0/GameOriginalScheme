@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AlphaText : MonoBehaviour {
 	public float speedFade;
 	private float count;
-	public Text text;
+    public Image text;
 
 	// Use this for initialization
 	void Start () {

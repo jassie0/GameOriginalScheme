@@ -315,6 +315,7 @@
     <Compile Include="Assets\Scripts\Common\DistoryThisAfterAWhile.cs" />
     <Compile Include="Assets\Scripts\Common\DonotDestroy.cs" />
     <Compile Include="Assets\Scripts\Common\GameHelp.cs" />
+    <Compile Include="Assets\Scripts\Common\MonoSingleton.cs" />
     <Compile Include="Assets\Scripts\Controller\GameController.cs" />
     <Compile Include="Assets\Scripts\Enemy\ArchorAnim.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMelee.cs" />
@@ -330,6 +331,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\SkillBox.cs" />
     <Compile Include="Assets\Scripts\Prpperty\DingBox.cs" />
+    <Compile Include="Assets\Scripts\Prpperty\Portal.cs" />
     <Compile Include="Assets\Scripts\Soldier\ArcherSoldier.cs" />
     <Compile Include="Assets\Scripts\Soldier\ArcherSoldierAttack.cs" />
     <Compile Include="Assets\Scripts\Soldier\BaseSoldier.cs" />
@@ -342,8 +344,12 @@
     <Compile Include="Assets\Scripts\Trap\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\Trap\PullBar.cs" />
     <Compile Include="Assets\Scripts\UI\AlphaText.cs" />
+    <Compile Include="Assets\Scripts\UI\GameOver.cs" />
+    <Compile Include="Assets\Scripts\UI\LoadingScreen.cs" />
     <Compile Include="Assets\Scripts\UI\PauseMain.cs" />
     <Compile Include="Assets\Scripts\UI\PauseOption.cs" />
+    <Compile Include="Assets\Scripts\UI\SelectLevel.cs" />
+    <Compile Include="Assets\Scripts\UI\SelectMode.cs" />
     <Compile Include="Assets\Scripts\UI\StartPlay.cs" />
     <Compile Include="Assets\Scripts\UI\UIControl.cs" />
     <Compile Include="Assets\Scripts\UI\UIWindow.cs" />

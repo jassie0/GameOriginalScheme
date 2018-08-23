@@ -20,7 +20,7 @@ public class MeleeAttack : MonoBehaviour {
 
 	void Start () 
     {
-        player = GameController.instance.Player;
+        player = GameController.instance.gameObject;
 	}
 	
 	void Update () 

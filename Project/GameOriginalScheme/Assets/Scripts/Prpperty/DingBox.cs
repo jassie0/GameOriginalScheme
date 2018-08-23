@@ -10,14 +10,8 @@ public class DingBox : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameObject kingObj = GameController.instance.Player;
-            if(kingObj == null)
-            {
-                Debug.LogError("Can not find King");
-                return;
-            }
 
-            PlayerController kingController = kingObj.GetComponent<PlayerController>();
+            PlayerController kingController = PlayerController.GetPlayerObject().GetComponent<PlayerController>();
             bool isOn = kingController.GetSoldier(m_Profession);
             if(isOn)
             {
