@@ -35,8 +35,10 @@ public class Arrow : MonoBehaviour {
 					}else {
 						enemiesToDamage [i].GetComponent<MachineTrigger> ().StateChange ();
 					}
+					Destroy (gameObject);
 				}
-				Destroy (gameObject);
+			
+				//Destroy (gameObject);
 				timeBtwAttack = startTime;
 			} else 
             {

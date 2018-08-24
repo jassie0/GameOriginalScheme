@@ -76,7 +76,7 @@ public class AOEAttack : MonoBehaviour {
         {
 			if (enemiesToDamage[i].tag != "Bar") {
 				enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
-			}else {
+			} else {
 				enemiesToDamage [i].GetComponent<MachineTrigger> ().StateChange ();
 			}
         }

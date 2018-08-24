@@ -97,6 +97,7 @@
      <Compile Include="Assets\Scripts\UI\AlphaText.cs" />
      <Compile Include="Assets\Scripts\UI\GameOver.cs" />
      <Compile Include="Assets\Scripts\UI\LoadingScreen.cs" />
+     <Compile Include="Assets\Scripts\UI\PauseGame.cs" />
      <Compile Include="Assets\Scripts\UI\PauseMain.cs" />
      <Compile Include="Assets\Scripts\UI\PauseOption.cs" />
      <Compile Include="Assets\Scripts\UI\SelectLevel.cs" />

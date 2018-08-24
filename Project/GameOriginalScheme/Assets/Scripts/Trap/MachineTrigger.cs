@@ -7,9 +7,11 @@ public class MachineTrigger : MonoBehaviour {
 	public Sprite state2;
 	public bool canRestore;
 	public bool machineOn = false;
+	Sprite barSprite;
 	// Use this for initialization
 	void Start () {
-		gameObject.GetComponent<SpriteRenderer> ().sprite = state1;
+		barSprite = gameObject.GetComponent<SpriteRenderer> ().sprite;
+		barSprite = state1;
 	}
 
 	// Update is called once per frame
@@ -18,13 +20,19 @@ public class MachineTrigger : MonoBehaviour {
 	}
 
 	public void StateChange () {
-		Debug.Log ("aaa");
+		StartCoroutine (Change());
+
+	}
+
+	IEnumerator Change () {
+		Debug.Log ("aaaaaa");
 		machineOn = !machineOn;
-//		if (gameObject.GetComponent<SpriteRenderer> ().sprite == state1) {
-//			gameObject.GetComponent<SpriteRenderer> ().sprite = state2;
-//		} else {
-//			gameObject.GetComponent<SpriteRenderer> ().sprite = state1;
-//		}
+		if (barSprite == state1) {
+			barSprite = state2;
+		} else {
+			barSprite = state1;
+		}
+		yield return null;
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
