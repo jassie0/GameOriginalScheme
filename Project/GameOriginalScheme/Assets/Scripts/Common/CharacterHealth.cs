@@ -29,6 +29,12 @@ public class CharacterHealth : MonoBehaviour {
 		healthPercent = health/maxHealth;
 		healthBar.localScale = new Vector3 (healthPercent * barOriginScale,1 ,1);
 		if (health <= 0 ) {
+
+            if(gameObject.name == "King")
+            {
+                UIControl.instance.SetGameOver(false);
+            }
+
             SoundManager.instance.PlaySound("soilderDie");
             SkillBox skillBox = this.GetComponentInParent<SkillBox>();
             if(skillBox != null)
