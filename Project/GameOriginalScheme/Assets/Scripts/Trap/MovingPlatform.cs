@@ -8,7 +8,7 @@ public class MovingPlatform : MonoBehaviour {
 	public Transform currentPoint;
 	public Transform[] points;
 	public int pointSelection;
-	public GameObject platformController;
+	public GameObject[] platformController;
 	// Use this for initialization
 	void Start () {
 		currentPoint = points[pointSelection];
@@ -16,17 +16,31 @@ public class MovingPlatform : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (platformController.GetComponent<PullBar>().machineOn == true) {
-			platform.transform.position = Vector3.MoveTowards (platform.transform.position, currentPoint.position, Time.deltaTime * movingSpeed);
+		for(int i = 0; i < platformController.Length; i++){
+			if (platformController[i].GetComponent<MachineTrigger>().machineOn == true) {
+				platform.transform.position = Vector3.MoveTowards (platform.transform.position, currentPoint.position, Time.deltaTime * movingSpeed);
 
-			if (platform.transform.position == currentPoint.position){
-				pointSelection++;
+				if (platform.transform.position == currentPoint.position){
+					pointSelection++;
 
-				if (pointSelection == points.Length){
-					pointSelection = 0;
+					if (pointSelection == points.Length){
+						pointSelection = 0;
+					}
+					currentPoint = points[pointSelection];
 				}
-				currentPoint = points[pointSelection];
 			}
+		}
+	}
+
+	void OnTriggerEnter2D (Collider2D other) {
+		if (other.tag == "King") {
+			other.transform.parent = transform;
+		}
+	}
+
+	void OnTriggerExit2D (Collider2D other) {
+		if (other.tag == "King") {
+			other.transform.parent = null;
 		}
 	}
 }

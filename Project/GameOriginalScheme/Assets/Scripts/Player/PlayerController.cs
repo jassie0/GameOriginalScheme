@@ -297,16 +297,6 @@ public class PlayerController : MonoSingleton<PlayerController>
 		return angle * (point - pivot) + pivot;
 	}
 
-	void OnTriggerEnter2D (Collider2D other) {
-		if (other.tag == "MovingPlatform") {
-			transform.parent = other.transform;
-		}
-	}
 
-	void OnTriggerExit2D (Collider2D other) {
-		if (other.tag == "MovingPlatform") {
-			transform.parent = null;
-		}
-	}
 
 }

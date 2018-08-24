@@ -20,7 +20,8 @@ public class MeleeAttack : MonoBehaviour {
 
 	void Start () 
     {
-        player = GameController.instance.gameObject;
+        //player = GameController.instance.gameObject;
+		player = PlayerController.GetPlayerObject();
 	}
 	
 	void Update () 
@@ -48,7 +49,7 @@ public class MeleeAttack : MonoBehaviour {
 			Vector2 pushDir =   enemiesToDamage[i].transform.position - transform.position;
 			pushDir =- pushDir.normalized;
 			Debug.Log (pushDir);
-			if (enemiesToDamage [i].tag == "Player" ) {
+			if (enemiesToDamage [i].tag == "Player" || enemiesToDamage [i].tag == "King") {
 				player.GetComponent<Rigidbody2D> ().AddForce (-pushDir * hitForce * 100000000);
 			}
         }
@@ -105,7 +106,11 @@ public class MeleeAttack : MonoBehaviour {
 
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<CharacterHealth>().TakeDamage(damage);
+			if (enemiesToDamage[i].tag != "Bar") {
+				enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
+			}else {
+				enemiesToDamage [i].GetComponent<MachineTrigger> ().StateChange ();
+			}
 
         }
 

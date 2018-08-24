@@ -8,7 +8,7 @@ public class DingBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("King"))
         {
 
             PlayerController kingController = PlayerController.GetPlayerObject().GetComponent<PlayerController>();

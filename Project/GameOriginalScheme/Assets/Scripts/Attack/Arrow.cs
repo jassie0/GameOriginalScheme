@@ -30,10 +30,10 @@ public class Arrow : MonoBehaviour {
 				Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll (attackPos.position, attackRange, enemies);
 				for (int i = 0; i < enemiesToDamage.Length; i++) 
                 {
-					if (enemiesToDamage[i].tag != "Device") {
+					if (enemiesToDamage[i].tag != "Bar") {
 						enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
 					}else {
-						enemiesToDamage [i].GetComponent<PullBar> ().StateChange ();
+						enemiesToDamage [i].GetComponent<MachineTrigger> ().StateChange ();
 					}
 				}
 				Destroy (gameObject);
@@ -54,7 +54,7 @@ public class Arrow : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other)
     {
-		if (other.tag == "Enemy") {
+		if (other.tag == "Enemy" || other.tag == "Bar" || other.tag == "Player" || other.tag == "King") {
 			hurtEnemy = true;
 		}
 	}

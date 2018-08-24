@@ -74,7 +74,11 @@ public class AOEAttack : MonoBehaviour {
 
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<CharacterHealth>().TakeDamage(damage);
+			if (enemiesToDamage[i].tag != "Bar") {
+				enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
+			}else {
+				enemiesToDamage [i].GetComponent<MachineTrigger> ().StateChange ();
+			}
         }
 
         coolDownTime = startTime;

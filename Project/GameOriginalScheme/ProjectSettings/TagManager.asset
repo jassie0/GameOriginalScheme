@@ -9,6 +9,10 @@ TagManager:
   - Wall
   - Device
   - MovingPlatform
+  - Box
+  - Bar
+  - Pad
+  - King
   layers:
   - Default
   - TransparentFX

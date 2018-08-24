@@ -51,13 +51,13 @@ public class CharacterHealth : MonoBehaviour {
 		if (!invincible) {
 			health -= damage;
 			
-			if (gameObject.name == "King") {
+			if (gameObject.tag == "King") {
                 SoundManager.instance.PlaySound ("kingActHurt");
 			} else {
                 SoundManager.instance.PlaySound ("soldierActHurt");
 			}
 
-			if (health > 0 && gameObject.tag == "Player") {
+			if (health > 0 && gameObject.tag == "Player" || gameObject.tag == "King") {
 				StartCoroutine (Flash());
 			}
 		}
