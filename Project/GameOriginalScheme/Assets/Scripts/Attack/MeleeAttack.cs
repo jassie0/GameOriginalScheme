@@ -41,18 +41,18 @@ public class MeleeAttack : MonoBehaviour {
             return;
         }
 
-        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemies);
-
-        for (int i = 0; i < enemiesToDamage.Length; i++)
-        {
-            enemiesToDamage[i].GetComponent<CharacterHealth>().TakeDamage(damage);
-			Vector2 pushDir =   enemiesToDamage[i].transform.position - transform.position;
-			pushDir =- pushDir.normalized;
-			Debug.Log (pushDir);
-			if (enemiesToDamage [i].tag == "Player" || enemiesToDamage [i].tag == "King") {
-				player.GetComponent<Rigidbody2D> ().AddForce (-pushDir * hitForce * 100000000);
-			}
-        }
+//        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemies);
+//
+//        for (int i = 0; i < enemiesToDamage.Length; i++)
+//        {
+//            enemiesToDamage[i].GetComponent<CharacterHealth>().TakeDamage(damage);
+//			Vector2 pushDir =   enemiesToDamage[i].transform.position - transform.position;
+//			pushDir =- pushDir.normalized;
+//			Debug.Log (pushDir);
+//			if (enemiesToDamage [i].tag == "Player" || enemiesToDamage [i].tag == "King") {
+//				player.GetComponent<Rigidbody2D> ().AddForce (-pushDir * hitForce * 100000000);
+//			}
+//        }
 
         timeBtwAttack = startTime;
 
@@ -108,6 +108,12 @@ public class MeleeAttack : MonoBehaviour {
         {
 			if (enemiesToDamage[i].tag != "Bar") {
 				enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
+				Vector2 pushDir =   enemiesToDamage[i].transform.position - transform.position;
+				pushDir =- pushDir.normalized;
+				//Debug.Log (pushDir);
+				if (enemiesToDamage [i].tag == "Player" || enemiesToDamage [i].tag == "King") {
+					player.GetComponent<Rigidbody2D> ().AddForce (-pushDir * hitForce * 100000000);
+				}
 			}else {
 				enemiesToDamage [i].GetComponent<MachineTrigger> ().StateChange ();
 			}
