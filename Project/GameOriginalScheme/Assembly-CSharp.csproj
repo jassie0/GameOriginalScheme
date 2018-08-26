@@ -88,6 +88,7 @@
      <Compile Include="Assets\Scripts\Soldier\SwordSoldierAttack.cs" />
      <Compile Include="Assets\Scripts\Trap\ArrowTrap.cs" />
      <Compile Include="Assets\Scripts\Trap\DesPoint.cs" />
+     <Compile Include="Assets\Scripts\Trap\DoorRoration.cs" />
      <Compile Include="Assets\Scripts\Trap\GroundSpike.cs" />
      <Compile Include="Assets\Scripts\Trap\GroundTrap.cs" />
      <Compile Include="Assets\Scripts\Trap\MachineTrigger.cs" />
