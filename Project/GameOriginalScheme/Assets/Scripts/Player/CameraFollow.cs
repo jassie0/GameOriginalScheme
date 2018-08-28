@@ -19,7 +19,11 @@ public class CameraFollow : MonoBehaviour {
 
         if(player == null)
         {
-            return;
+            player = PlayerController.GetPlayerObject();
+            if(player == null)
+            {
+                return;
+            }
         }
 
 		float posX = Mathf.SmoothDamp (transform.position.x, player.transform.position.x, ref velocity.x, smoothTimeX);

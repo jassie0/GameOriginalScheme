@@ -11,7 +11,9 @@ public class SelectMode : UIWindow
 
     public void OnClick_OnEndlessMode()
     {
-        Debug.Log("开发中。。。。");
+        UIControl.instance.LoadScene("EndlessMode");
+        UIControl.instance.OpenWindow(UI_TYPE.Endless);
+        GameController.instance.SetInFightScene(true);
     }
 
 }

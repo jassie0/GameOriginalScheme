@@ -42,8 +42,6 @@ public class GameController : MonoBehaviour
         }
     }
 
-
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -52,10 +50,7 @@ public class GameController : MonoBehaviour
             {
                 UIControl.instance.OpenWindow(UI_TYPE.PauseMain);
             }
-
         }
-
     }
-
 
 }

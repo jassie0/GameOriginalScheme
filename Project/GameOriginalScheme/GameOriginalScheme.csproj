@@ -339,13 +339,20 @@
     <Compile Include="Assets\Scripts\Soldier\GeneralSoldierAttack.cs" />
     <Compile Include="Assets\Scripts\Soldier\SwordSoldier.cs" />
     <Compile Include="Assets\Scripts\Soldier\SwordSoldierAttack.cs" />
+    <Compile Include="Assets\Scripts\Trap\ArrowTrap.cs" />
     <Compile Include="Assets\Scripts\Trap\DesPoint.cs" />
+    <Compile Include="Assets\Scripts\Trap\DoorRoration.cs" />
+    <Compile Include="Assets\Scripts\Trap\GroundSpike.cs" />
     <Compile Include="Assets\Scripts\Trap\GroundTrap.cs" />
+    <Compile Include="Assets\Scripts\Trap\MachineTrigger.cs" />
     <Compile Include="Assets\Scripts\Trap\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\Trap\PullBar.cs" />
+    <Compile Include="Assets\Scripts\Trap\SpikeDamage.cs" />
     <Compile Include="Assets\Scripts\UI\AlphaText.cs" />
+    <Compile Include="Assets\Scripts\UI\EndlessScore.cs" />
     <Compile Include="Assets\Scripts\UI\GameOver.cs" />
     <Compile Include="Assets\Scripts\UI\LoadingScreen.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseGame.cs" />
     <Compile Include="Assets\Scripts\UI\PauseMain.cs" />
     <Compile Include="Assets\Scripts\UI\PauseOption.cs" />
     <Compile Include="Assets\Scripts\UI\SelectLevel.cs" />
@@ -360,7 +367,7 @@
     <Compile Include="Assets\sumMusic\Scripts\SumMusicButtonImage.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Material\Outline.shader" />
+    <None Include="Assets\Images\Material\Outline.shader" />
     <None Include="Assets\sumMusic\README.md.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

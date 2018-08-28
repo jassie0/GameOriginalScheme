@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1685304383415720}
+  m_IsPrefabParent: 1
+--- !u!1 &1685304383415720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4609660278359908}
+  - component: {fileID: 114657952840964372}
+  m_Layer: 0
+  m_Name: MonsterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4609660278359908
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1685304383415720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114657952840964372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1685304383415720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f0932367f6664b9d87029764d58268d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _monsterPerfab:
+  - {fileID: 1192565805050714, guid: a146f3f76fb2f6b44b0c54a0e4c9c300, type: 2}
+  - {fileID: 1766681647734650, guid: fc8f11747644b432da6d7cb2b0c572eb, type: 2}
+  _monsterSpawner:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _dingPerfab:
+  - {fileID: 1085853850984664, guid: 9a198cc2a3878402ba8c5fd08cde1219, type: 2}
+  - {fileID: 1164039768839150, guid: 51b6e5886441c451a8e52542802c8642, type: 2}
+  - {fileID: 1956412429606240, guid: ef21468f04fb14785bf21d01bb18d33f, type: 2}
+  _dingSpawner:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _monsterMinTime: 3
+  _monsterMaxTime: 10
+  _dingMinTime: 3
+  _dingMaxTime: 10
+  checkRadius: 1
+  checkLayers:
+    serializedVersion: 2
+    m_Bits: 2048

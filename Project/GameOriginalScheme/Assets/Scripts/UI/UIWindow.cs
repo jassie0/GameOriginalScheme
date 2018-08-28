@@ -27,4 +27,9 @@ public class UIWindow : MonoBehaviour
     {
         
     }
+
+    public virtual bool isShow()
+    {
+        return this.gameObject.activeSelf;
+    }
 }

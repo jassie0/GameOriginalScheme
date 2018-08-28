@@ -35,6 +35,11 @@ public class CharacterHealth : MonoBehaviour {
                 UIControl.instance.SetGameOver(false);
             }
 
+            if(gameObject.layer == 9)
+            {
+                UIControl.instance.EnemyDeadScore();
+            }
+
             SoundManager.instance.PlaySound("soilderDie");
             SkillBox skillBox = this.GetComponentInParent<SkillBox>();
             if(skillBox != null)

@@ -6,7 +6,7 @@ public class Portal : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("King"))
         {
             GameObject kingObj = PlayerController.GetPlayerObject();
             if (kingObj == null)

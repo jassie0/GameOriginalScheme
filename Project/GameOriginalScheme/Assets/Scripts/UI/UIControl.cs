@@ -11,7 +11,8 @@ public enum UI_TYPE
     SelectMode,
     SelectLevel,
     Loading,
-    GameOver
+    GameOver,
+    Endless
 }
 
 public class UIControl : MonoBehaviour
@@ -111,6 +112,18 @@ public class UIControl : MonoBehaviour
             }
 
             GameController.instance.OpenNewScene();
+        }
+    }
+
+
+    public void EnemyDeadScore()
+    {
+        if(m_windowDict.ContainsKey(UI_TYPE.Endless))
+        {
+            if(m_windowDict[UI_TYPE.Endless].isShow())
+            {
+                m_windowDict[UI_TYPE.Endless].SetWindow();
+            }
         }
     }
 }

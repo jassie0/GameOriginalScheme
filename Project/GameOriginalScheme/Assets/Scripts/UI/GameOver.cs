@@ -8,6 +8,8 @@ public class GameOver : UIWindow
 {
     public GameObject m_Win;
     public GameObject m_Lose;
+    public GameObject m_Over;
+    public Text m_Score;
 
     public override void SetWindow(string data)
     {
@@ -16,24 +18,32 @@ public class GameOver : UIWindow
         {
             m_Win.SetActive(true);
             m_Lose.SetActive(false);
+            m_Over.SetActive(false);
         }
         else if(data == "Lose")
         {
             m_Win.SetActive(false);
             m_Lose.SetActive(true);
+            m_Over.SetActive(false);
+        }
+        else
+        {
+            m_Win.SetActive(false);
+            m_Lose.SetActive(false);
+            m_Over.SetActive(true);
+            m_Score.text = "分数：" + data;
         }
     }
 
     public void OnClick_Replay()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
         Close();
     }
 
     public void OnClick_BackTo()
     {
-        UIControl.instance.OpenWindow(UI_TYPE.SelectLevel);
+        UIControl.instance.OpenWindow(UI_TYPE.StartPlay);
         GameController.instance.SetInFightScene(false);
     }
 
