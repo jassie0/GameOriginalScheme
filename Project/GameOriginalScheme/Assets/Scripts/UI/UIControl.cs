@@ -12,7 +12,9 @@ public enum UI_TYPE
     SelectLevel,
     Loading,
     GameOver,
-    Endless
+    Endless,
+    TrainingSession,
+    MovingTips
 }
 
 public class UIControl : MonoBehaviour
@@ -29,7 +31,7 @@ public class UIControl : MonoBehaviour
     public List<UIWindow> m_windowList;
     private static Dictionary<UI_TYPE, UIWindow> m_windowDict = new Dictionary<UI_TYPE, UIWindow>();
 
-    public UIWindow GetUIWindow(UI_TYPE type)
+    public UIWindow GetWindow(UI_TYPE type)
     {
         if (m_windowDict.ContainsKey(type))
         {
@@ -39,12 +41,25 @@ public class UIControl : MonoBehaviour
         return null;
     }
 
-    public void OpenWindow(UI_TYPE type)
+
+    public void CloseAllWindow()
+    {
+        foreach (UIWindow w in m_windowDict.Values)
+        {
+            w.Close();
+        }
+    }
+
+    public void OpenSingleWindow(UI_TYPE type)
     {
         foreach(UIWindow w in m_windowDict.Values)
         {
             if(w.TYPE != type)
             {
+                if(w.TYPE == UI_TYPE.Loading)
+                {
+                    return;
+                }
                 w.Close();
             }
             else
@@ -59,6 +74,14 @@ public class UIControl : MonoBehaviour
         if (m_windowDict.ContainsKey(type))
         {
             m_windowDict[type].Close();
+        }
+    }
+
+    public void OpenWindow(UI_TYPE type)
+    {
+        if (m_windowDict.ContainsKey(type))
+        {
+            m_windowDict[type].Open();
         }
     }
 

@@ -34,6 +34,18 @@ public class GameController : MonoBehaviour
         _inFightScene = isIn;
     }
 
+    public void PauseGame(bool pause)
+    {
+        if (pause)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+    }
+
     private void InitLevel()
     {
         if(!PlayerPrefs.HasKey("Level"))
@@ -48,9 +60,11 @@ public class GameController : MonoBehaviour
         {
             if (_inFightScene)
             {
-                UIControl.instance.OpenWindow(UI_TYPE.PauseMain);
+                UIControl.instance.OpenSingleWindow(UI_TYPE.PauseMain);
             }
         }
     }
+
+
 
 }

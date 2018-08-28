@@ -323,6 +323,8 @@
     <Compile Include="Assets\Scripts\Enemy\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Enemy\MonsterController.cs" />
     <Compile Include="Assets\Scripts\Enemy\SwordEnemyAttack.cs" />
+    <Compile Include="Assets\Scripts\Event\CloseTipsOnDestory.cs" />
+    <Compile Include="Assets\Scripts\Event\OpenTipAttack.cs" />
     <Compile Include="Assets\Scripts\Manager\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Manager\MonsterManager.cs" />
     <Compile Include="Assets\Scripts\Manager\SoundManager.cs" />
@@ -341,6 +343,7 @@
     <Compile Include="Assets\Scripts\Soldier\SwordSoldierAttack.cs" />
     <Compile Include="Assets\Scripts\Trap\ArrowTrap.cs" />
     <Compile Include="Assets\Scripts\Trap\DesPoint.cs" />
+    <Compile Include="Assets\Scripts\Trap\DoorAnimPause.cs" />
     <Compile Include="Assets\Scripts\Trap\DoorRoration.cs" />
     <Compile Include="Assets\Scripts\Trap\GroundSpike.cs" />
     <Compile Include="Assets\Scripts\Trap\GroundTrap.cs" />
@@ -352,12 +355,14 @@
     <Compile Include="Assets\Scripts\UI\EndlessScore.cs" />
     <Compile Include="Assets\Scripts\UI\GameOver.cs" />
     <Compile Include="Assets\Scripts\UI\LoadingScreen.cs" />
+    <Compile Include="Assets\Scripts\UI\MovingTips.cs" />
     <Compile Include="Assets\Scripts\UI\PauseGame.cs" />
     <Compile Include="Assets\Scripts\UI\PauseMain.cs" />
     <Compile Include="Assets\Scripts\UI\PauseOption.cs" />
     <Compile Include="Assets\Scripts\UI\SelectLevel.cs" />
     <Compile Include="Assets\Scripts\UI\SelectMode.cs" />
     <Compile Include="Assets\Scripts\UI\StartPlay.cs" />
+    <Compile Include="Assets\Scripts\UI\TrainingSession.cs" />
     <Compile Include="Assets\Scripts\UI\UIControl.cs" />
     <Compile Include="Assets\Scripts\UI\UIWindow.cs" />
     <Compile Include="Assets\sumMusic\Sample\SumMusicMultiSceneTest.cs" />

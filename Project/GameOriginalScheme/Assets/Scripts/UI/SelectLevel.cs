@@ -34,6 +34,14 @@ public class SelectLevel : UIWindow
     {
         UIControl.instance.LoadScene("SampleScene");
         UIControl.instance.CloseWindow(UI_TYPE.SelectLevel);
+        UIControl.instance.OpenWindow(UI_TYPE.TrainingSession);
+        UIWindow trainingSession = UIControl.instance.GetWindow(UI_TYPE.TrainingSession);
+        if (trainingSession != null)
+        {
+            trainingSession.SetWindow("MovingTip");
+        }
+
         GameController.instance.SetNowScene(1);
+
     }
 }

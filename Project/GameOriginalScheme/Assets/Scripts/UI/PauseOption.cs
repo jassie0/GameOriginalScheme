@@ -26,6 +26,6 @@ public class PauseOption : UIWindow {
 
     public void OnClick_Back()
     {
-        UIControl.instance.OpenWindow(UI_TYPE.PauseMain);
+        UIControl.instance.OpenSingleWindow(UI_TYPE.PauseMain);
     }
 }
