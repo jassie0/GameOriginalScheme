@@ -8,12 +8,14 @@ public class CharacterHealth : MonoBehaviour {
     public AudioSource m_hurtSource;
 	public float health;
 	public float maxHealth;
-	public Transform healthBar;
+	public float healthPlus;
+	public float originalHealth;
 	public float healthPercent;
-	public float barOriginScale;
+	public float maskOriginScale;
 	//public string hurtSoundName;
 	// Use this for initialization
 	public SpriteRenderer characterSprite;
+	public Transform barMask;
 
 	public bool invincible = false;
 
@@ -27,10 +29,10 @@ public class CharacterHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		healthPercent = health/maxHealth;
-		healthBar.localScale = new Vector3 (healthPercent * barOriginScale,1 ,1);
+		barMask.localScale = new Vector3 (healthPercent * maskOriginScale, 1 ,1);
 		if (health <= 0 ) {
 
-            if(gameObject.name == "King")
+            if(gameObject.tag == "King")
             {
                 UIControl.instance.SetGameOver(false);
             }
@@ -46,8 +48,10 @@ public class CharacterHealth : MonoBehaviour {
             {
                 skillBox.Relese();
             }
+			if (gameObject.tag != "King" ) {
+				Destroy (gameObject);
+			}
 
-			Destroy (gameObject);
 		}
 	}
 

@@ -33,7 +33,7 @@ public class PlayerController : MonoSingleton<PlayerController>
 
 	public bool playerMoving;
 	public Vector2 lastMove;
-	public bool deathFlag;
+	public bool PlayerAlive;
 
 	public GameObject animSprite;
 	Animator animator;
@@ -50,34 +50,28 @@ public class PlayerController : MonoSingleton<PlayerController>
 		Time.timeScale = 1;
 		animator = animSprite.GetComponent<Animator> ();
         ResetSkillBoxDic(m_targetKey);
+		PlayerAlive = GetComponent<DieAndRespawnController> ().Alive;
     }
 
 	void FixedUpdate()
 	{
+		if (PlayerAlive) {
+			if (NeedToRotate ()) {
+				for (int i = 0; i < m_skillBox.Length; i++) {
+					m_skillBox [i].transform.position = RotateAroundPivot (m_skillBox [i].transform.position, transform.position, Quaternion.Euler (0, 0, angle * m_rotateDirection));
+				}
+			} else {
+				if (Input.GetKeyDown (KeyCode.Q)) {
+					m_targetKey = GetNextDirection (false);
+					ResetSkillBoxDic (m_targetKey);
+					m_rotateDirection = 1;
 
-        if (NeedToRotate())
-        {
-            for (int i = 0; i < m_skillBox.Length; i++)
-            {
-                m_skillBox[i].transform.position = RotateAroundPivot(m_skillBox[i].transform.position, transform.position, Quaternion.Euler(0, 0, angle * m_rotateDirection));
-            }
-        }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                m_targetKey = GetNextDirection(false);
-                ResetSkillBoxDic(m_targetKey);
-                m_rotateDirection = 1;
-
-            }
-            else if (Input.GetKeyDown(KeyCode.E))
-            {
-                m_targetKey = GetNextDirection(true);
-                ResetSkillBoxDic(m_targetKey);
-                m_rotateDirection = -1;
-            }
-        }
+				} else if (Input.GetKeyDown (KeyCode.E)) {
+					m_targetKey = GetNextDirection (true);
+					ResetSkillBoxDic (m_targetKey);
+					m_rotateDirection = -1;
+				}
+			}
 
 //		if (Input.GetMouseButtonDown(0))
 //		{
@@ -97,9 +91,9 @@ public class PlayerController : MonoSingleton<PlayerController>
 //			transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
 //		}
 
-		playerMoving = false;
+			playerMoving = false;
 
-        /*替换移动逻辑
+			/*替换移动逻辑
 		if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f){
             //transform.Translate (new Vector3(Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime, 0f, 0f));
             playerMoving = true;
@@ -114,55 +108,47 @@ public class PlayerController : MonoSingleton<PlayerController>
 			isMoving = false;
 		}*/
 
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+			float h = Input.GetAxisRaw ("Horizontal");
+			float v = Input.GetAxisRaw ("Vertical");
 
-        if (h > 0.5f || v > 0.5f || h < -0.5f || v < -0.5f)
-        {
-            m_playerRigidbody.MovePosition((Vector2)transform.position + new Vector2(h, v) * speed * Time.deltaTime);
-            playerMoving = true;
-            lastMove = new Vector2(h, v);
-            //isMoving = false;
-        }
+			if (h > 0.5f || v > 0.5f || h < -0.5f || v < -0.5f) {
+				m_playerRigidbody.MovePosition ((Vector2)transform.position + new Vector2 (h, v) * speed * Time.deltaTime);
+				playerMoving = true;
+				lastMove = new Vector2 (h, v);
+				//isMoving = false;
+			}
         
 
 
 
+			if (Input.GetKeyDown (KeyCode.W)) {
+				SkillBox skillBox = m_skillBoxDic [Direction.Up];
+				skillBox.UseSkill ();
 
-		if (Input.GetKeyDown(KeyCode.W))
-		{
-			SkillBox skillBox = m_skillBoxDic[Direction.Up];
-			skillBox.UseSkill();
+			}
 
+			if (Input.GetKeyDown (KeyCode.D)) {
+				SkillBox skillBox = m_skillBoxDic [Direction.Right];
+				skillBox.UseSkill ();
+			}
+
+			if (Input.GetKeyDown (KeyCode.S)) {
+				SkillBox skillBox = m_skillBoxDic [Direction.Down];
+				skillBox.UseSkill ();
+			}
+
+			if (Input.GetKeyDown (KeyCode.A)) {
+				SkillBox skillBox = m_skillBoxDic [Direction.Left];
+				skillBox.UseSkill ();
+			}
+
+
+			animator.SetFloat ("WalkX", h);
+			animator.SetFloat ("WalkY", v);
+			animator.SetBool ("PlayerMoving", playerMoving);
+			animator.SetFloat ("LastMoveX", lastMove.x);
+			animator.SetFloat ("LastMoveY", lastMove.y);     
 		}
-
-		if (Input.GetKeyDown(KeyCode.D))
-		{
-			SkillBox skillBox = m_skillBoxDic[Direction.Right];
-			skillBox.UseSkill();
-		}
-
-		if (Input.GetKeyDown(KeyCode.S))
-		{
-			SkillBox skillBox = m_skillBoxDic[Direction.Down];
-			skillBox.UseSkill();
-		}
-
-		if (Input.GetKeyDown(KeyCode.A))
-		{
-			SkillBox skillBox = m_skillBoxDic[Direction.Left];
-			skillBox.UseSkill();
-		}
-
-
-
-
-
-		animator.SetFloat ("WalkX", h);
-		animator.SetFloat ("WalkY", v);
-		animator.SetBool ("PlayerMoving", playerMoving);
-		animator.SetFloat ("LastMoveX", lastMove.x);
-		animator.SetFloat ("LastMoveY", lastMove.y);     
 	}
 
     public static GameObject GetPlayerObject()

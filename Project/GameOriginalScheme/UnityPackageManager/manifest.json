@@ -1,4 +1,7 @@
 {
-	"dependencies": {
-	}
+  "dependencies": {
+    "com.unity.textmeshpro": "1.2.4",
+    "com.unity.cinemachine": "2.2.0",
+    "com.unity.postprocessing": "2.0.8-preview"
+  }
 }

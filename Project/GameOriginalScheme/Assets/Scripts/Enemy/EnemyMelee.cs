@@ -19,20 +19,23 @@ public class EnemyMelee : MonoBehaviour {
 	private bool enemyAttack;
 	//private Vector2 attackDir;
 	Animator animator;
-	//GameObject player;
+	GameObject player;
 
 	// Use this for initialization
 	void Start () {
 		enemy = this.GetComponent<Rigidbody2D> ();
 		animator = gameObject.GetComponentInChildren<Animator> ();
 		//meleeAttack = GameObject.GetComponent <MeleeAttack> ();
-		//player = GameController.instance.Player;
+		player = GameObject.FindGameObjectWithTag("King");
 		//meleeAttack.GetComponent<MeleeAttack> ().soundName = "laserKnife";
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		FindClosestEnemy ();
+		DieAndRespawnController dieAndRespawnController = player.GetComponent<DieAndRespawnController> ();
+		if (dieAndRespawnController.Alive){
+			FindClosestEnemy ();
+		}
 	}
 
 	void FindClosestEnemy() {

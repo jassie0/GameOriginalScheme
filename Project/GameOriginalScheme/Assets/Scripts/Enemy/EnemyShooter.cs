@@ -22,6 +22,7 @@ public class EnemyShooter : MonoBehaviour {
 	private Vector2 attackDir;
 	private bool enemyAttack;
 	Animator animator;
+	GameObject player;
 
 	// Use this for initialization
 	void Start () {
@@ -29,12 +30,15 @@ public class EnemyShooter : MonoBehaviour {
 		enemy = this.GetComponent<Rigidbody2D> ();
 		//meleeAttack = GameObject.GetComponent <MeleeAttack> ();
 		timeBtwShoot = startTime;
-
+		player = GameObject.FindGameObjectWithTag("King");
 	}
 
 	// Update is called once per frame
 	void Update () {
-		FindClosestEnemy ();
+		DieAndRespawnController dieAndRespawnController = player.GetComponent<DieAndRespawnController> ();
+		if (dieAndRespawnController.Alive){
+			FindClosestEnemy ();
+		}
 	}
 
 	public void FindClosestEnemy() {
