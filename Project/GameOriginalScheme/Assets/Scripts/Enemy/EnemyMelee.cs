@@ -9,6 +9,8 @@ public class EnemyMelee : MonoBehaviour {
     public float attackRadius = 2;
     public float checkRadius = 10;
 
+	public float hitForce = 6;
+
 	public LayerMask checkLayers;
 	public float enemySpeed;
 	private Rigidbody2D enemy;
@@ -101,6 +103,11 @@ public class EnemyMelee : MonoBehaviour {
         foreach (Collider2D p in colliders)
         {
             p.GetComponent<CharacterHealth>().TakeDamage(damage);
+			Vector2 pushDir =   p.transform.position - transform.position;
+			pushDir =- pushDir.normalized;
+			if (p.tag == "Player" || p.tag == "King") {
+				player.GetComponent<Rigidbody2D> ().AddForce (-pushDir * hitForce * 100000000);
+			}
         }
 
     }

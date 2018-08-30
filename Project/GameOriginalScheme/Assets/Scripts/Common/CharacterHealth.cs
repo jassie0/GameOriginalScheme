@@ -39,7 +39,7 @@ public class CharacterHealth : MonoBehaviour {
 
             if(gameObject.layer == 9)
             {
-                UIControl.instance.EnemyDeadScore();
+              //  UIControl.instance.EnemyDeadScore();
             }
 
             SoundManager.instance.PlaySound("soilderDie");
@@ -48,9 +48,9 @@ public class CharacterHealth : MonoBehaviour {
             {
                 skillBox.Relese();
             }
-			if (gameObject.tag != "King" ) {
+			//if (gameObject.tag != "King" ) {
 				Destroy (gameObject);
-			}
+			//}
 
 		}
 	}

@@ -41,6 +41,8 @@ GameObject:
   - component: {fileID: 114564923046414046}
   - component: {fileID: 82264181966129160}
   - component: {fileID: 70964869493456210}
+  - component: {fileID: 114908504486305104}
+  - component: {fileID: 114666964780625790}
   m_Layer: 8
   m_Name: King
   m_TagString: King
@@ -549,7 +551,7 @@ MonoBehaviour:
   m_radius: 2
   playerMoving: 0
   lastMove: {x: 0, y: 0}
-  deathFlag: 0
+  PlayerAlive: 0
   animSprite: {fileID: 1106828085926234}
 --- !u!114 &114342543262628448
 MonoBehaviour:
@@ -583,11 +585,12 @@ MonoBehaviour:
   m_hurtSource: {fileID: 82264181966129160}
   health: 0
   maxHealth: 500
+  healthPlus: 0
+  originalHealth: 0
   healthPercent: 1
   maskOriginScale: 2.4
   characterSprite: {fileID: 212957566168930710}
   barMask: {fileID: 4042983596966554}
-  barMaskFinalPos: 2.4
   invincible: 0
 --- !u!114 &114641404249699516
 MonoBehaviour:
@@ -625,6 +628,18 @@ MonoBehaviour:
     type: 2}
   m_generalSoldier: {fileID: 1813633381695374, guid: 4ef19144a9fd1494db9645719c66e59f,
     type: 2}
+--- !u!114 &114666964780625790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1171878511745506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf6c49a510bf4b44a9bebbf065713fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkPointPos: {x: 0, y: 0, z: 0}
 --- !u!114 &114789218758550496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -643,6 +658,31 @@ MonoBehaviour:
     type: 2}
   m_generalSoldier: {fileID: 1813633381695374, guid: 4ef19144a9fd1494db9645719c66e59f,
     type: 2}
+--- !u!114 &114908504486305104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1171878511745506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19db68c3ae524ae4bb240757cb95c80d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Invulnerable: 0
+  RespawnTime: 1
+  m_lastCheckpoint: {fileID: 0}
+  Alive: 1
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: DieAndRespawnController+DieAndRespawnEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnRespawn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: DieAndRespawnController+DieAndRespawnEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!212 &212068949252883172
 SpriteRenderer:
   m_ObjectHideFlags: 1

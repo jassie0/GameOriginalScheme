@@ -198,7 +198,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1813633381695374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.117493, y: -10.242863, z: 0}
+  m_LocalPosition: {x: 10.245934, y: -12.456429, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4960232981701970}
@@ -546,13 +546,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_hurtSource: {fileID: 82009719988184178}
   health: 0
-  maxHealth: 340
+  maxHealth: 300
   healthPlus: 20
   originalHealth: 300
   healthPercent: 0
   maskOriginScale: 2.4
   characterSprite: {fileID: 212913819672390760}
-  barMask: {fileID: 0}
+  barMask: {fileID: 4543422944123376}
   invincible: 0
 --- !u!114 &114771180798720680
 MonoBehaviour:
