@@ -15,7 +15,7 @@ public class Portal : MonoBehaviour {
                 return;
             }
 
-            UIControl.instance.SetGameOver(true);
+            UIControl.Instance().SetGameOver(true);
 
             //PlayerController kingController = kingObj.GetComponent<PlayerController>();
             //bool isOn = kingController.GetSoldier(m_Profession);

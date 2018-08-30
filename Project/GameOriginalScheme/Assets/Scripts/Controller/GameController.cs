@@ -66,7 +66,7 @@ public class GameController : MonoBehaviour
         {
             if (_inFightScene)
             {
-                UIControl.instance.OpenSingleWindow(UI_TYPE.PauseMain);
+                UIControl.Instance().OpenSingleWindow(UI_TYPE.PauseMain);
             }
         }
     }

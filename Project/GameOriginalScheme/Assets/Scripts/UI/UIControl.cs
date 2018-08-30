@@ -13,7 +13,7 @@ public enum UI_TYPE
     Loading,
     GameOver,
     Endless,
-    TrainingSession,
+    Training,
     MovingTips
 }
 
@@ -24,17 +24,17 @@ public class Window
     public UI_TYPE type;
 }
 
-public class UIControl : MonoBehaviour
+public class UIControl : MonoSingleton<UIControl>
 {
     public List<Window> m_windowList;
 
-    [HideInInspector]
-    public static UIControl instance;
+    //[HideInInspector]
+    //public static UIControl instance;
 
-    private void Awake()
-    {
-        instance = this;
-    }
+    //private void Awake()
+    //{
+    //    instance = this;
+    //}
 
     private void Start()
     {
@@ -233,5 +233,13 @@ public class UIControl : MonoBehaviour
         }
     }
 
-    
+    public void TrainingMassage(string massage)
+    {
+        UIWindow teachWindow = CreateWindow(UI_TYPE.Training);
+        if (teachWindow == null)
+        {
+            return;
+        }
+        teachWindow.SetWindow(massage);
+    }
 }

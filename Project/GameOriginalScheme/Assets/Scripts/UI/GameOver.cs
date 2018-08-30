@@ -43,7 +43,7 @@ public class GameOver : UIWindow
 
     public void OnClick_BackTo()
     {
-        UIControl.instance.OpenSingleWindow(UI_TYPE.StartPlay);
+        UIControl.Instance().OpenSingleWindow(UI_TYPE.StartPlay);
         GameController.instance.SetInFightScene(false);
     }
 

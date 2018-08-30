@@ -61,7 +61,7 @@ public class MeleeAttack : MonoBehaviour {
 //        {
 //            m_attackSource.Play();
 //        }
-        SoundManager.instance.PlaySound("laserKnife");
+        SoundManager.Instance().PlaySound("laserKnife");
 
         StartCoroutine(SetAttackRange());
     }
@@ -74,7 +74,7 @@ public class MeleeAttack : MonoBehaviour {
             return;
         }
 
-        SoundManager.instance.PlaySound("soldierAttack");
+        SoundManager.Instance().PlaySound("soldierAttack");
 
         if (m_bingAni)
         {
@@ -128,27 +128,22 @@ public class MeleeAttack : MonoBehaviour {
 
     public void PlayAnimation(Direction curDirection)
     {
-        //Direction curDirection = GetCurrectDirection(m_defaultDirection, dir);
-
-
         if (curDirection == Direction.Up)
         {
-            m_bingAni.SetFloat("AttackDirection", 0.66f);
+            m_bingAni.SetTrigger("AttackUp");
         }
         else if (curDirection == Direction.Right)
         {
-            m_bingAni.SetFloat("AttackDirection", 1f);
+            m_bingAni.SetTrigger("AttackRight");
         }
         else if (curDirection == Direction.Down)
         {
-            m_bingAni.SetFloat("AttackDirection", 0.0f);
+            m_bingAni.SetTrigger("AttackDown");
         }
         else if (curDirection == Direction.Left)
         {
-            m_bingAni.SetFloat("AttackDirection", 0.33f);
+            m_bingAni.SetTrigger("AttackLeft");
         }
-
-        m_bingAni.SetTrigger("Attacking");
 
     }
 }

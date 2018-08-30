@@ -6,13 +6,13 @@ public class SelectMode : UIWindow
 {
     public void OnClick_StoryMode()
     {
-        UIControl.instance.OpenSingleWindow(UI_TYPE.SelectLevel);
+        UIControl.Instance().OpenSingleWindow(UI_TYPE.SelectLevel);
     }
 
     public void OnClick_OnEndlessMode()
     {
-        UIControl.instance.LoadScene("EndlessMode");
-        UIControl.instance.OpenSingleWindow(UI_TYPE.Endless);
+        UIControl.Instance().LoadScene("EndlessMode");
+        UIControl.Instance().OpenSingleWindow(UI_TYPE.Endless);
         GameController.instance.SetInFightScene(true);
     }
 

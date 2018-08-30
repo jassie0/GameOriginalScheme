@@ -10,7 +10,7 @@ public class SelectLevel : UIWindow
 
     private void OnEnable()
     {
-        SetLevel();
+        //SetLevel();
     }
 
     private void SetLevel()
@@ -30,18 +30,25 @@ public class SelectLevel : UIWindow
         }
     }
 
+    public void OnClick_LoadLevel(int i)
+    {
+        UIControl.Instance().LoadScene("Stage" + i.ToString());
+        UIControl.Instance().CloseWindow(UI_TYPE.SelectLevel);
+    }
+
     public void OnClick_LoadLevel1()
     {
-        UIControl.instance.LoadScene("SampleScene");
-        UIControl.instance.CloseWindow(UI_TYPE.SelectLevel);
-        UIControl.instance.OpenWindow(UI_TYPE.TrainingSession);
-        UIWindow trainingSession = UIControl.instance.GetWindow(UI_TYPE.TrainingSession);
+        UIControl.Instance().LoadScene("SampleScene");
+        UIControl.Instance().CloseWindow(UI_TYPE.SelectLevel);
+        UIControl.Instance().OpenWindow(UI_TYPE.Training);
+        UIWindow trainingSession = UIControl.Instance().GetWindow(UI_TYPE.Training);
         if (trainingSession != null)
         {
             trainingSession.SetWindow("MovingTip");
         }
 
         GameController.instance.SetNowScene(1);
-
     }
+
+    
 }

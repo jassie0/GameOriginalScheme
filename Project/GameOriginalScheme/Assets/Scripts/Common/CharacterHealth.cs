@@ -34,15 +34,16 @@ public class CharacterHealth : MonoBehaviour {
 
             if(gameObject.tag == "King")
             {
-                UIControl.instance.SetGameOver(false);
+                UIControl.Instance().SetGameOver(false);
             }
 
+            //无尽模式刷新计分板
             if(gameObject.layer == 9)
             {
-              //  UIControl.instance.EnemyDeadScore();
+                UIControl.Instance().EnemyDeadScore();
             }
 
-            SoundManager.instance.PlaySound("soilderDie");
+            SoundManager.Instance().PlaySound("soilderDie");
             SkillBox skillBox = this.GetComponentInParent<SkillBox>();
             if(skillBox != null)
             {
@@ -61,9 +62,9 @@ public class CharacterHealth : MonoBehaviour {
 			health -= damage;
 			
 			if (gameObject.tag == "King") {
-                SoundManager.instance.PlaySound ("kingActHurt");
+                SoundManager.Instance().PlaySound ("kingActHurt");
 			} else {
-                SoundManager.instance.PlaySound ("soldierActHurt");
+                SoundManager.Instance().PlaySound ("soldierActHurt");
 			}
 
 			if (health > 0 && gameObject.tag == "Player" || gameObject.tag == "King") {

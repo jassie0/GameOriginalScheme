@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class SoundManager : MonoSingleton<SoundManager>
 {
-    public static SoundManager instance;
+    //public static SoundManager instance;
 
     private void Awake()
     {
-        instance = this;
+        //instance = this;
         bgMusic = this.GetComponent<AudioSource>();
     }
 

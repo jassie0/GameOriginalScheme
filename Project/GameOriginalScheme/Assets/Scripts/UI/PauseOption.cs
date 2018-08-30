@@ -10,22 +10,22 @@ public class PauseOption : UIWindow {
 
     void OnEnable()
     {
-        m_sound.value = SoundManager.instance.GetSoundVolumePrefs();
-        m_bgMusic.value = SoundManager.instance.GetMusicVolumePrefs();
+        m_sound.value = SoundManager.Instance().GetSoundVolumePrefs();
+        m_bgMusic.value = SoundManager.Instance().GetMusicVolumePrefs();
     }
 
     public void SetSoundVolume()
     {
-        SoundManager.instance.SetSoundVolume(m_sound.value);
+        SoundManager.Instance().SetSoundVolume(m_sound.value);
     }
 
     public void SetBgMusicVolue()
     {
-        SoundManager.instance.SetBgMusicVolume(m_bgMusic.value);
+        SoundManager.Instance().SetBgMusicVolume(m_bgMusic.value);
     }
 
     public void OnClick_Back()
     {
-        UIControl.instance.OpenSingleWindow(UI_TYPE.PauseMain);
+        UIControl.Instance().OpenSingleWindow(UI_TYPE.PauseMain);
     }
 }
