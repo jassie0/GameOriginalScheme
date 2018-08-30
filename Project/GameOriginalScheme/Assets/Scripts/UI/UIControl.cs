@@ -17,19 +17,32 @@ public enum UI_TYPE
     MovingTips
 }
 
+[System.Serializable]
+public class Window
+{
+    public UIWindow window;
+    public UI_TYPE type;
+}
+
 public class UIControl : MonoBehaviour
 {
+    public List<Window> m_windowList;
+
     [HideInInspector]
     public static UIControl instance;
 
     private void Awake()
     {
         instance = this;
-        InitDict();
     }
 
-    public List<UIWindow> m_windowList;
+    private void Start()
+    {
+        OpenSingleWindow(UI_TYPE.StartPlay);
+    }
+
     private static Dictionary<UI_TYPE, UIWindow> m_windowDict = new Dictionary<UI_TYPE, UIWindow>();
+    private static List<UIWindow> m_alwaysTopWindowList = new List<UIWindow>();
 
     public UIWindow GetWindow(UI_TYPE type)
     {
@@ -41,7 +54,6 @@ public class UIControl : MonoBehaviour
         return null;
     }
 
-
     public void CloseAllWindow()
     {
         foreach (UIWindow w in m_windowDict.Values)
@@ -52,6 +64,15 @@ public class UIControl : MonoBehaviour
 
     public void OpenSingleWindow(UI_TYPE type)
     {
+        if (!m_windowDict.ContainsKey(type))
+        {
+            UIWindow win = CreateWindow(type);
+            if (win != null)
+            {
+                win.Open();
+            }
+        }
+
         foreach(UIWindow w in m_windowDict.Values)
         {
             if(w.TYPE != type)
@@ -67,13 +88,23 @@ public class UIControl : MonoBehaviour
                 w.Open();
             }
         }
+
+        CheckTopWindow();
     }
 
     public void CloseWindow(UI_TYPE type)
     {
         if (m_windowDict.ContainsKey(type))
         {
-            m_windowDict[type].Close();
+            UIWindow window = m_windowDict[type];
+            if (window != null)
+            {
+                m_windowDict[type].Close();
+            }
+            else
+            {
+                m_windowDict.Remove(type);
+            }
         }
     }
 
@@ -83,70 +114,124 @@ public class UIControl : MonoBehaviour
         {
             m_windowDict[type].Open();
         }
+        else
+        {
+            UIWindow win = CreateWindow(type);
+            if (win != null)
+            {
+                win.Open();
+            }
+        }
+        CheckTopWindow();
     }
 
-    private void InitDict()
+    public UIWindow CreateWindow(UI_TYPE type)
     {
-        if(m_windowList.Count > 0)
+        if (m_windowDict.ContainsKey(type))
+        {
+            return m_windowDict[type];
+        }
+        else
         {
             for (int i = 0; i < m_windowList.Count; i++)
             {
-                if(!m_windowDict.ContainsKey(m_windowList[i].TYPE))
+                if (m_windowList[i].type == type)
                 {
-                    m_windowDict.Add(m_windowList[i].TYPE, m_windowList[i]);
+                    GameObject win = Instantiate(m_windowList[i].window.gameObject, transform);
+                    if (win != null)
+                    {
+                        UIWindow UIwindow = win.GetComponent<UIWindow>();
+                        if (UIwindow != null)
+                        {
+                            m_windowDict.Add(type, UIwindow);
+                            CheckTopWindow();
+                            return UIwindow;
+                        }
+                    }
                 }
             }
+            return null;
         }
     }
 
+    public void DestroyWindow(UI_TYPE type)
+    {
+        if (m_windowDict.ContainsKey(type))
+        {
+            UIWindow window = m_windowDict[type];
+            if (window != null)
+            {
+                Destroy(window);
+            }
+            m_windowDict.Remove(type);
+        }
+    }
+
+    public void SetWindowAlwaysTop(UIWindow window)
+    {
+        if (window != null)
+        {
+            m_alwaysTopWindowList.Add(window);
+        }
+    }
+
+    private void CheckTopWindow()
+    {
+        for (int i = 0; i < m_alwaysTopWindowList.Count; i++)
+        {
+            m_alwaysTopWindowList[i].transform.SetAsLastSibling();
+        }
+    }
+
+    //---------------以下为窗口逻辑----------------//
+
     public void LoadScene(string sceneName)
     {
-        if(m_windowDict.ContainsKey(UI_TYPE.Loading))
+        UIWindow loadingWindow = CreateWindow(UI_TYPE.Loading);
+        if (loadingWindow != null)
         {
-            UIWindow loadingScreen = (UIWindow)m_windowDict[UI_TYPE.Loading];
-            if(loadingScreen == null)
-            {
-                return;
-            }
-            loadingScreen.Open();
-            loadingScreen.SetWindow(sceneName);
+            SetWindowAlwaysTop(loadingWindow);
+            loadingWindow.Open();
+            loadingWindow.SetWindow(sceneName);
         }
     }
 
     public void SetGameOver(bool isWin)
     {
-        if (m_windowDict.ContainsKey(UI_TYPE.GameOver))
+        UIWindow gameOverWin = CreateWindow(UI_TYPE.GameOver);
+        if (gameOverWin == null)
         {
-            UIWindow gameOverWin = (UIWindow)m_windowDict[UI_TYPE.GameOver];
-            if (gameOverWin == null)
-            {
-                return;
-            }
-
-            gameOverWin.Open();
-
-            if(isWin)
-            {
-                gameOverWin.SetWindow("Win");
-            }
-            else
-            {
-                gameOverWin.SetWindow("Lose");
-            }
-
-            GameController.instance.OpenNewScene();
+            return;
         }
+
+        gameOverWin.Open();
+
+        if(isWin)
+        {
+            gameOverWin.SetWindow("Win");
+        }
+        else
+        {
+            gameOverWin.SetWindow("Lose");
+        }
+
+        GameController.instance.OpenNewScene();
     }
 
 
     public void EnemyDeadScore()
     {
-        if(m_windowDict.ContainsKey(UI_TYPE.Endless))
+        UIWindow endlessWin = GetWindow(UI_TYPE.Endless);
+        if (endlessWin == null)
         {
-            if(m_windowDict[UI_TYPE.Endless].isShow())
-            {
-                m_windowDict[UI_TYPE.Endless].SetWindow();
-            }
+            return;
+        }
+
+        if (endlessWin.isShow())
+        {
+            m_windowDict[UI_TYPE.Endless].SetWindow();
         }
     }
+
+    
 }

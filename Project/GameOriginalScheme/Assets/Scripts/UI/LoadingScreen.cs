@@ -9,6 +9,12 @@ public class LoadingScreen : UIWindow
     public Slider slider;
     public Text progressText;
 
+    public override void Open()
+    {
+        base.Open();
+        transform.SetAsLastSibling();
+    }
+
     public override void SetWindow(string data)
     {
         base.SetWindow(data);
@@ -21,9 +27,9 @@ public class LoadingScreen : UIWindow
 
         while (!operation.isDone)
         {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
+            float progress = operation.progress / 0.9f;
             slider.value = progress;
-            progressText.text = progress * 100 + "%";
+            progressText.text = Mathf.CeilToInt(progress * 100).ToString() + "%";
             yield return null;
         }
 

@@ -5,15 +5,21 @@ using UnityEngine;
 public class GameController : MonoBehaviour 
 {
     public static GameController instance;
-    //
+    
+    private static bool _inFightScene = false;
+    private static int _nowScene = 0;
+
+    //endless mode
+    private const int endlessEnemyMax = 10;
+    private const int endlessDingMax = 10;
+    private static int endlessEnemyCount = 0;
+    private static int endlessDingCount = 0;
+
     void Awake()
     {
         instance = this;
         InitLevel();
     }
-
-    private static bool _inFightScene = false;
-    private static int _nowScene = 0;
 
     public void SetNowScene(int number)
     {

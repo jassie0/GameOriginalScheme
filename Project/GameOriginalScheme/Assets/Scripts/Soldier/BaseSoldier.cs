@@ -6,7 +6,8 @@ public enum Profession
 {
     SwordSoldier,
     ArcherSoldier,
-    GeneralSoldier
+    GeneralSoldier,
+    ShieldSoldier
 }
 
 public class BaseSoldier : MonoBehaviour {
@@ -32,34 +33,4 @@ public class BaseSoldier : MonoBehaviour {
     {
         m_nowDirection = dir;
     }
-
-    //public void RotateAroundPivot(Direction direction, Transform nubing)
-    //{
-    //    if (direction == Direction.Up)
-    //    {
-
-    //    }
-    //    else if (direction == Direction.Right)
-    //    {
-    //        nubing.Rotate(0, 0, -90);
-    //    }
-    //    else if (direction == Direction.Down)
-    //    {
-    //        nubing.Rotate(0, 0, -180);
-    //    }
-    //    else if (direction == Direction.Left)
-    //    {
-    //        nubing.Rotate(0, 0, -270);
-    //    }
-
-    //}
-
-    //public Direction GetCurrectDirection(Direction defaultDir, Direction playerDir)
-    //{
-    //    int dirNum = ((int)defaultDir + (int)playerDir) % 4;
-
-    //    return (Direction)dirNum;
-    //}
-
-
 }

@@ -82,10 +82,10 @@ public class MonsterManager : MonoBehaviour
         }
     }
 
-	void OnTriggerEnter(object other)
-	{
-		Destroy (this.gameObject);
-	}
+	//void OnTriggerEnter(object other)
+	//{
+	//	Destroy (this.gameObject);
+	//}
 
 	//public Vector2 RandomPosition()
 	//{

@@ -10,12 +10,12 @@ public class UIWindow : MonoBehaviour
 
     public virtual void Open()
     {
-        this.gameObject.SetActive(true);
+        gameObject.SetActive(true);
     }
 
     public virtual void Close()
     {
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public virtual void SetWindow()
@@ -30,6 +30,6 @@ public class UIWindow : MonoBehaviour
 
     public virtual bool isShow()
     {
-        return this.gameObject.activeSelf;
+        return gameObject.activeSelf;
     }
 }

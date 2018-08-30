@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CloseTipsOnDestory : MonoBehaviour {
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         UIControl.instance.CloseWindow(UI_TYPE.MovingTips);
 

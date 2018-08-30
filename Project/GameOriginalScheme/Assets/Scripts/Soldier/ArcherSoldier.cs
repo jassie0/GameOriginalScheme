@@ -98,7 +98,6 @@ public class ArcherSoldier : BaseSoldier {
         {
             nubing.Rotate(0, 0, -270);
         }
-
     }
 
 }
