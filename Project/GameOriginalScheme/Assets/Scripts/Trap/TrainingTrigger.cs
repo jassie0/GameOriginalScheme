@@ -13,6 +13,11 @@ public class TrainingTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        SendMassage();
+        if (other.gameObject.tag == "King")
+        {
+            SendMassage();
+        }
+
+        Destroy(gameObject);
     }
 }

@@ -45,6 +45,7 @@ public class GameOver : UIWindow
     {
         UIControl.Instance().OpenSingleWindow(UI_TYPE.StartPlay);
         GameController.instance.SetInFightScene(false);
+        Close();
     }
 
     private void OnEnable()

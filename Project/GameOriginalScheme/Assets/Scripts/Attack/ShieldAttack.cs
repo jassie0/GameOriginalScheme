@@ -11,6 +11,8 @@ public class ShieldAttack : MonoBehaviour {
     private float startTime;
     public LayerMask enemies;
     public float damage;
+    public float duringTime = 1.5f;
+
     private Direction m_direction = Direction.Up;
 
     void Start()
@@ -52,19 +54,15 @@ public class ShieldAttack : MonoBehaviour {
         StartCoroutine(SetAttackRange());
     }
 
-
     IEnumerator SetAttackRange()
     {
         m_attackRange.gameObject.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(duringTime);
         m_attackRange.gameObject.SetActive(false);
     }
 
     public void PlayAnimation(Direction curDirection)
     {
-        //Direction curDirection = GetCurrectDirection(m_defaultDirection, dir);
-
-
         if (curDirection == Direction.Up)
         {
             m_bingAni.SetFloat("AttackDirection", 0.66f);

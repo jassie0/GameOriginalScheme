@@ -571,6 +571,8 @@ MonoBehaviour:
     type: 2}
   m_generalSoldier: {fileID: 1813633381695374, guid: 4ef19144a9fd1494db9645719c66e59f,
     type: 2}
+  m_shieldSoldier: {fileID: 1813633381695374, guid: 86fc397120fc12e44a833d55987946d0,
+    type: 2}
 --- !u!114 &114564923046414046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -610,6 +612,8 @@ MonoBehaviour:
     type: 2}
   m_generalSoldier: {fileID: 1813633381695374, guid: 4ef19144a9fd1494db9645719c66e59f,
     type: 2}
+  m_shieldSoldier: {fileID: 1813633381695374, guid: 86fc397120fc12e44a833d55987946d0,
+    type: 2}
 --- !u!114 &114654268603087144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -627,6 +631,8 @@ MonoBehaviour:
   m_archerSoldier: {fileID: 1813633381695374, guid: 26e54f4ba76460844b8e3f71e53235b0,
     type: 2}
   m_generalSoldier: {fileID: 1813633381695374, guid: 4ef19144a9fd1494db9645719c66e59f,
+    type: 2}
+  m_shieldSoldier: {fileID: 1813633381695374, guid: 86fc397120fc12e44a833d55987946d0,
     type: 2}
 --- !u!114 &114666964780625790
 MonoBehaviour:
@@ -657,6 +663,8 @@ MonoBehaviour:
   m_archerSoldier: {fileID: 1813633381695374, guid: 26e54f4ba76460844b8e3f71e53235b0,
     type: 2}
   m_generalSoldier: {fileID: 1813633381695374, guid: 4ef19144a9fd1494db9645719c66e59f,
+    type: 2}
+  m_shieldSoldier: {fileID: 1813633381695374, guid: 86fc397120fc12e44a833d55987946d0,
     type: 2}
 --- !u!114 &114908504486305104
 MonoBehaviour:
