@@ -8,10 +8,17 @@ public class ShieldTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        GameObject player = PlayerController.GetPlayerObject();
+        if (player == null)
+        {
+            return;
+        }
+
         if (other.tag == "Enemy")
         {
-            Vector2 pushDir = other.transform.position - transform.position;
+            Vector2 pushDir = other.transform.position - player.transform.position;
             pushDir = -pushDir.normalized;
+
             other.GetComponent<Rigidbody2D>().AddForce(-pushDir * hitForce * 1);
         }
     }
