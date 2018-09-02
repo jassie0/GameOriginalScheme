@@ -400,6 +400,7 @@ MonoBehaviour:
   originalHealth: 0
   healthPercent: 0
   maskOriginScale: 2.4
+  maskYScale: 0.4
   characterSprite: {fileID: 0}
   barMask: {fileID: 4979238453919148}
   invincible: 0
