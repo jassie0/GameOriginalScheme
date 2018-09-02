@@ -12,6 +12,7 @@ public class CharacterHealth : MonoBehaviour {
 	public float originalHealth;
 	public float healthPercent;
 	public float maskOriginScale;
+	public float maskYScale;
 	//public string hurtSoundName;
 	// Use this for initialization
 	public SpriteRenderer characterSprite;
@@ -29,7 +30,7 @@ public class CharacterHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		healthPercent = health/maxHealth;
-		barMask.localScale = new Vector3 (healthPercent * maskOriginScale, 1 ,1);
+		barMask.localScale = new Vector3 (healthPercent * maskOriginScale, maskYScale ,1);
 		if (health <= 0 ) {
 
             if(gameObject.tag == "King")

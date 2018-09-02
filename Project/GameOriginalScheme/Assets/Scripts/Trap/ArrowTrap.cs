@@ -15,7 +15,10 @@ public class ArrowTrap : MonoBehaviour {
 	//Coroutine lastRoutine = null;
 	// Use this for initialization
 	void Start () {
-
+		if (arrowActivator.Length == 0) {
+			gameObject.GetComponent<SpriteRenderer> ().sprite = trapOn;
+			StartCoroutine (ShootArrow());
+		}
 	}
 	
 	// Update is called once per frame

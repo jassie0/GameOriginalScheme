@@ -16,6 +16,16 @@ public class TrainingSession : UIWindow {
 
     public Text m_trainingMassage;
 
+    public void OnEnable()
+    {
+        GameController.Instance().PauseGame(true);
+    }
+
+    public void OnDisable()
+    {
+        GameController.Instance().PauseGame(false);
+    }
+
     public override void SetWindow(string data)
     {
         m_trainingMassage.text = data;

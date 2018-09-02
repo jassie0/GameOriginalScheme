@@ -243,6 +243,7 @@
      <Compile Include="Assets\Scripts\Attack\DistCompare.cs" />
      <Compile Include="Assets\Scripts\Attack\LaserBullet.cs" />
      <Compile Include="Assets\Scripts\Attack\MeleeAttack.cs" />
+     <Compile Include="Assets\Scripts\Attack\ShieldAttack.cs" />
      <Compile Include="Assets\Scripts\Attack\SpritesOutline.cs" />
      <Compile Include="Assets\Scripts\Common\CharacterHealth.cs" />
      <Compile Include="Assets\Scripts\Common\DistoryThisAfterAWhile.cs" />
@@ -257,15 +258,15 @@
      <Compile Include="Assets\Scripts\Enemy\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Enemy\MonsterController.cs" />
      <Compile Include="Assets\Scripts\Enemy\SwordEnemyAttack.cs" />
-     <Compile Include="Assets\Scripts\Event\CloseTipsOnDestory.cs" />
-     <Compile Include="Assets\Scripts\Event\OpenTipAttack.cs" />
      <Compile Include="Assets\Scripts\Manager\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Manager\MonsterManager.cs" />
      <Compile Include="Assets\Scripts\Manager\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\Manager\TrainingManager.cs" />
      <Compile Include="Assets\Scripts\Player\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Player\HurtPlayer.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Player\SkillBox.cs" />
+     <Compile Include="Assets\Scripts\Portal\StairPortal.cs" />
      <Compile Include="Assets\Scripts\Prpperty\DingBox.cs" />
      <Compile Include="Assets\Scripts\Prpperty\MaxHealthPlus.cs" />
      <Compile Include="Assets\Scripts\Prpperty\Portal.cs" />
@@ -279,6 +280,7 @@
      <Compile Include="Assets\Scripts\Soldier\BaseSoldier.cs" />
      <Compile Include="Assets\Scripts\Soldier\GeneralSoldier.cs" />
      <Compile Include="Assets\Scripts\Soldier\GeneralSoldierAttack.cs" />
+     <Compile Include="Assets\Scripts\Soldier\ShieldSoldier.cs" />
      <Compile Include="Assets\Scripts\Soldier\SwordSoldier.cs" />
      <Compile Include="Assets\Scripts\Soldier\SwordSoldierAttack.cs" />
      <Compile Include="Assets\Scripts\Trap\ArrowTrap.cs" />
@@ -288,9 +290,11 @@
      <Compile Include="Assets\Scripts\Trap\GroundSpike.cs" />
      <Compile Include="Assets\Scripts\Trap\GroundTrap.cs" />
      <Compile Include="Assets\Scripts\Trap\MachineTrigger.cs" />
+     <Compile Include="Assets\Scripts\Trap\MechanicalDoor.cs" />
      <Compile Include="Assets\Scripts\Trap\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts\Trap\PullBar.cs" />
      <Compile Include="Assets\Scripts\Trap\SpikeDamage.cs" />
+     <Compile Include="Assets\Scripts\Trap\TrainingTrigger.cs" />
      <Compile Include="Assets\Scripts\UI\AlphaText.cs" />
      <Compile Include="Assets\Scripts\UI\EndlessScore.cs" />
      <Compile Include="Assets\Scripts\UI\GameOver.cs" />

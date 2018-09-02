@@ -158,13 +158,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ecd45479fa8bd4a91b2bab6d1826c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 15
   damage: 20
-  startTime: 0.3
+  startTime: 0.5
   attackPos: {fileID: 4978829855845886}
   enemies:
     serializedVersion: 2
-    m_Bits: 4608
+    m_Bits: 512
   attackRange: 0.1
   hurtEnemy: 0
   m_rigidbody: {fileID: 50020219315446102}
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a66d1473853f24192b290e4cd90a6f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Time: 2
+  m_Time: 1
 --- !u!212 &212368782697146732
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -213,7 +213,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 52
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 42d3bad4bc6f21f4cbedee2349f08245, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

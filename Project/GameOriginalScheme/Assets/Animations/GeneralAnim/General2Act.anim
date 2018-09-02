@@ -19,13 +19,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: fb676c5d31dd9034a81740f6382281ba, type: 3}
-    - time: 0.33333334
       value: {fileID: 21300000, guid: 0c2493ab901b2fc40b2608e318ee6771, type: 3}
-    - time: 0.6666667
+    - time: 0.083333336
       value: {fileID: 21300000, guid: 603574a1312b6754098d01f959346359, type: 3}
-    - time: 1
-      value: {fileID: 21300000, guid: fb676c5d31dd9034a81740f6382281ba, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -45,16 +41,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: fb676c5d31dd9034a81740f6382281ba, type: 3}
     - {fileID: 21300000, guid: 0c2493ab901b2fc40b2608e318ee6771, type: 3}
     - {fileID: 21300000, guid: 603574a1312b6754098d01f959346359, type: 3}
-    - {fileID: 21300000, guid: fb676c5d31dd9034a81740f6382281ba, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.0166667
+    m_StopTime: 0.1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -75,7 +69,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0.6666667
+  - time: 0.083333336
     functionName: TakeAOE
     data: 
     objectReferenceParameter: {fileID: 0}

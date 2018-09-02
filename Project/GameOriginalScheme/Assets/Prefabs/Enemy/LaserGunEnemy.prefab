@@ -311,8 +311,11 @@ MonoBehaviour:
   m_hurtSource: {fileID: 0}
   health: 0
   maxHealth: 10
+  healthPlus: 0
+  originalHealth: 0
   healthPercent: 0
   maskOriginScale: 2.4
+  maskYScale: 0.4
   characterSprite: {fileID: 0}
   barMask: {fileID: 4654681663054778}
   invincible: 0

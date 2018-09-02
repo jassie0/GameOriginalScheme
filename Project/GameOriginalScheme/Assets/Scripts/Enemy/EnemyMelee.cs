@@ -27,17 +27,30 @@ public class EnemyMelee : MonoBehaviour {
 	void Start () {
 		enemy = this.GetComponent<Rigidbody2D> ();
 		animator = gameObject.GetComponentInChildren<Animator> ();
-		//meleeAttack = GameObject.GetComponent <MeleeAttack> ();
-		player = GameObject.FindGameObjectWithTag("King");
+        //meleeAttack = GameObject.GetComponent <MeleeAttack> ();
+        player = PlayerController.GetPlayerObject();
 		//meleeAttack.GetComponent<MeleeAttack> ().soundName = "laserKnife";
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		DieAndRespawnController dieAndRespawnController = player.GetComponent<DieAndRespawnController> ();
-		if (dieAndRespawnController.Alive){
-			FindClosestEnemy ();
-		}
+        //加入判空防止主角死报错
+        if (player != null)
+        {
+            DieAndRespawnController dieAndRespawnController = player.GetComponent<DieAndRespawnController>();
+            if (dieAndRespawnController != null)
+            {
+                if (dieAndRespawnController.Alive)
+                {
+                    FindClosestEnemy();
+                }
+            }
+        }
+        else
+        {
+            player = PlayerController.GetPlayerObject();
+        }
+
 	}
 
 	void FindClosestEnemy() {
@@ -102,7 +115,12 @@ public class EnemyMelee : MonoBehaviour {
 
         foreach (Collider2D p in colliders)
         {
-            p.GetComponent<CharacterHealth>().TakeDamage(damage);
+            CharacterHealth health = p.GetComponent<CharacterHealth>();
+            if (health == null)
+            {
+                return;
+            }
+            health.GetComponent<CharacterHealth>().TakeDamage(damage);
 			Vector2 pushDir =   p.transform.position - transform.position;
 			pushDir =- pushDir.normalized;
 			if (p.tag == "Player" || p.tag == "King") {

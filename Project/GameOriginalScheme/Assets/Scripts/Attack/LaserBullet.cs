@@ -22,9 +22,14 @@ public class LaserBullet : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
-		if (other.tag == "Player" || other.tag == "King") {
-			other.GetComponent<CharacterHealth> ().TakeDamage(damage);
-			Destroy (gameObject);
-		}
+        if (other.tag == "Player" || other.tag == "King")
+        {
+            other.GetComponent<CharacterHealth>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
+        else if (other.tag == "Shield")
+        {
+            Destroy(gameObject);
+        }
 	}
 }

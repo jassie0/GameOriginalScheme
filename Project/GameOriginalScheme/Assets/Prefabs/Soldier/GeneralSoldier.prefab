@@ -551,6 +551,7 @@ MonoBehaviour:
   originalHealth: 300
   healthPercent: 0
   maskOriginScale: 2.4
+  maskYScale: 0.64
   characterSprite: {fileID: 212913819672390760}
   barMask: {fileID: 4543422944123376}
   invincible: 0

@@ -178,7 +178,7 @@ Transform:
   m_GameObject: {fileID: 1410856098122754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.2, y: 0, z: 0}
-  m_LocalScale: {x: 2.4, y: 0.68, z: 1}
+  m_LocalScale: {x: 2.4, y: 0.64, z: 1}
   m_Children: []
   m_Father: {fileID: 4697064802027356}
   m_RootOrder: 0
@@ -217,7 +217,7 @@ Transform:
   m_GameObject: {fileID: 1106828085926234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1.1830753}
   m_Children: []
   m_Father: {fileID: 4894305122803302}
   m_RootOrder: 0
@@ -283,7 +283,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1171878511745506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.81, y: -12.28, z: 0}
+  m_LocalPosition: {x: 22.7, y: -16.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4431279179135520}
@@ -571,6 +571,8 @@ MonoBehaviour:
     type: 2}
   m_generalSoldier: {fileID: 1813633381695374, guid: 4ef19144a9fd1494db9645719c66e59f,
     type: 2}
+  m_shieldSoldier: {fileID: 1813633381695374, guid: 86fc397120fc12e44a833d55987946d0,
+    type: 2}
 --- !u!114 &114564923046414046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -589,6 +591,7 @@ MonoBehaviour:
   originalHealth: 0
   healthPercent: 1
   maskOriginScale: 2.4
+  maskYScale: 0.64
   characterSprite: {fileID: 212957566168930710}
   barMask: {fileID: 4042983596966554}
   invincible: 0
@@ -610,6 +613,8 @@ MonoBehaviour:
     type: 2}
   m_generalSoldier: {fileID: 1813633381695374, guid: 4ef19144a9fd1494db9645719c66e59f,
     type: 2}
+  m_shieldSoldier: {fileID: 1813633381695374, guid: 86fc397120fc12e44a833d55987946d0,
+    type: 2}
 --- !u!114 &114654268603087144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -627,6 +632,8 @@ MonoBehaviour:
   m_archerSoldier: {fileID: 1813633381695374, guid: 26e54f4ba76460844b8e3f71e53235b0,
     type: 2}
   m_generalSoldier: {fileID: 1813633381695374, guid: 4ef19144a9fd1494db9645719c66e59f,
+    type: 2}
+  m_shieldSoldier: {fileID: 1813633381695374, guid: 86fc397120fc12e44a833d55987946d0,
     type: 2}
 --- !u!114 &114666964780625790
 MonoBehaviour:
@@ -657,6 +664,8 @@ MonoBehaviour:
   m_archerSoldier: {fileID: 1813633381695374, guid: 26e54f4ba76460844b8e3f71e53235b0,
     type: 2}
   m_generalSoldier: {fileID: 1813633381695374, guid: 4ef19144a9fd1494db9645719c66e59f,
+    type: 2}
+  m_shieldSoldier: {fileID: 1813633381695374, guid: 86fc397120fc12e44a833d55987946d0,
     type: 2}
 --- !u!114 &114908504486305104
 MonoBehaviour:

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController : MonoBehaviour 
+public class GameController : MonoSingleton<GameController> 
 {
     public static GameController instance;
     

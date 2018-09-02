@@ -506,6 +506,7 @@
     <Compile Include="Assets\Scripts\Attack\LaserBullet.cs" />
     <Compile Include="Assets\Scripts\Attack\MeleeAttack.cs" />
     <Compile Include="Assets\Scripts\Attack\ShieldAttack.cs" />
+    <Compile Include="Assets\Scripts\Attack\ShieldTrigger.cs" />
     <Compile Include="Assets\Scripts\Attack\SpritesOutline.cs" />
     <Compile Include="Assets\Scripts\Common\CharacterHealth.cs" />
     <Compile Include="Assets\Scripts\Common\DistoryThisAfterAWhile.cs" />

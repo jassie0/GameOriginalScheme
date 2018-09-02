@@ -13,6 +13,7 @@ TagManager:
   - Bar
   - Pad
   - King
+  - Shield
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,7 @@ public class SkillBox : MonoBehaviour
     public GameObject m_swordSoldier;
     public GameObject m_archerSoldier;
     public GameObject m_generalSoldier;
+    public GameObject m_shieldSoldier;
 
     private Direction m_nowDirection;
     public Direction NowDirection   //士兵目前方位
@@ -37,7 +38,7 @@ public class SkillBox : MonoBehaviour
     {
         m_isOn = true;
 
-        if (m_swordSoldier == null || m_archerSoldier == null || m_generalSoldier == null)
+        if (m_swordSoldier == null || m_archerSoldier == null || m_generalSoldier == null || m_shieldSoldier == null)
         {
             Debug.LogError("兵种未配置");
         }
@@ -53,6 +54,10 @@ public class SkillBox : MonoBehaviour
         else if (pro == Profession.GeneralSoldier)
         {
             CreateSoldier(m_generalSoldier);
+        }
+        else if (pro == Profession.ShieldSoldier)
+        {
+            CreateSoldier(m_shieldSoldier);
         }
     }
 

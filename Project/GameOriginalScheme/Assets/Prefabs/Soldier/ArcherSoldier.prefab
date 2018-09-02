@@ -278,7 +278,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -422,6 +422,7 @@ MonoBehaviour:
   originalHealth: 120
   healthPercent: 0
   maskOriginScale: 2.4
+  maskYScale: 0.64
   characterSprite: {fileID: 212430681058225402}
   barMask: {fileID: 4646516433138012}
   invincible: 0

@@ -6,7 +6,7 @@ public class ArcherSoldierAttack : MonoBehaviour {
 
     public ArcherSoldier m_archerSoldier;
 
-    public void ArcherSolierSendArrow()
+    public void ArcherSolierAttack()
     {
         if (m_archerSoldier != null)
         {

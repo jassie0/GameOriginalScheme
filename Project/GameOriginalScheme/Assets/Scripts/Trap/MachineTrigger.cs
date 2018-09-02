@@ -37,13 +37,14 @@ public class MachineTrigger : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.tag == "King" && gameObject.tag == "Pad") {
-			machineOn = !machineOn;
+			
 			if (gameObject.GetComponent<SpriteRenderer> ().sprite == state1) {
 				gameObject.GetComponent<SpriteRenderer> ().sprite = state2;
+				machineOn = !machineOn;
 
 			} else if (canRestore == true){
 				gameObject.GetComponent<SpriteRenderer> ().sprite = state1;
-
+				machineOn = !machineOn;
 			}
 		}	
 	}
