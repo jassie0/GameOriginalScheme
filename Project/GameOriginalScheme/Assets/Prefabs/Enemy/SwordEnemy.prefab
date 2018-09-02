@@ -342,6 +342,7 @@ MonoBehaviour:
   damage: 10
   attackRadius: 2
   checkRadius: 10
+  hitForce: 2
   checkLayers:
     serializedVersion: 2
     m_Bits: 256
@@ -395,6 +396,8 @@ MonoBehaviour:
   m_hurtSource: {fileID: 0}
   health: 0
   maxHealth: 20
+  healthPlus: 0
+  originalHealth: 0
   healthPercent: 0
   maskOriginScale: 2.4
   characterSprite: {fileID: 0}
