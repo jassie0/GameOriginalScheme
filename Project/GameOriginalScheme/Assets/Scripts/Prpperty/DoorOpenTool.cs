@@ -1,0 +1,28 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DoorOpenTool : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+	void OnTriggerEnter2D (Collider2D other) {
+		if (other.tag == "King") {
+			if (gameObject.tag == "Card") {
+				LevelToolValue.doorCardCount += 1;
+				Destroy (gameObject);
+			} else if (gameObject.tag == "Key") {
+				LevelToolValue.keyCount += 1;
+				Destroy (gameObject);
+			}
+		}
+	}
+}

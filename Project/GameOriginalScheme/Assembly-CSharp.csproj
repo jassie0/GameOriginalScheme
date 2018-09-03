@@ -250,6 +250,7 @@
      <Compile Include="Assets\Scripts\Common\DistoryThisAfterAWhile.cs" />
      <Compile Include="Assets\Scripts\Common\DonotDestroy.cs" />
      <Compile Include="Assets\Scripts\Common\GameHelp.cs" />
+     <Compile Include="Assets\Scripts\Common\LevelToolValue.cs" />
      <Compile Include="Assets\Scripts\Common\MonoSingleton.cs" />
      <Compile Include="Assets\Scripts\Controller\DieAndRespawnController.cs" />
      <Compile Include="Assets\Scripts\Controller\GameController.cs" />
@@ -269,6 +270,7 @@
      <Compile Include="Assets\Scripts\Player\SkillBox.cs" />
      <Compile Include="Assets\Scripts\Portal\StairPortal.cs" />
      <Compile Include="Assets\Scripts\Prpperty\DingBox.cs" />
+     <Compile Include="Assets\Scripts\Prpperty\DoorOpenTool.cs" />
      <Compile Include="Assets\Scripts\Prpperty\MaxHealthPlus.cs" />
      <Compile Include="Assets\Scripts\Prpperty\Portal.cs" />
      <Compile Include="Assets\Scripts\Save&amp;Load\LoadGame.cs" />
@@ -287,6 +289,7 @@
      <Compile Include="Assets\Scripts\Trap\ArrowTrap.cs" />
      <Compile Include="Assets\Scripts\Trap\DesPoint.cs" />
      <Compile Include="Assets\Scripts\Trap\DoorAnimPause.cs" />
+     <Compile Include="Assets\Scripts\Trap\DoorOpenByPass.cs" />
      <Compile Include="Assets\Scripts\Trap\DoorRoration.cs" />
      <Compile Include="Assets\Scripts\Trap\GroundSpike.cs" />
      <Compile Include="Assets\Scripts\Trap\GroundTrap.cs" />
