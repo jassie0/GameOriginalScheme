@@ -162,6 +162,7 @@
      <Compile Include="Assets\2DGamekit\Scripts\Utility\UIAutoscroll.cs" />
      <Compile Include="Assets\2DGamekit\Scripts\Utility\VisibleBubbleUp.cs" />
      <Compile Include="Assets\2DGamekit\TutorialInfo\Scripts\Readme.cs" />
+     <Compile Include="Assets\2DGamekit\Utilities\CinemachinePostProcessingV2\CinemachinePostProcessing.cs" />
      <Compile Include="Assets\2DGamekit\Utilities\DefaultPlayables\LightControl\LightControlBehaviour.cs" />
      <Compile Include="Assets\2DGamekit\Utilities\DefaultPlayables\LightControl\LightControlClip.cs" />
      <Compile Include="Assets\2DGamekit\Utilities\DefaultPlayables\LightControl\LightControlMixerBehaviour.cs" />
