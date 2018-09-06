@@ -23,7 +23,12 @@ public class CharacterHealth : MonoBehaviour {
 	static readonly float invincilityTime = 1f;
 	static readonly float flickerTime = 0.1f;
 
-	void Start () {
+    static readonly float destoryDelayTime = 1f;
+    private bool isAlive = true;
+    public bool IsAlive { get { return IsAlive; }}
+    public float HealthPrecent { get { return healthPercent; } }
+
+    void Start () {
 		health = maxHealth;
 	}
 
@@ -50,10 +55,13 @@ public class CharacterHealth : MonoBehaviour {
             {
                 skillBox.Relese();
             }
-			//if (gameObject.tag != "King" ) {
-				Destroy (gameObject);
-			//}
 
+            gameObject.SetActive(false);
+            //if (gameObject.tag != "King" ) {
+            //	Destroy (gameObject);
+            //}
+            isAlive = false;
+            StartCoroutine(DestoryAfterAWhile());
 		}
 	}
 
@@ -73,6 +81,12 @@ public class CharacterHealth : MonoBehaviour {
 			}
 		}
 	}
+
+    IEnumerator DestoryAfterAWhile()
+    {
+        yield return new WaitForSeconds(destoryDelayTime);
+        Destroy(gameObject);
+    }
 
 	IEnumerator Flash() {
 		float time = 0f;

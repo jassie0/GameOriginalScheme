@@ -339,6 +339,7 @@
     <Compile Include="Assets\2DGamekit\Scripts\Timeline\Editor\DirectorTriggerEditor.cs" />
     <Compile Include="Assets\2DGamekit\Scripts\Timeline\ScrollingText\Editor\ScrollingTextDrawer.cs" />
     <Compile Include="Assets\2DGamekit\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
+    <Compile Include="Assets\2DGamekit\Utilities\CinemachinePostProcessingV2\Editor\CinemachinePostProcessingEditor.cs" />
     <Compile Include="Assets\2DGamekit\Utilities\DefaultPlayables\Editor\TimelinePlayableWizard.cs" />
     <Compile Include="Assets\2DGamekit\Utilities\DefaultPlayables\LightControl\Editor\LightControlDrawer.cs" />
     <Compile Include="Assets\2DGamekit\Utilities\DefaultPlayables\ScreenFader\Editor\ScreenFaderDrawer.cs" />
