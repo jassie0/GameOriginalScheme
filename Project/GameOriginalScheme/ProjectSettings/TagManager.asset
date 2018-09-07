@@ -15,6 +15,7 @@ TagManager:
   - King
   - Shield
   - Card
+  - Collectable
   layers:
   - Default
   - TransparentFX

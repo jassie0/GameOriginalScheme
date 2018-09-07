@@ -13,9 +13,13 @@ public class DoorOpenByPass : MonoBehaviour {
 	public int pointSelection;
 	public Transform[] points;
 	public GameObject door;
+	public GameObject textTip;
+	TextMesh tip;
 	// Use this for initialization
 	void Start () {
 		currentPoint = points[pointSelection];
+		textTip.SetActive (false);
+		tip = textTip.GetComponent<TextMesh> ();
 	}
 
 	// Update is called once per frame
@@ -26,14 +30,14 @@ public class DoorOpenByPass : MonoBehaviour {
 					doorMoving = true;
 					LevelToolValue.doorCardCount -= 1;
 				} else {
-					Debug.Log ("Need a Card to Open");
+					tip.text = "需要房卡开门";
 				}
 			} else if (NeedForKey) {
 				if (LevelToolValue.keyCount > 0) {
 					doorMoving = true;
 					LevelToolValue.keyCount -= 1;
 				} else {
-					Debug.Log ("Need a Key to Open");
+					tip.text = "需要钥匙开门";
 				}
 			} else if (!NeedForKey && !NeedForCard) {
 				doorMoving = true;
@@ -47,7 +51,8 @@ public class DoorOpenByPass : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.tag == "King") {
-			Debug.Log ("Press Space to Open");
+			textTip.SetActive (true);
+			tip.text = "按下 空格 开门";
 			Debug.Log (LevelToolValue.doorCardCount);
 			OpenRange = true;
 		}
@@ -55,6 +60,7 @@ public class DoorOpenByPass : MonoBehaviour {
 
 	void OnTriggerExit2D (Collider2D other) {
 		if (other.tag == "King") {
+			textTip.SetActive (false);
 			OpenRange = false;
 		}
 	}

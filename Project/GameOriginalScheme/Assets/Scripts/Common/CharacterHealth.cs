@@ -23,6 +23,8 @@ public class CharacterHealth : MonoBehaviour {
 	static readonly float invincilityTime = 1f;
 	static readonly float flickerTime = 0.1f;
 
+	public GameObject coinSpwanerPrefab;
+
 	void Start () {
 		health = maxHealth;
 	}
@@ -50,11 +52,15 @@ public class CharacterHealth : MonoBehaviour {
             {
                 skillBox.Relese();
             }
-			//if (gameObject.tag != "King" ) {
+			if (gameObject.tag != "King" ) {
+				if (gameObject.tag == "Enemy") {
+					Instantiate(coinSpwanerPrefab, transform.position, Quaternion.identity);
+				}
 				Destroy (gameObject);
-			//}
+			}
 
 		}
+
 	}
 
 	public void TakeDamage (float damage) {
@@ -93,4 +99,7 @@ public class CharacterHealth : MonoBehaviour {
 
 		invincible = false;
 	}
+
+
+
 }

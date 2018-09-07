@@ -99,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1549562191471630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17, y: 4.1, z: 10}
+  m_LocalPosition: {x: -1, y: 2.4, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4813192619787844}
@@ -151,7 +151,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1436393258692148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.81, y: -21.36, z: -15.75}
+  m_LocalPosition: {x: 23.81, y: -21.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4739798285333108}
@@ -288,6 +288,7 @@ MonoBehaviour:
   - {fileID: 4787239361145664}
   - {fileID: 4739798285333108}
   door: {fileID: 1162654851378496}
+  textTip: {fileID: 1549562191471630}
 --- !u!212 &212008375748895880
 SpriteRenderer:
   m_ObjectHideFlags: 1
