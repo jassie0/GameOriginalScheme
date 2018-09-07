@@ -8,10 +8,11 @@ public class MachineTrigger : MonoBehaviour {
 	public bool canRestore;
 	public bool machineOn = false;
 	Sprite barSprite;
+	public int hitTime;
+
 	// Use this for initialization
 	void Start () {
-		barSprite = gameObject.GetComponent<SpriteRenderer> ().sprite;
-		barSprite = state1;
+
 	}
 
 	// Update is called once per frame
@@ -20,17 +21,21 @@ public class MachineTrigger : MonoBehaviour {
 	}
 
 	public void StateChange () {
-		StartCoroutine (Change());
-
+		hitTime -= 1;
+		if (hitTime <= 0) {
+			StartCoroutine (Change());
+		}
 	}
 
 	IEnumerator Change () {
 		Debug.Log ("aaaaaa");
 		machineOn = !machineOn;
-		if (barSprite == state1) {
-			barSprite = state2;
-		} else {
-			barSprite = state1;
+		if (gameObject.GetComponent<SpriteRenderer> ().sprite == state1) {
+			gameObject.GetComponent<SpriteRenderer> ().sprite = state2;
+		} else if (canRestore == true){
+			gameObject.GetComponent<SpriteRenderer> ().sprite = state1;
+		} else if (!canRestore) {
+			machineOn = !machineOn;
 		}
 		yield return null;
 	}

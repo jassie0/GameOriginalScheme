@@ -303,6 +303,7 @@
      <Compile Include="Assets\Scripts\Trap\MachineTrigger.cs" />
      <Compile Include="Assets\Scripts\Trap\MechanicalDoor.cs" />
      <Compile Include="Assets\Scripts\Trap\MovingPlatform.cs" />
+     <Compile Include="Assets\Scripts\Trap\MovingTarget.cs" />
      <Compile Include="Assets\Scripts\Trap\PullBar.cs" />
      <Compile Include="Assets\Scripts\Trap\SpikeDamage.cs" />
      <Compile Include="Assets\Scripts\Trap\TrainingTrigger.cs" />
