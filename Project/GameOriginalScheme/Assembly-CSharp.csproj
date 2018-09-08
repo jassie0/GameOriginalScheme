@@ -247,6 +247,11 @@
      <Compile Include="Assets\Scripts\Attack\ShieldAttack.cs" />
      <Compile Include="Assets\Scripts\Attack\ShieldTrigger.cs" />
      <Compile Include="Assets\Scripts\Attack\SpritesOutline.cs" />
+     <Compile Include="Assets\Scripts\Collectable\CoinSpawner.cs" />
+     <Compile Include="Assets\Scripts\Collectable\CollectableObject.cs" />
+     <Compile Include="Assets\Scripts\Collectable\CollectionCount.cs" />
+     <Compile Include="Assets\Scripts\Collectable\DialogueCollection.cs" />
+     <Compile Include="Assets\Scripts\Collectable\GoldCollection.cs" />
      <Compile Include="Assets\Scripts\Common\CharacterHealth.cs" />
      <Compile Include="Assets\Scripts\Common\DistoryThisAfterAWhile.cs" />
      <Compile Include="Assets\Scripts\Common\DonotDestroy.cs" />
@@ -262,6 +267,7 @@
      <Compile Include="Assets\Scripts\Enemy\MonsterController.cs" />
      <Compile Include="Assets\Scripts\Enemy\SwordEnemyAttack.cs" />
      <Compile Include="Assets\Scripts\Manager\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\Manager\MoneyManger.cs" />
      <Compile Include="Assets\Scripts\Manager\MonsterManager.cs" />
      <Compile Include="Assets\Scripts\Manager\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Manager\TrainingManager.cs" />
@@ -297,6 +303,7 @@
      <Compile Include="Assets\Scripts\Trap\MachineTrigger.cs" />
      <Compile Include="Assets\Scripts\Trap\MechanicalDoor.cs" />
      <Compile Include="Assets\Scripts\Trap\MovingPlatform.cs" />
+     <Compile Include="Assets\Scripts\Trap\MovingTarget.cs" />
      <Compile Include="Assets\Scripts\Trap\PullBar.cs" />
      <Compile Include="Assets\Scripts\Trap\SpikeDamage.cs" />
      <Compile Include="Assets\Scripts\Trap\TrainingTrigger.cs" />

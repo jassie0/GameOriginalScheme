@@ -161,7 +161,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1766681647734650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.09387, y: -12.599924, z: 0}
+  m_LocalPosition: {x: 31.35, y: -9.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4465056273612158}
@@ -404,6 +404,8 @@ MonoBehaviour:
   characterSprite: {fileID: 0}
   barMask: {fileID: 4979238453919148}
   invincible: 0
+  coinSpwanerPrefab: {fileID: 1787296141070696, guid: 5da197f740725b54ba0c1a4c1a4a881e,
+    type: 2}
 --- !u!212 &212475880465050238
 SpriteRenderer:
   m_ObjectHideFlags: 1

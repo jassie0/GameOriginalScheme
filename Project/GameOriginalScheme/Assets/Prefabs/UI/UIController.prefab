@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_windowList:
-  - window: {fileID: 114137329078282514, guid: 55d49f9ff07c7424695eb1138c574b66, type: 2}
+  - window: {fileID: 114577074171940232, guid: db4a570cf08070746b0a3725147187f6, type: 2}
     type: 8
   - window: {fileID: 114023659579176812, guid: 811a72527fcb74c9a932a7b379d0768d, type: 2}
     type: 7

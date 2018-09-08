@@ -74,12 +74,12 @@ public class PlayerData : MonoBehaviour
         save.PrincessPos.Add(checkPointPos.z);
         save.CurrentScene = SceneManager.GetActiveScene().buildIndex;
 
-//        if (GameObject.FindWithTag("Collectable") != null)
-//        {
-//            save.CurrentCollection = CollectionCount.CurrentCollection;
-//            save.Collections = CollectionCount.Collection;
-//            save.SceneCollections = NextScene.SceneCollection;
-//        }
+        if (GameObject.FindWithTag("Collectable") != null)
+        {
+            save.CurrentCollection = CollectionCount.CurrentCollection;
+            save.Collections = CollectionCount.Collection;
+            save.SceneCollections = NextScene.SceneCollection;
+        }
 
         //Debug.Log("saved");
         //Debug.Log("2 + "+CollectionCount.CurrentCollection[2]);
