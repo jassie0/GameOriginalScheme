@@ -28,6 +28,7 @@ public class GroundSpike : MonoBehaviour {
 
 	IEnumerator SkikeShowUp() {
 		Instantiate(spikePrefab, transform.position, spikePrefab.rotation, this.transform.parent);
+		SoundManager.Instance().PlaySound("spikeOut");
 		yield return new WaitForSeconds(interval);
 		StartCoroutine(SkikeShowUp());
 	}

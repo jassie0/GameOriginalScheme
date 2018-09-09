@@ -37,8 +37,8 @@ GameObject:
   - component: {fileID: 4008251698561012}
   - component: {fileID: 50799676668742972}
   - component: {fileID: 61088768468002316}
-  - component: {fileID: 114581942321943646}
   - component: {fileID: 114007944074775328}
+  - component: {fileID: 114186859868339358}
   m_Layer: 0
   m_Name: ArrowGoUp
   m_TagString: Arrow
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Time: 2
---- !u!114 &114581942321943646
+--- !u!114 &114186859868339358
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -167,18 +167,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1824032368877552}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ecd45479fa8bd4a91b2bab6d1826c6, type: 3}
+  m_Script: {fileID: 11500000, guid: fcc118e9356396c40b7fcc0b21c831a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
   damage: 20
-  startTime: 0.3
-  attackPos: {fileID: 4796719511176700}
-  enemies:
-    serializedVersion: 2
-    m_Bits: 256
-  attackRange: 0.1
-  hurtEnemy: 0
   m_rigidbody: {fileID: 50799676668742972}
 --- !u!212 &212733194890773106
 SpriteRenderer:
@@ -213,7 +206,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 42d3bad4bc6f21f4cbedee2349f08245, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

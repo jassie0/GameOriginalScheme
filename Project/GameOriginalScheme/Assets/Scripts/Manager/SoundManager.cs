@@ -26,6 +26,11 @@ public class SoundManager : MonoSingleton<SoundManager>
     public AudioSource laserKnife;
     public AudioSource stoneMoving;
     public AudioSource archorAttack;
+	public AudioSource stepPad;
+	public AudioSource barMoving;
+	public AudioSource spikeOut;
+	public AudioSource arrowShoot;
+	public AudioSource getCoin;
 
     static Dictionary<string, AudioSource> dict;
 
@@ -45,7 +50,12 @@ public class SoundManager : MonoSingleton<SoundManager>
             {"laserGun", laserGun },
             {"laserKnife", laserKnife },
             {"archorAttack", archorAttack },
-            {"stoneMoving", stoneMoving }
+            {"stoneMoving", stoneMoving },
+			{"stepPad", stepPad },
+			{"barMoving", barMoving },
+			{"spikeOut", spikeOut },
+			{"arrowShoot", arrowShoot },
+			{"getCoin", getCoin }
         };
     }
 

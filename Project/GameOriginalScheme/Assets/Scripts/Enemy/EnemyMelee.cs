@@ -121,11 +121,11 @@ public class EnemyMelee : MonoBehaviour {
                 return;
             }
             health.GetComponent<CharacterHealth>().TakeDamage(damage);
-			Vector2 pushDir =   p.transform.position - transform.position;
-			pushDir =- pushDir.normalized;
-			if (p.tag == "Player" || p.tag == "King") {
-				player.GetComponent<Rigidbody2D> ().AddForce (-pushDir * hitForce * 100000000);
-			}
+//			Vector2 pushDir =   p.transform.position - transform.position;
+//			pushDir =- pushDir.normalized;
+////			if (p.tag == "Player" || p.tag == "King") {
+////				player.GetComponent<Rigidbody2D> ().AddForce (-pushDir * hitForce * 100000000);
+////			}
         }
 
     }

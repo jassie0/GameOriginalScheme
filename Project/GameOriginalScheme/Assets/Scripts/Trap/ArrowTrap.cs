@@ -39,7 +39,8 @@ public class ArrowTrap : MonoBehaviour {
 
 	IEnumerator ShootArrow() {
 		Transform arrow= Instantiate(arrowPrefab, arrowSpawnPoint.position, arrowPrefab.rotation, this.transform.parent);
-		arrow.GetComponent<Arrow>().speed = arrowSpeed;
+		arrow.GetComponent<EnemyArrow>().speed = arrowSpeed;
+		//SoundManager.Instance().PlaySound("arrowShoot");
 		yield return new WaitForSeconds(interval);
 		StartCoroutine(ShootArrow());
 	}

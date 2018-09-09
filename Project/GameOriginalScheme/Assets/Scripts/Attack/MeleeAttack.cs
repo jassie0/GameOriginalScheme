@@ -115,9 +115,9 @@ public class MeleeAttack : MonoBehaviour {
 
 			Vector2 pushDir =   enemiesToDamage[i].transform.position - transform.position;
 			pushDir =- pushDir.normalized;
-			if (enemiesToDamage [i].tag == "Player" || enemiesToDamage [i].tag == "King") {
+			if (enemiesToDamage [i].tag == "Enemy") {
 				Debug.Log ("back");
-				player.GetComponent<Rigidbody2D> ().AddForce (-pushDir * hitForce * 100000000);
+				enemiesToDamage [i].GetComponent<Rigidbody2D> ().AddForce (-pushDir * hitForce * 100000000);
 			}
 
         }
