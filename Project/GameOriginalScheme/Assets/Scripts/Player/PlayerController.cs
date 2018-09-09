@@ -43,12 +43,15 @@ public class PlayerController : MonoSingleton<PlayerController>
 	{
 		InitCurrentPosition();
         _player = gameObject;
+
+        
 	}
 
 	void Start()
 	{
 		Time.timeScale = 1;
 		animator = animSprite.GetComponent<Animator> ();
+        ResetSkillBoxDistance();
         ResetSkillBoxDic(m_targetKey);
 		PlayerAlive = GetComponent<DieAndRespawnController> ().Alive;
     }
@@ -150,6 +153,14 @@ public class PlayerController : MonoSingleton<PlayerController>
 			animator.SetFloat ("LastMoveY", lastMove.y);     
 		}
 	}
+
+    public void ResetSkillBoxDistance()
+    {
+        m_skillBox[0].transform.localPosition = new Vector3(0, m_radius);
+        m_skillBox[1].transform.localPosition = new Vector3(m_radius, 0);
+        m_skillBox[2].transform.localPosition = new Vector3(0, -m_radius);
+        m_skillBox[3].transform.localPosition = new Vector3(-m_radius, 0);
+    }
 
     public static GameObject GetPlayerObject()
     {

@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 50020219315446102}
   - component: {fileID: 61773600547509646}
   - component: {fileID: 114252224013820476}
-  - component: {fileID: 114517559157389306}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Arrow
@@ -158,28 +157,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ecd45479fa8bd4a91b2bab6d1826c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 10
   damage: 20
-  startTime: 0.5
+  timeDuration: 3
   attackPos: {fileID: 4978829855845886}
   enemies:
     serializedVersion: 2
     m_Bits: 4608
   attackRange: 0.1
-  hurtEnemy: 0
   m_rigidbody: {fileID: 50020219315446102}
---- !u!114 &114517559157389306
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1078766680536524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a66d1473853f24192b290e4cd90a6f59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Time: 2
 --- !u!212 &212368782697146732
 SpriteRenderer:
   m_ObjectHideFlags: 1
