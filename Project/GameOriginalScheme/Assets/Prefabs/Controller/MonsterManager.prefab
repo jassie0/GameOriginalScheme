@@ -68,6 +68,7 @@ MonoBehaviour:
   - {fileID: 1085853850984664, guid: 9a198cc2a3878402ba8c5fd08cde1219, type: 2}
   - {fileID: 1164039768839150, guid: 51b6e5886441c451a8e52542802c8642, type: 2}
   - {fileID: 1956412429606240, guid: ef21468f04fb14785bf21d01bb18d33f, type: 2}
+  - {fileID: 1956412429606240, guid: cc7089214d7853f40bbf40bd45c3dd60, type: 2}
   _dingSpawner:
   - {fileID: 0}
   - {fileID: 0}

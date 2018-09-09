@@ -14,5 +14,7 @@ public class BossAttackingSwitch : MonoBehaviour
     public void EndAttack()
     {
         m_bossController.IsAttacking = false;
+        m_bossController.ResetTimeTick();
     }
+
 }
