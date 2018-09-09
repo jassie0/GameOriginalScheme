@@ -5,6 +5,7 @@ using UnityEngine;
 public class DingBox : MonoBehaviour 
 {
     public Profession m_Profession;
+    public bool m_destoryAfterEat = true;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,7 +18,10 @@ public class DingBox : MonoBehaviour
             {
                 SoundManager.Instance().PlaySound("dingBox");
                 SoundManager.Instance().PlaySound("getSoilder");
-                Destroy(this.gameObject);
+                if (m_destoryAfterEat)
+                {
+                    Destroy(this.gameObject);
+                }
             }
         }
     }

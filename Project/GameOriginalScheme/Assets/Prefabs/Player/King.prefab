@@ -548,7 +548,7 @@ MonoBehaviour:
   - {fileID: 114654268603087144}
   - {fileID: 114641404249699516}
   angle: 3
-  m_radius: 2
+  m_radius: 1.5
   playerMoving: 0
   lastMove: {x: 0, y: 0}
   PlayerAlive: 0
