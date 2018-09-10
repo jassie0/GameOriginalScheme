@@ -7,9 +7,6 @@ using UnityEngine.UI;
 public class StartPlay : UIWindow 
 {
 	public AudioClip sfxButton;
-	public GameObject loadingScreen;
-	public Slider slider;
-	public Text progressText;
 
     private bool oneshotSfx = true;
 
@@ -37,15 +34,15 @@ public class StartPlay : UIWindow
         }
 	}
 
-	IEnumerator LoadAsyn (){
-		AsyncOperation operation = SceneManager.LoadSceneAsync (1);
-		loadingScreen.SetActive (true);
-		while(!operation.isDone) {
-			float progress = Mathf.Clamp01 (operation.progress / .9f);
-			slider.value = progress;
-			progressText.text = progress * 100 + "%";
-			yield return null;
-		}
-	}
+	//IEnumerator LoadAsyn (){
+	//	AsyncOperation operation = SceneManager.LoadSceneAsync (1);
+	//	loadingScreen.SetActive (true);
+	//	while(!operation.isDone) {
+	//		float progress = Mathf.Clamp01 (operation.progress / .9f);
+	//		slider.value = progress;
+	//		progressText.text = progress * 100 + "%";
+	//		yield return null;
+	//	}
+	//}
 		
 }

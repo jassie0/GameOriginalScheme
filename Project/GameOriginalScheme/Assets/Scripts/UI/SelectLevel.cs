@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SelectLevel : UIWindow 
 {
     public List<Button> m_buttonList;
+    public Button m_bossLevel;
 
     private void OnEnable()
     {
@@ -50,5 +51,9 @@ public class SelectLevel : UIWindow
         GameController.instance.SetNowScene(1);
     }
 
-    
+    public void OnClick_BossLevel()
+    {
+        UIControl.Instance().LoadScene("Boss");
+        UIControl.Instance().CloseWindow(UI_TYPE.SelectLevel);
+    }
 }

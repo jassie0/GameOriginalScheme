@@ -145,10 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TYPE: 1
-  sfxButton: {fileID: 8300000, guid: 8e8218f6a01e74bd5894788e3f912635, type: 3}
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
+  sfxButton: {fileID: 8300000, guid: 360937f1ef291cc4d86a4840f63d4ce8, type: 3}
 --- !u!114 &114798369100850648
 MonoBehaviour:
   m_ObjectHideFlags: 1

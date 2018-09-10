@@ -565,6 +565,7 @@
     <Compile Include="Assets\Scripts\Trap\DoorAnimPause.cs" />
     <Compile Include="Assets\Scripts\Trap\DoorOpenByPass.cs" />
     <Compile Include="Assets\Scripts\Trap\DoorRoration.cs" />
+    <Compile Include="Assets\Scripts\Trap\EnemyArrow.cs" />
     <Compile Include="Assets\Scripts\Trap\GroundSpike.cs" />
     <Compile Include="Assets\Scripts\Trap\GroundTrap.cs" />
     <Compile Include="Assets\Scripts\Trap\MachineTrigger.cs" />
