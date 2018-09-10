@@ -30,35 +30,32 @@ public class BossController : MonoBehaviour
     private float m_trackTimeTick = 0;
 
     public float m_attackDistance = 10.5f;
+    public GameObject m_bossMouse;
+    public GameObject m_laserPrefab;
+    public GameObject m_traceLaserPrefab;
 
     private Rigidbody2D m_boss;
     private CharacterHealth m_characterHealth;
     private PlayerController m_playerController;
-    //private BossState m_bossState = BossState.One;
-    //private BossSkill m_bossSkill;
     private const float m_bossMoveDistance = 6.5f;
-    //private bool Moving = false;
 
     private bool isAttacking = false;
     public bool IsAttacking { set { isAttacking = value; } get { return isAttacking; } }
-    private float BossYPosition;
-   
 
     private void Awake()
     {
         m_boss = GetComponent<Rigidbody2D>();
         m_characterHealth = GetComponent<CharacterHealth>();
         m_playerController = PlayerController.Instance().GetComponent<PlayerController>();
-        BossYPosition = transform.position.y;
         m_trackTimeTick = m_trackTime;
     }
 
     private void Update()
     {
-        //if (m_BossAnimator == null)
-        //{
-        //    return;
-        //}
+        if (m_BossAnimator == null)
+        {
+            return;
+        }
 
         if (m_playerController == null)
         {
@@ -97,22 +94,20 @@ public class BossController : MonoBehaviour
 
     public void MeleeAttack()
     {
-        int bossSkill = Random.Range((int)BossSkill.LeftArmPat, (int)BossSkill.RightArmSweep);
+        int bossSkill = Random.Range((int)BossSkill.LeftArmPat, (int)BossSkill.BossLaser);
 
         m_BossAnimator.SetBool("Moving", false);
         m_BossAnimator.SetInteger("SkillID", bossSkill);
         m_BossAnimator.SetTrigger("Attack");
-        //m_trackTimeTick = m_trackTime;
     }
 
     public void LongDistanceAttack()
     {
-        int bossSkill = Random.Range((int)BossSkill.BossLaser, (int)BossSkill.BossTraceLaser);
+        int bossSkill = Random.Range((int)BossSkill.BossLaser, (int)BossSkill.Max);
 
         m_BossAnimator.SetBool("Moving", false);
         m_BossAnimator.SetInteger("SkillID", bossSkill);
         m_BossAnimator.SetTrigger("Attack");
-        //m_trackTimeTick = m_trackTime;
     }
 
     public void ResetTimeTick()
@@ -120,7 +115,23 @@ public class BossController : MonoBehaviour
         m_trackTimeTick = m_trackTime;
     }
 
-    /*
+    public void LaserAttack()
+    {
+        if (m_bossMouse != null)
+        {
+            Instantiate(m_laserPrefab, m_bossMouse.transform.position, Quaternion.identity);
+        }
+    }
+
+    public void TraceLaserAttack()
+    {
+        if (m_bossMouse != null)
+        {
+            Instantiate(m_traceLaserPrefab, m_bossMouse.transform.position, Quaternion.identity);
+        }
+    }
+
+    /* BOSS多状态切换暂时注释
     IEnumerator BossAttack()
     {
         while (m_characterHealth != null)

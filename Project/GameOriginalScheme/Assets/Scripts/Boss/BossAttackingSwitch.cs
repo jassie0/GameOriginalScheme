@@ -17,4 +17,13 @@ public class BossAttackingSwitch : MonoBehaviour
         m_bossController.ResetTimeTick();
     }
 
+    public void LaserAttack()
+    {
+        m_bossController.LaserAttack();
+    }
+
+    public void TraceLaserAttack()
+    {
+        m_bossController.TraceLaserAttack();
+    }
 }

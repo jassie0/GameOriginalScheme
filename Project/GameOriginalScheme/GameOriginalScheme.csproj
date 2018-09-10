@@ -502,6 +502,7 @@
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Scripts\Attack\AOEAttack.cs" />
     <Compile Include="Assets\Scripts\Attack\Arrow.cs" />
+    <Compile Include="Assets\Scripts\Attack\BossTraceLaser.cs" />
     <Compile Include="Assets\Scripts\Attack\BowAttack.cs" />
     <Compile Include="Assets\Scripts\Attack\DistCompare.cs" />
     <Compile Include="Assets\Scripts\Attack\LaserBullet.cs" />
