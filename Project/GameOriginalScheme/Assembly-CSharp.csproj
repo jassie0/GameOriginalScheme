@@ -247,6 +247,9 @@
      <Compile Include="Assets\Scripts\Attack\ShieldAttack.cs" />
      <Compile Include="Assets\Scripts\Attack\ShieldTrigger.cs" />
      <Compile Include="Assets\Scripts\Attack\SpritesOutline.cs" />
+     <Compile Include="Assets\Scripts\Boss\BossAttackingSwitch.cs" />
+     <Compile Include="Assets\Scripts\Boss\BossController.cs" />
+     <Compile Include="Assets\Scripts\Boss\BossTrigger.cs" />
      <Compile Include="Assets\Scripts\Collectable\CoinSpawner.cs" />
      <Compile Include="Assets\Scripts\Collectable\CollectableObject.cs" />
      <Compile Include="Assets\Scripts\Collectable\CollectionCount.cs" />
@@ -272,6 +275,7 @@
      <Compile Include="Assets\Scripts\Manager\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Manager\TrainingManager.cs" />
      <Compile Include="Assets\Scripts\Player\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Player\CameraShake.cs" />
      <Compile Include="Assets\Scripts\Player\HurtPlayer.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Player\SkillBox.cs" />
@@ -298,6 +302,7 @@
      <Compile Include="Assets\Scripts\Trap\DoorAnimPause.cs" />
      <Compile Include="Assets\Scripts\Trap\DoorOpenByPass.cs" />
      <Compile Include="Assets\Scripts\Trap\DoorRoration.cs" />
+     <Compile Include="Assets\Scripts\Trap\EnemyArrow.cs" />
      <Compile Include="Assets\Scripts\Trap\GroundSpike.cs" />
      <Compile Include="Assets\Scripts\Trap\GroundTrap.cs" />
      <Compile Include="Assets\Scripts\Trap\MachineTrigger.cs" />

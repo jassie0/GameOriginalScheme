@@ -32,8 +32,10 @@ public class MachineTrigger : MonoBehaviour {
 		machineOn = !machineOn;
 		if (gameObject.GetComponent<SpriteRenderer> ().sprite == state1) {
 			gameObject.GetComponent<SpriteRenderer> ().sprite = state2;
+			SoundManager.Instance().PlaySound("barMoving");
 		} else if (canRestore == true){
 			gameObject.GetComponent<SpriteRenderer> ().sprite = state1;
+			SoundManager.Instance().PlaySound("barMoving");
 		} else if (!canRestore) {
 			machineOn = !machineOn;
 		}
@@ -46,10 +48,11 @@ public class MachineTrigger : MonoBehaviour {
 			if (gameObject.GetComponent<SpriteRenderer> ().sprite == state1) {
 				gameObject.GetComponent<SpriteRenderer> ().sprite = state2;
 				machineOn = !machineOn;
-
+				SoundManager.Instance().PlaySound("stepPad");
 			} else if (canRestore == true){
 				gameObject.GetComponent<SpriteRenderer> ().sprite = state1;
 				machineOn = !machineOn;
+				SoundManager.Instance().PlaySound("stepPad");
 			}
 		}	
 	}

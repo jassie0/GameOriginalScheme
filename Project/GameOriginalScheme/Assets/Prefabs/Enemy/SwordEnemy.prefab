@@ -208,7 +208,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -404,8 +404,6 @@ MonoBehaviour:
   characterSprite: {fileID: 0}
   barMask: {fileID: 4979238453919148}
   invincible: 0
-  coinSpwanerPrefab: {fileID: 1787296141070696, guid: 5da197f740725b54ba0c1a4c1a4a881e,
-    type: 2}
 --- !u!212 &212475880465050238
 SpriteRenderer:
   m_ObjectHideFlags: 1

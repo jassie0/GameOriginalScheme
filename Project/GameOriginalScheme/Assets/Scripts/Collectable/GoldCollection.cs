@@ -18,6 +18,7 @@ public class GoldCollection : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.gameObject.tag == "King"){
 			moneyManager.AddMoney (value);
+			SoundManager.Instance().PlaySound("getCoin");
 			Destroy (gameObject);
 		}
 	}

@@ -37,8 +37,8 @@ GameObject:
   - component: {fileID: 4789229631115790}
   - component: {fileID: 50203466066708760}
   - component: {fileID: 61560683218814402}
-  - component: {fileID: 114059268183206570}
   - component: {fileID: 114202907702256024}
+  - component: {fileID: 114457614764607062}
   m_Layer: 0
   m_Name: ArrowGoRight
   m_TagString: Arrow
@@ -147,27 +147,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8728601, y: 7.5363283}
   m_EdgeRadius: 0
---- !u!114 &114059268183206570
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1880057356231732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ecd45479fa8bd4a91b2bab6d1826c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  damage: 20
-  startTime: 0.3
-  attackPos: {fileID: 4864342925671400}
-  enemies:
-    serializedVersion: 2
-    m_Bits: 256
-  attackRange: 0.1
-  hurtEnemy: 0
-  m_rigidbody: {fileID: 50203466066708760}
 --- !u!114 &114202907702256024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,6 +159,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Time: 2
+--- !u!114 &114457614764607062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1880057356231732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc118e9356396c40b7fcc0b21c831a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  damage: 20
+  m_rigidbody: {fileID: 50203466066708760}
 --- !u!212 &212458578969411372
 SpriteRenderer:
   m_ObjectHideFlags: 1
