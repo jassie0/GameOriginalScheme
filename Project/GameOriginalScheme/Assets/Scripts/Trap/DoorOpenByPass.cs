@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorOpenByPass : MonoBehaviour {
-
-	public bool NeedForCard;
-	public bool NeedForKey;
 	public bool OpenRange;
 	public bool doorMoving;
 	public Transform currentPoint;
@@ -14,6 +11,7 @@ public class DoorOpenByPass : MonoBehaviour {
 	public Transform[] points;
 	public GameObject door;
 	public GameObject textTip;
+	public GameObject doorCloseLight;
 	TextMesh tip;
 	// Use this for initialization
 	void Start () {
@@ -25,26 +23,38 @@ public class DoorOpenByPass : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Space) && OpenRange) {
-			if (NeedForCard) {
-				if (LevelToolValue.doorCardCount > 0) {
+			if (gameObject.tag == "GreenDoor") {
+				if (LevelToolValue.greenCardCount > 0) {
 					doorMoving = true;
-					LevelToolValue.doorCardCount -= 1;
 				} else {
 					tip.text = "需要房卡开门";
 				}
-			} else if (NeedForKey) {
+			} else if (gameObject.tag == "KeyDoor") {
 				if (LevelToolValue.keyCount > 0) {
 					doorMoving = true;
-					LevelToolValue.keyCount -= 1;
 				} else {
 					tip.text = "需要钥匙开门";
 				}
-			} else if (!NeedForKey && !NeedForCard) {
+			} else if (gameObject.tag == "PurpleDoor") {
+				if (LevelToolValue.keyCount > 0) {
+					doorMoving = true;
+				} else {
+					tip.text = "需要钥匙开门";
+				}
+			} else if (gameObject.tag == "WhiteDoor") {
+				if (LevelToolValue.keyCount > 0) {
+					doorMoving = true;
+				} else {
+					tip.text = "需要钥匙开门";
+				}
+			} else if (gameObject.tag == "CommonDoor"){
 				doorMoving = true;
 			}
 		}
 		if (doorMoving) {
 			door.transform.position = Vector3.MoveTowards (door.transform.position, points [0].position, Time.deltaTime * movingSpeed);
+			textTip.SetActive (false);
+			doorCloseLight.SetActive (false);
 			//doorMoving = false;
 		}
 	}

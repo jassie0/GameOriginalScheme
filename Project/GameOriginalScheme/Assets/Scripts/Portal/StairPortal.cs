@@ -17,7 +17,7 @@ public class StairPortal : MonoBehaviour {
 	}
 
 	IEnumerator Teleport () {
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (0.15f);
 		player.transform.position = new Vector2 (Portal.transform.position.x, Portal.transform.position.y);
 	}
 }

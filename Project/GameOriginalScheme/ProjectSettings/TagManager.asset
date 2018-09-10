@@ -14,8 +14,15 @@ TagManager:
   - Pad
   - King
   - Shield
-  - Card
   - Collectable
+  - GreenCard
+  - PurpleCard
+  - WhiteCard
+  - GreenDoor
+  - KeyDoor
+  - PurpleDoor
+  - WhiteDoor
+  - CommonDoor
   layers:
   - Default
   - TransparentFX

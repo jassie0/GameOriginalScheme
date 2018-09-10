@@ -16,11 +16,20 @@ public class DoorOpenTool : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.tag == "King") {
-			if (gameObject.tag == "Card") {
+			if (gameObject.tag == "GreenCard") {
+				LevelToolValue.greenCardCount += 1;
 				LevelToolValue.doorCardCount += 1;
 				Destroy (gameObject);
 			} else if (gameObject.tag == "Key") {
 				LevelToolValue.keyCount += 1;
+				Destroy (gameObject);
+			} else if (gameObject.tag == "PurpleCard") {
+				LevelToolValue.purpleCardCount += 1;
+				LevelToolValue.doorCardCount += 1;
+				Destroy (gameObject);
+			} else if (gameObject.tag == "WhiteCard") {
+				LevelToolValue.whiteCardCount += 1;
+				LevelToolValue.doorCardCount += 1;
 				Destroy (gameObject);
 			}
 		}

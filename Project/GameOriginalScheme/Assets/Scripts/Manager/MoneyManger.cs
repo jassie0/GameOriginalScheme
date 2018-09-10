@@ -8,6 +8,7 @@ public class MoneyManger : MonoBehaviour {
 	public int currentGold;
 	// Use this for initialization
 	void Start () {
+		//PlayerPrefs.SetInt ("CurrentMoney", 0);
 		if (PlayerPrefs.HasKey ("CurrentMoney")) {
 			currentGold = PlayerPrefs.GetInt ("CurrentMoney");
 		} else {
