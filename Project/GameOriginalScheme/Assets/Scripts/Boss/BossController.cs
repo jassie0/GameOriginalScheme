@@ -28,13 +28,11 @@ public class BossController : MonoBehaviour
     public float m_trackTime = 3f;
     public float m_trackDistance = 0.5f;
     private float m_trackTimeTick = 0;
-
-    public float m_attackDistance = 10.5f;
     public GameObject m_bossMouse;
     public GameObject m_laserPrefab;
     public GameObject m_traceLaserPrefab;
 
-    private Rigidbody2D m_boss;
+    //private Rigidbody2D m_boss;
     private CharacterHealth m_characterHealth;
     private PlayerController m_playerController;
     private const float m_bossMoveDistance = 6.5f;
@@ -44,7 +42,7 @@ public class BossController : MonoBehaviour
 
     private void Awake()
     {
-        m_boss = GetComponent<Rigidbody2D>();
+        //m_boss = GetComponent<Rigidbody2D>();
         m_characterHealth = GetComponent<CharacterHealth>();
         m_playerController = PlayerController.Instance().GetComponent<PlayerController>();
         m_trackTimeTick = m_trackTime;
@@ -65,23 +63,31 @@ public class BossController : MonoBehaviour
         if (m_trackTimeTick > 0)
         {
             m_trackTimeTick -= Time.deltaTime;
-            MoveTo();
-            return;
+
+            if (!isAttacking)
+            {
+                MoveTo();
+            }
+        }
+        else
+        {
+            Attack();
+            m_trackTimeTick = m_trackTime;
         }
 
-        Attack();
     }
 
     public void MoveTo()
     {
         Vector2 dir = new Vector2((m_playerController.transform.position - transform.position).x, 0);
         Vector2 targetPos = (Vector2)transform.position + dir * m_moveSpeed * Time.deltaTime;
-        m_boss.MovePosition(targetPos);
+        //m_boss.MovePosition(targetPos);
+        gameObject.transform.position = targetPos;
     }
 
     public void Attack()
     {
-        float tempDistance = Mathf.Abs(m_playerController.transform.position.x - transform.position.x);
+        float tempDistance = Vector2.Distance( (Vector2)m_playerController.transform.position ,(Vector2)transform.position);
         if (tempDistance < m_trackDistance)
         {
             MeleeAttack();
@@ -96,7 +102,7 @@ public class BossController : MonoBehaviour
     {
         int bossSkill = Random.Range((int)BossSkill.LeftArmPat, (int)BossSkill.BossLaser);
 
-        m_BossAnimator.SetBool("Moving", false);
+        //m_BossAnimator.SetBool("Moving", false);
         m_BossAnimator.SetInteger("SkillID", bossSkill);
         m_BossAnimator.SetTrigger("Attack");
     }
@@ -105,7 +111,7 @@ public class BossController : MonoBehaviour
     {
         int bossSkill = Random.Range((int)BossSkill.BossLaser, (int)BossSkill.Max);
 
-        m_BossAnimator.SetBool("Moving", false);
+        //m_BossAnimator.SetBool("Moving", false);
         m_BossAnimator.SetInteger("SkillID", bossSkill);
         m_BossAnimator.SetTrigger("Attack");
     }

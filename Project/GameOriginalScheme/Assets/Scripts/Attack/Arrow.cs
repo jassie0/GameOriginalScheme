@@ -41,7 +41,7 @@ public class Arrow : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other)
     {
-		if (other.tag == "Enemy" /*|| other.tag == "Player" || other.tag == "King"*/)
+		if (other.tag == "Enemy" || other.tag == "Boss" /*|| other.tag == "King"*/)
         {
             other.GetComponent<CharacterHealth>().TakeDamage(damage);
             Destroy(gameObject);

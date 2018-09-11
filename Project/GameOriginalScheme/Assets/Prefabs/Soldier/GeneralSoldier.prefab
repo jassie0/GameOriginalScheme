@@ -587,7 +587,7 @@ MonoBehaviour:
   endPos: {fileID: 4681858469026924}
   enemies:
     serializedVersion: 2
-    m_Bits: 4608
+    m_Bits: 12800
   damage: 30
   charSprite: {fileID: 1853273639280446}
   defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}

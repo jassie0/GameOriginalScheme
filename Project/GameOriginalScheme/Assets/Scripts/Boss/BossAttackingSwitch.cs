@@ -5,6 +5,7 @@ using UnityEngine;
 public class BossAttackingSwitch : MonoBehaviour
 {
     public BossController m_bossController;
+    public Animator m_animator;
 
     public void BeginAttack()
     {
@@ -14,7 +15,7 @@ public class BossAttackingSwitch : MonoBehaviour
     public void EndAttack()
     {
         m_bossController.IsAttacking = false;
-        m_bossController.ResetTimeTick();
+        //m_bossController.ResetTimeTick();
     }
 
     public void LaserAttack()

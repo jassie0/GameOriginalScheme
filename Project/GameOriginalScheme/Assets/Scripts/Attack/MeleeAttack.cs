@@ -34,7 +34,6 @@ public class MeleeAttack : MonoBehaviour {
 		
 	}
 
-
     public void Attack()
     {
         if (timeBtwAttack > 0)
@@ -118,7 +117,7 @@ public class MeleeAttack : MonoBehaviour {
 			if (enemiesToDamage [i].tag == "Enemy") {
 				Debug.Log ("back");
 				enemiesToDamage [i].GetComponent<Rigidbody2D> ().AddForce (-pushDir * hitForce * 100000000);
-			}
+            }
 
         }
 

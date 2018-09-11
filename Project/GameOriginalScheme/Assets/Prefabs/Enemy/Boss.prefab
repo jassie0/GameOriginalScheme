@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4921173978944812}
   - component: {fileID: 331694164644307056}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: barMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,9 +38,9 @@ GameObject:
   - component: {fileID: 212211366258498074}
   - component: {fileID: 95591637197859040}
   - component: {fileID: 114183858764878068}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Boss_Idle
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,12 +54,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4788728390310174}
   - component: {fileID: 114242101518108210}
-  - component: {fileID: 50883487101334876}
-  - component: {fileID: 61135481058728050}
   - component: {fileID: 114845807482260358}
-  m_Layer: 9
+  - component: {fileID: 50015282916482274}
+  - component: {fileID: 61209782373269150}
+  m_Layer: 13
   m_Name: Boss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4717761672067192}
   - component: {fileID: 212544543262121392}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: healthbar_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,9 +89,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4603274096194794}
   - component: {fileID: 212869949537547448}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: healthbar_0 (1)
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,9 +104,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4485334112314896}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: BossMouse
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,7 +194,7 @@ Transform:
   m_Father: {fileID: 4603274096194794}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50883487101334876
+--- !u!50 &50015282916482274
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -213,31 +213,31 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &61135481058728050
+  m_Constraints: 7
+--- !u!61 &61209782373269150
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1379848370440220}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05752182, y: 2.619481}
+  m_Offset: {x: -0.052892208, y: 2.0613673}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.61, y: 8.64}
+    newSize: {x: 0.61, y: 8.64}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.9607677, y: 7.1306515}
+  m_Size: {x: 4.8564568, y: 5.962357}
   m_EdgeRadius: 0
 --- !u!95 &95591637197859040
 Animator:
@@ -268,6 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bossController: {fileID: 114242101518108210}
+  m_animator: {fileID: 0}
 --- !u!114 &114242101518108210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,9 +282,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BossAnimator: {fileID: 95591637197859040}
   m_moveSpeed: 0.6
-  m_trackTime: 2
-  m_trackDistance: 1
-  m_attackDistance: 15
+  m_trackTime: 3
+  m_trackDistance: 5
   m_bossMouse: {fileID: 1863261402900688}
   m_laserPrefab: {fileID: 1839962794150800, guid: bb969641bb7023c4fbba57cb9863bcb3,
     type: 2}
@@ -478,7 +478,7 @@ SpriteMask:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1f1f8a66c651d4ec6a870fcb4ae665bf, type: 3}
-  m_MaskAlphaCutoff: 0.2
+  m_MaskAlphaCutoff: 1
   m_FrontSortingLayerID: 0
   m_BackSortingLayerID: 0
   m_FrontSortingLayer: 0
