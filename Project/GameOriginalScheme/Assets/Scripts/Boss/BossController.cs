@@ -31,6 +31,8 @@ public class BossController : MonoBehaviour
     public GameObject m_bossMouse;
     public GameObject m_laserPrefab;
     public GameObject m_traceLaserPrefab;
+    public float m_patDamage;
+    public float m_sweepDamage;
 
     //private Rigidbody2D m_boss;
     private CharacterHealth m_characterHealth;
@@ -82,7 +84,7 @@ public class BossController : MonoBehaviour
         Vector2 dir = new Vector2((m_playerController.transform.position - transform.position).x, 0);
         Vector2 targetPos = (Vector2)transform.position + dir * m_moveSpeed * Time.deltaTime;
         //m_boss.MovePosition(targetPos);
-        gameObject.transform.position = targetPos;
+        transform.position = targetPos;
     }
 
     public void Attack()

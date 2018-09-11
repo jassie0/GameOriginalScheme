@@ -512,6 +512,7 @@
     <Compile Include="Assets\Scripts\Attack\SpritesOutline.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAttackingSwitch.cs" />
     <Compile Include="Assets\Scripts\Boss\BossController.cs" />
+    <Compile Include="Assets\Scripts\Boss\BossPatCollider.cs" />
     <Compile Include="Assets\Scripts\Boss\BossTrigger.cs" />
     <Compile Include="Assets\Scripts\Collectable\CoinSpawner.cs" />
     <Compile Include="Assets\Scripts\Collectable\CollectableObject.cs" />
