@@ -10738,11 +10738,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4105130627287608, guid: bec645ac80ef68243913709fd6fc2f43, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -21.82222
+      value: -28.93333
       objectReference: {fileID: 0}
     - target: {fileID: 4105130627287608, guid: bec645ac80ef68243913709fd6fc2f43, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 14.5
+      value: 18.5
       objectReference: {fileID: 0}
     - target: {fileID: 4105130627287608, guid: bec645ac80ef68243913709fd6fc2f43, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10771,6 +10771,11 @@ Prefab:
     - target: {fileID: 1999344489621136, guid: bec645ac80ef68243913709fd6fc2f43, type: 2}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 20669982881884924, guid: bec645ac80ef68243913709fd6fc2f43,
+        type: 2}
+      propertyPath: orthographic size
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bec645ac80ef68243913709fd6fc2f43, type: 2}
@@ -12119,6 +12124,21 @@ Prefab:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 1066701777}
+    - target: {fileID: 114599926703239054, guid: b26b4f4917252d24aa13353041f7ff18,
+        type: 2}
+      propertyPath: m_Lens.OrthographicSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114566932135103282, guid: b26b4f4917252d24aa13353041f7ff18,
+        type: 2}
+      propertyPath: m_DeadZoneWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114566932135103282, guid: b26b4f4917252d24aa13353041f7ff18,
+        type: 2}
+      propertyPath: m_DeadZoneHeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b26b4f4917252d24aa13353041f7ff18, type: 2}
   m_IsPrefabParent: 0
