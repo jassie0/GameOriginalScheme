@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4638077353535534}
   - component: {fileID: 212555255637425196}
   - component: {fileID: 58865904157653066}
-  m_Layer: 0
+  - component: {fileID: 114166019972338772}
+  m_Layer: 10
   m_Name: Wall12
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,6 +57,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5.6050005
+--- !u!114 &114166019972338772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501037312046598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 220062a36697820458f318d88f2c6310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212555255637425196
 SpriteRenderer:
   m_ObjectHideFlags: 1
