@@ -218,6 +218,9 @@
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>D:/Softwares/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+ <HintPath>D:/Documents/Unity Projects/GameOriginalScheme/Project/GameOriginalScheme/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/xuzha/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
@@ -251,6 +254,12 @@
       <Project>{D59CCD03-8ABF-63F8-31EE-A373CAF7D0A8}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
       <Project>{136462C6-55AE-9A84-68F8-4BBCA0A026A5}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{77B9D423-AA41-AABA-56FC-AD5216B2D07B}</Project>      <Name>AstarPathfindingProject</Name>    </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{EAA3E25A-04BB-34E8-FDEA-988CD7A7908D}</Project>      <Name>PackageToolsEditor</Name>    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{BBF0A2A0-1D9C-6069-80AC-05C423E649AF}</Project>      <Name>AstarPathfindingProjectEditor</Name>    </ProjectReference>
     <ProjectReference Include="PackageManagerAssembly.csproj">
       <Project>{A271D400-1247-027D-B2FE-6E96EB3DA6AE}</Project>      <Name>PackageManagerAssembly</Name>    </ProjectReference>
   </ItemGroup>
