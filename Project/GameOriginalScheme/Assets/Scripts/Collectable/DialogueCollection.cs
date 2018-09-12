@@ -39,7 +39,7 @@ public class DialogueCollection : MonoBehaviour {
 			dlgText.text = words[0];
 			index++;
 		}
-		//Time.timeScale = 0;
+		Time.timeScale = 0;
 	}
 
 	public void DisableDialogue()
@@ -51,7 +51,7 @@ public class DialogueCollection : MonoBehaviour {
 		}
 		else
 		{
-			//Time.timeScale = 1;
+			Time.timeScale = 1;
 			dialogue.SetActive(false);
 		}
 	}

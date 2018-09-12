@@ -10,7 +10,7 @@ public class SwordSoldierAttack : MonoBehaviour {
     {
         if (m_MeleeAttack != null)
         {
-            Debug.Log("SwordAttack");
+            //Debug.Log("SwordAttack");
             m_MeleeAttack.TakeDamage();
         }
 

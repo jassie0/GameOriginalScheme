@@ -9,17 +9,26 @@ public class LaserBullet : MonoBehaviour {
 	public float damage;
     public float duringTime = 15;
 
+    private Vector2 dir;
+
 	void Start () {		
         player = PlayerController.GetPlayerObject().transform;
 		target = new Vector2 (player.transform.position.x, player.transform.position.y);
-	}
+
+        dir = (target - (Vector2)transform.position).normalized;
+    }
 	
 	void Update () {
-		transform.position = Vector2.MoveTowards (transform.position, target, speed * Time.deltaTime);
-        if (transform.position.x == target.x && transform.position.y == target.y)
-        {
-            Destroy(gameObject);
-        }
+
+        
+        Vector2 targetPos = (Vector2)transform.position + dir * speed * Time.deltaTime;
+        transform.position = targetPos;
+
+        //transform.position = Vector2.MoveTowards (transform.position, target, speed * Time.deltaTime);
+        //if (transform.position.x == target.x && transform.position.y == target.y)
+        //{
+        //    Destroy(gameObject);
+        //}
 
         duringTime -= Time.deltaTime;
         if (duringTime < 0)

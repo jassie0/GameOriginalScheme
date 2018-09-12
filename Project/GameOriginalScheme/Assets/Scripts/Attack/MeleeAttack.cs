@@ -34,7 +34,6 @@ public class MeleeAttack : MonoBehaviour {
 		
 	}
 
-
     public void Attack()
     {
         if (timeBtwAttack > 0)
@@ -107,18 +106,34 @@ public class MeleeAttack : MonoBehaviour {
 
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-			if (enemiesToDamage[i].tag != "Bar") {
-				enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
-			}else {
-				enemiesToDamage [i].GetComponent<MachineTrigger> ().StateChange ();
-			}
+            if (enemiesToDamage[i].tag != "Bar")
+            {
+                CharacterHealth characterHealth = enemiesToDamage[i].GetComponent<CharacterHealth>();
+                if (characterHealth != null)
+                {
+                    characterHealth.TakeDamage(damage);
+                }
+
+                if (enemiesToDamage[i].tag == "Hand")
+                {
+
+                }
+            }
+            else
+            {
+                MachineTrigger machineTrigger = enemiesToDamage[i].GetComponent<MachineTrigger>();
+                if (machineTrigger != null)
+                {
+                    machineTrigger.StateChange();
+                }
+            }
 
 			Vector2 pushDir =   enemiesToDamage[i].transform.position - transform.position;
 			pushDir =- pushDir.normalized;
 			if (enemiesToDamage [i].tag == "Enemy") {
 				Debug.Log ("back");
 				enemiesToDamage [i].GetComponent<Rigidbody2D> ().AddForce (-pushDir * hitForce * 100000000);
-			}
+            }
 
         }
 

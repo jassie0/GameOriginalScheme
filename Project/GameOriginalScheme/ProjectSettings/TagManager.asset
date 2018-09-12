@@ -23,6 +23,7 @@ TagManager:
   - PurpleDoor
   - WhiteDoor
   - CommonDoor
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -37,8 +38,8 @@ TagManager:
   - Wall
   - Property
   - Device
-  - 
-  - 
+  - Boss
+  - Hand
   - 
   - 
   - 
