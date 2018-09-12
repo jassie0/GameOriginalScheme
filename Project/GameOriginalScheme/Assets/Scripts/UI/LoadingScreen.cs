@@ -33,7 +33,7 @@ public class LoadingScreen : UIWindow
             yield return null;
         }
 
-        yield return new WaitForSeconds(1f);
+        //yield return new WaitForSeconds(1f);
 
         GameController.instance.SetInFightScene(true);
         Close();
