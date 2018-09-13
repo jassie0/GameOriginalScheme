@@ -209,13 +209,17 @@ public class UIControl : MonoSingleton<UIControl>
         if(isWin)
         {
             gameOverWin.SetWindow("Win");
+            SoundManager.Instance().RecordTempBGM();
+            SoundManager.Instance().PlayBGM("successBGM", false);
         }
         else
         {
             gameOverWin.SetWindow("Lose");
+            SoundManager.Instance().RecordTempBGM();
+            SoundManager.Instance().PlayBGM("failBGM", false);
         }
 
-        GameController.instance.OpenNewScene();
+        GameController.Instance().OpenNewScene();
     }
 
 

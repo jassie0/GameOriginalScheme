@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoSingleton<GameController> 
-{
-    public static GameController instance;
-    
+{    
     private static bool _inFightScene = false;
     private static int _nowScene = 0;
 
@@ -19,11 +17,22 @@ public class GameController : MonoSingleton<GameController>
     {
         instance = this;
         InitLevel();
+
+    }
+
+    private void Start()
+    {
+        SoundManager.Instance().PlayBGM("startSceneBGM");
     }
 
     public void SetNowScene(int number)
     {
         _nowScene = number;
+    }
+
+    public int GetNowScene()
+    {
+        return _nowScene;
     }
 
     public void OpenNewScene()

@@ -19,29 +19,35 @@ public class PauseMain : UIWindow
 
     public void Pause(bool pause)
     {
-        GameController.instance.PauseGame(pause);
+        GameController.Instance().PauseGame(pause);
     }
 
     public void OnClick_Back()
     {
         UIControl.Instance().OpenSingleWindow(UI_TYPE.StartPlay);
-        GameController.instance.SetInFightScene(false);
+        GameController.Instance().SetInFightScene(true);
+        Close();
     }
 
     public void OnClick_Option()
     {
         UIControl.Instance().OpenSingleWindow(UI_TYPE.PauseOption);
+
     }
 
     public void OnClick_Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         UIControl.Instance().CloseAllWindow();
+        GameController.Instance().SetInFightScene(true);
+        Pause(false);
         Close();
     }
 
     public void OnClick_Resume()
     {
+        GameController.Instance().SetInFightScene(true);
+        Pause(false);
         Close();
     }
 }

@@ -13,7 +13,7 @@ public class SelectMode : UIWindow
     {
         UIControl.Instance().LoadScene("EndlessMode");
         UIControl.Instance().OpenSingleWindow(UI_TYPE.Endless);
-        GameController.instance.SetInFightScene(true);
+        GameController.Instance().SetInFightScene(true);
     }
 
 }

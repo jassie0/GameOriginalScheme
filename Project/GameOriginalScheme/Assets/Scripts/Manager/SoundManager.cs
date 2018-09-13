@@ -31,6 +31,16 @@ public class SoundManager : MonoSingleton<SoundManager>
 	public AudioSource spikeOut;
 	public AudioSource arrowShoot;
 	public AudioSource getCoin;
+    public AudioSource startSceneBGM;
+    public AudioSource trainingStageBGM;
+    public AudioSource stage1BGM;
+    public AudioSource stage2BGM;
+    public AudioSource successBGM;
+    public AudioSource failBGM;
+    public AudioSource bossFightBGM;
+
+    private AudioClip m_tempAudioClip;
+    //public AudioClip TempAudioClip{ get{ return m_tempAudioClip; } set{ m_tempAudioClip = value; }}
 
     static Dictionary<string, AudioSource> dict;
 
@@ -55,11 +65,50 @@ public class SoundManager : MonoSingleton<SoundManager>
 			{"barMoving", barMoving },
 			{"spikeOut", spikeOut },
 			{"arrowShoot", arrowShoot },
-			{"getCoin", getCoin }
+			{"getCoin", getCoin },
+            {"startSceneBGM",startSceneBGM},
+            {"trainingStageBGM",trainingStageBGM},
+            {"stage1BGM",stage1BGM},
+            {"stage2BGM",stage2BGM},
+            {"successBGM",successBGM},
+            {"failBGM",failBGM},
+            {"bossFightBGM",bossFightBGM},
         };
     }
 
-    
+
+
+    public void PlayBGM(string bgmName,bool isLoop = true)
+    {
+        if (!dict.ContainsKey(bgmName))
+        {
+            return;
+        }
+
+        bgMusic.clip = dict[bgmName].clip;
+        bgMusic.loop = isLoop;
+        bgMusic.Play();
+    }
+
+    public void PlayBGMbyClip(AudioClip clip, bool isLoop = true)
+    {
+        bgMusic.clip = clip;
+        bgMusic.loop = isLoop;
+        bgMusic.Play();
+    }
+
+    public void RecordTempBGM()
+    {
+        m_tempAudioClip = bgMusic.clip;
+
+    }
+
+    public void PlayTempBGM()
+    {
+        bgMusic.clip = m_tempAudioClip;
+        bgMusic.loop = true;
+        bgMusic.Play();
+    }
 
     public void PlaySound(string soundName) 
     {

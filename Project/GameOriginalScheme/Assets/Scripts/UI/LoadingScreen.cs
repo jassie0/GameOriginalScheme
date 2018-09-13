@@ -35,7 +35,7 @@ public class LoadingScreen : UIWindow
 
         //yield return new WaitForSeconds(1f);
 
-        GameController.instance.SetInFightScene(true);
+        GameController.Instance().SetInFightScene(true);
         Close();
         //UIControl.instance.CloseWindow(UI_TYPE.Loading);
     }

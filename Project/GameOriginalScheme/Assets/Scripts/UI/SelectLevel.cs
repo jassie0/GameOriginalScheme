@@ -35,6 +35,18 @@ public class SelectLevel : UIWindow
     {
         UIControl.Instance().LoadScene("Stage" + i.ToString());
         UIControl.Instance().CloseWindow(UI_TYPE.SelectLevel);
+        if(0 == i)
+        {
+            SoundManager.Instance().PlayBGM("trainingStageBGM");
+        }
+        else if(1 == i)
+        {
+            SoundManager.Instance().PlayBGM("stage1BGM");
+        }
+        else if(2 == i)
+        {
+            SoundManager.Instance().PlayBGM("stage2BGM");
+        }
     }
 
     public void OnClick_LoadLevel1()
@@ -48,12 +60,13 @@ public class SelectLevel : UIWindow
             trainingSession.SetWindow("MovingTip");
         }
 
-        GameController.instance.SetNowScene(1);
+        GameController.Instance().SetNowScene(1);
     }
 
     public void OnClick_BossLevel()
     {
         UIControl.Instance().LoadScene("Boss");
         UIControl.Instance().CloseWindow(UI_TYPE.SelectLevel);
+        SoundManager.Instance().PlayBGM("bossFightBGM");
     }
 }

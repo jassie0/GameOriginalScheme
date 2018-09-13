@@ -38,13 +38,15 @@ public class GameOver : UIWindow
     public void OnClick_Replay()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SoundManager.Instance().PlayTempBGM();
         Close();
     }
 
     public void OnClick_BackTo()
     {
         UIControl.Instance().OpenSingleWindow(UI_TYPE.StartPlay);
-        GameController.instance.SetInFightScene(false);
+        GameController.Instance().SetInFightScene(false);
+        SoundManager.Instance().PlayBGM("startSceneBGM");
         Close();
     }
 
