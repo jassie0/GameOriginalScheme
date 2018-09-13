@@ -68,11 +68,13 @@ public class PlayerController : MonoSingleton<PlayerController>
 					m_targetKey = GetNextDirection (false);
 					ResetSkillBoxDic (m_targetKey);
 					m_rotateDirection = 1;
+                    SoundManager.Instance().PlaySound("stoneMoving");
 
 				} else if (Input.GetKeyDown (KeyCode.E)) {
 					m_targetKey = GetNextDirection (true);
 					ResetSkillBoxDic (m_targetKey);
 					m_rotateDirection = -1;
+                    SoundManager.Instance().PlaySound("stoneMoving");
 				}
 			}
 
