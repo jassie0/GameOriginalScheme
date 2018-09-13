@@ -36,7 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4328682545293494}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: EndPt
   m_TagString: Untagged
   m_Icon: {fileID: 7707008975528953803, guid: 0000000000000000d000000000000000, type: 0}
@@ -52,13 +52,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4288245043041054}
   - component: {fileID: 212629478420374012}
-  m_Layer: 10
-  m_Name: DownClose
+  m_Layer: 0
+  m_Name: DownOpen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1359062750423356
 GameObject:
   m_ObjectHideFlags: 1
@@ -67,7 +67,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4170060205717772}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: StartPt
   m_TagString: Untagged
   m_Icon: {fileID: 8220585740371884164, guid: 0000000000000000d000000000000000, type: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4953758749161020}
   - component: {fileID: 212570922612402642}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: DoorDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4101614191884720}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: EndPt
   m_TagString: Untagged
   m_Icon: {fileID: 7707008975528953803, guid: 0000000000000000d000000000000000, type: 0}
@@ -130,7 +130,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4792292613915274}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: StartPt
   m_TagString: Untagged
   m_Icon: {fileID: 8220585740371884164, guid: 0000000000000000d000000000000000, type: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 4124052860855294}
   - component: {fileID: 23533572977980120}
   - component: {fileID: 102521694500653804}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4774363691011034}
   - component: {fileID: 212139704454048070}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: DoorUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,13 +179,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4219420614122668}
   - component: {fileID: 212614789535189864}
-  m_Layer: 10
-  m_Name: UpClose
+  m_Layer: 0
+  m_Name: UpOpen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1934488418065156
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 114805053386147908}
   - component: {fileID: 61866833617394160}
   - component: {fileID: 114887770836124620}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: PurpleDoor
   m_TagString: PurpleDoor
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
@@ -212,8 +212,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4131684766930416}
-  m_Layer: 10
-  m_Name: DoorCloseLight
+  m_Layer: 0
+  m_Name: DoorOpenLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,7 +390,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1934488418065156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.71, y: -17.69, z: 0}
+  m_LocalPosition: {x: -11.71, y: -16.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4131684766930416}
@@ -551,7 +551,7 @@ MonoBehaviour:
   - {fileID: 4792292613915274}
   door: {fileID: 1136656506539558}
   textTip: {fileID: 1719574360979772}
-  doorCloseLight: {fileID: 1815905821611970}
+  doorOpenLight: {fileID: 1815905821611970}
 --- !u!114 &114887770836124620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -573,7 +573,7 @@ MonoBehaviour:
   - {fileID: 4170060205717772}
   door: {fileID: 1374793259336296}
   textTip: {fileID: 1719574360979772}
-  doorCloseLight: {fileID: 1357652109131518}
+  doorOpenLight: {fileID: 1357652109131518}
 --- !u!212 &212139704454048070
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -608,7 +608,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: cf604dd4917f9db49851ff0bb898ae9e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6e38a76727c3794b873592fe21b5747, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -652,7 +652,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: cf604dd4917f9db49851ff0bb898ae9e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6e38a76727c3794b873592fe21b5747, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -696,7 +696,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: e6e38a76727c3794b873592fe21b5747, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cf604dd4917f9db49851ff0bb898ae9e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -740,7 +740,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: e6e38a76727c3794b873592fe21b5747, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cf604dd4917f9db49851ff0bb898ae9e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0

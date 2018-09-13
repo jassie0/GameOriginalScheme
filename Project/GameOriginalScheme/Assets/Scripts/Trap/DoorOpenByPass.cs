@@ -11,7 +11,7 @@ public class DoorOpenByPass : MonoBehaviour {
 	public Transform[] points;
 	public GameObject door;
 	public GameObject textTip;
-	public GameObject doorCloseLight;
+	public GameObject doorOpenLight;
 	TextMesh tip;
 	// Use this for initialization
 	void Start () {
@@ -54,7 +54,7 @@ public class DoorOpenByPass : MonoBehaviour {
 		if (doorMoving) {
 			door.transform.position = Vector3.MoveTowards (door.transform.position, points [0].position, Time.deltaTime * movingSpeed);
 			textTip.SetActive (false);
-			doorCloseLight.SetActive (false);
+			doorOpenLight.SetActive (true);
 			//doorMoving = false;
 		}
 	}

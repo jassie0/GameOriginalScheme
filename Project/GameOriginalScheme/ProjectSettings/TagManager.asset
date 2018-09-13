@@ -24,6 +24,7 @@ TagManager:
   - WhiteDoor
   - CommonDoor
   - Boss
+  - Key
   layers:
   - Default
   - TransparentFX
