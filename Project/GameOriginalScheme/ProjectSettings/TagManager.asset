@@ -25,6 +25,7 @@ TagManager:
   - CommonDoor
   - Boss
   - Key
+  - BossDoor
   layers:
   - Default
   - TransparentFX

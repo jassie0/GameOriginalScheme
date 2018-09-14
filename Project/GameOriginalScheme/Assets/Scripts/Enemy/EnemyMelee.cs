@@ -19,7 +19,7 @@ public class EnemyMelee : MonoBehaviour {
 	public GameObject meleeAttack;
 	private bool enemyMoving;
 	//private Vector2 lastMove;
-	private bool enemyAttack;
+	public bool enemyAttack;
 	//private Vector2 attackDir;
 	Animator animator;
 	GameObject player;
@@ -70,8 +70,9 @@ public class EnemyMelee : MonoBehaviour {
 
 		if (closestPlayer != null) {
 			Vector2 dir = (closestPlayer.transform.position - transform.position).normalized;
-			Vector2 targetPos = enemy.position + dir * enemySpeed * Time.deltaTime;
-			enemy.MovePosition (targetPos);
+			//Vector2 targetPos = enemy.position + dir * enemySpeed * Time.deltaTime;
+			//enemy.MovePosition (targetPos);
+			gameObject.GetComponent<AIDestinationSetter> ().target = closestPlayer.transform;
 			float disToTarget = Vector2.Distance (closestPlayer.transform.position, this.transform.position);
             if (disToTarget < attackRadius)
             {
@@ -100,11 +101,9 @@ public class EnemyMelee : MonoBehaviour {
 		
 			animator.SetFloat ("WalkX", dir.x);
 			animator.SetFloat ("WalkY", dir.y);
-            animator.SetBool("EnemyMoving", enemyMoving);
-            if (enemyAttack)
-            {
-                animator.SetTrigger("EnemyAttack");
-            }
+            animator.SetBool("EnemyMoving", enemyMoving);          
+			animator.SetBool ("EnemyAttacking", enemyAttack);
+           
 
 			Debug.DrawLine (this.transform.position, closestPlayer.transform.position);
 		} 

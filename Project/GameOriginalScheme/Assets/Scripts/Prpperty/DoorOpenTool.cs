@@ -21,6 +21,7 @@ public class DoorOpenTool : MonoBehaviour {
 				LevelToolValue.doorCardCount += 1;
 				Destroy (gameObject);
 			} else if (gameObject.tag == "Key") {
+				SoundManager.Instance ().PlaySound ("getKey");
 				LevelToolValue.keyCount += 1;
 				Destroy (gameObject);
 			} else if (gameObject.tag == "PurpleCard") {
