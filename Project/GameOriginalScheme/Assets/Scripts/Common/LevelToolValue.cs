@@ -8,5 +8,4 @@ public static class LevelToolValue {
 	public static int greenCardCount;
 	public static int purpleCardCount;
 	public static int whiteCardCount;
-
 }

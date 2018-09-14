@@ -36,13 +36,13 @@ public class DoorOpenByPass : MonoBehaviour {
 					tip.text = "需要钥匙开门";
 				}
 			} else if (gameObject.tag == "PurpleDoor") {
-				if (LevelToolValue.keyCount > 0) {
+				if (LevelToolValue.purpleCardCount > 0) {
 					doorMoving = true;
 				} else {
 					tip.text = "需要钥匙开门";
 				}
 			} else if (gameObject.tag == "WhiteDoor") {
-				if (LevelToolValue.keyCount > 0) {
+				if (LevelToolValue.whiteCardCount > 0) {
 					doorMoving = true;
 				} else {
 					tip.text = "需要钥匙开门";

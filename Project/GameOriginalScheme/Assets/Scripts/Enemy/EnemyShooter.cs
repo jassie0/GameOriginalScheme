@@ -55,6 +55,7 @@ public class EnemyShooter : MonoBehaviour {
 		}
 		if (closestPlayer != null) {
 			Vector2 dir = (closestPlayer.transform.position - transform.position).normalized;
+			//gameObject.GetComponent<IAstarAI> ();
 			Vector2 targetPos = enemy.position + dir * speed * Time.deltaTime;
 			enemy.MovePosition (targetPos);
 			float disToTarget = Vector2.Distance (closestPlayer.transform.position, this.transform.position);

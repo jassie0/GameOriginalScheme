@@ -9,18 +9,6 @@ public class LayerController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
         }
-    }
-	
-	void Update ()
-    {
-        if (gameObject.tag == "Wall")
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
-        }
-        else if(gameObject.tag == "Player")
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
-        }
         else if (gameObject.tag == "Box")
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
@@ -33,5 +21,18 @@ public class LayerController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
         }
+        else if (gameObject.tag == "Collectable")
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
+        }
+    }
+	
+	void Update ()
+    {
+        if(gameObject.tag == "Player")
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
+        }
+        
     }
 }

@@ -340,7 +340,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0.6
   pickNextWaypointDist: 2
-  endReachedDistance: 0.2
+  endReachedDistance: 7
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 0
   whenCloseToDestination: 0
@@ -1120,11 +1120,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4877893694399938, guid: b26b4f4917252d24aa13353041f7ff18, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.61
+      value: 33.6
       objectReference: {fileID: 0}
     - target: {fileID: 4877893694399938, guid: b26b4f4917252d24aa13353041f7ff18, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -32.36
+      value: -36.5
       objectReference: {fileID: 0}
     - target: {fileID: 4877893694399938, guid: b26b4f4917252d24aa13353041f7ff18, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1316,7 +1316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACYn+v2AIisUwIAAOQEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVEtz2jAQ/iuMzoWxgfDorQVCe8hjQjq9+CKkNdYgSx5JDiEZ/ntXssCO64vtb1/ffrvSJxHKVsCcNlsj+IPmQL4PiP8m3waEBtsLdUIjnCIirC7BGcF+qIP0vgmCtRK5NuWGH2ClrbMI51RaQJPRzkcrhD4H5B1fw6UPOcfQD/8eXPCLgXJgWr90PppEx+F0dJfgM59NYshwPJotxvjMZpthMg8JasUkLSvgO/EB3TzTmCZdpMFRYZfRx7fEtJTCRo7EnasgwQs9ewW4oNhv4OV9CxCHwuHPuBv4lOcWXOzI0PNaGJStyUh+alf4TCW1x4bVG5V1KJ6Mp4FQk/XhP4dhwzc3uvx1LZwmvogrBDsiRUat66jdhddfmdfqROWR7iX8LUA96q3RteJodKb2obWF8br9vfW2KoAdW7yh2gPrqpW7P1zfwyW0/76Sotx702jaADupg9hhI8DgWH4j4bAvNqZA1LP4Y+GVHrqLFQ33wliHptil8vT2ujbelWyCZr6b2q20URDgSLoCRaU7P2Ma159hz9Yp27PcU390YvFou56MXkiAW/8k6Zme9ek2LFvo0wPY4ql2UihoSXvDI+q00ko1K9bV5Bq2q01OWSfsUAv+dbVIeseWdI8HiC5Yejfmw8k8XUyApny6gGW6nJGwe0Jhn1Q+N0SjPDg11SZXuGfXS2OwNbQK684NPW3FR6k7kguV6x0zAOqpyXAjDgaL4JHkGy5QoB04J1SYN/nMiNTsCDy7JcpCp5t3Z2jWZslIJd6080hGVuE2yciFXP4BUEsDBBQAAAgIAACYn+vi+AuFbAAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz1DMy1FFQSi9KLMgoBoqAOaWZKSB2tJKhabJlYpKRkVmiRbKhqVGKrrG5oYVxaqJhiolFqqWhpZlSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJif6/YAiKxTAgAA5AQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif6+L4C4VsAAAAeAAAAAkAJAAAAAAAAAAAAAAAoAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABXAwAAAAA=
+    dataString: UEsDBBQAAAgIAACYn+tdodxbUwIAAOQEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoXBfNNbSwjtIQkT0unFFyGtsQZZ8khyCGT4713JAjuuL7bffr19u9InEcqWwJw2GyP4k+ZAvveI/ybfeoQG2yt1QiOcICKsLsAZwX6og/S+QwQrJTJtijU/wEpbZxHOqLSAJqOdj1YIffbIB776Sx9yjqEX/+5d8YuBcmAav2Q+GEfH/mQwHeIzn41jSH80mC1G+Mxm6/5wHhJUiklalMB34gLtPJOYJlkkwVFhl9HHt8S0lMJGjsSdyyDBKz17Bbig2G/g5X1zEIfc4c+oHfiSZRZc7MjQ84MwKFudkfzULveZCmqPNat3KitfYzobjwKhOuvTfw79mm9mdPHrVjgZ+iIuF+yIFBm1rqV2G374yrxSJyqPdC/hbw7qWW+MrhRHozOVD60sjB6a33tvqxzYscFrqh2wKhu5u8P1PVxD+x8rKYq9Nw0mNbCTOogdNgIMjuU3Eg77YmMKRD2LPxbe6KG9WNHwKIx1aIpdKk9vryvjXck6aOa7qdxKGwUBjqRLUFS68xbTuO4MO7ZW2Y7lkfqjE4tH2+1kdEIC3PgPhx3TVp/uw7K5Pj2BzV8qJ4WChrQ3PKNOK61UvWJtTW5hu8pklLXCDpXgX1eLJFO2pHs8QHTBkumI98fzZDEGmvDJApbJckbC7gmFfVK5rYlGeXBqqkmucM9ul0ZvY2gZ1p0betqIS6FbkguV6R0zAOqlznAnDgaL4JHkay5QoB04J1SYN/lMidTsCDy9J0pDp+sPZ2jaZElJKd6180hKVuE2ScmVXP8BUEsDBBQAAAgIAACYn+vi+AuFbAAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz1DMy1FFQSi9KLMgoBoqAOaWZKSB2tJKhabJlYpKRkVmiRbKhqVGKrrG5oYVxaqJhiolFqqWhpZlSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJif612h3FtTAgAA5AQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif6+L4C4VsAAAAeAAAAAkAJAAAAAAAAAAAAAAAoAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABXAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -1379,7 +1379,7 @@ MonoBehaviour:
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   minAreaSize: 0
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
@@ -15965,11 +15965,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4894305122803302, guid: e31f4c40b4ee0e04f9eb495c2316e66d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.61
+      value: 33.6
       objectReference: {fileID: 0}
     - target: {fileID: 4894305122803302, guid: e31f4c40b4ee0e04f9eb495c2316e66d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -32.36
+      value: -36.5
       objectReference: {fileID: 0}
     - target: {fileID: 4894305122803302, guid: e31f4c40b4ee0e04f9eb495c2316e66d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -16319,6 +16319,11 @@ Prefab:
         type: 2}
       propertyPath: speed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114464837879922600, guid: a146f3f76fb2f6b44b0c54a0e4c9c300,
+        type: 2}
+      propertyPath: attackRange
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a146f3f76fb2f6b44b0c54a0e4c9c300, type: 2}
@@ -16920,6 +16925,12 @@ Prefab:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 1430597685}
+    - target: {fileID: 212518733579062464, guid: a8ba50da6d0457242af05a69530fc82d,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1bae97d3b2ac25f40b410a0179ce585a,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a8ba50da6d0457242af05a69530fc82d, type: 2}
   m_IsPrefabParent: 0
@@ -17461,11 +17472,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4105130627287608, guid: bec645ac80ef68243913709fd6fc2f43, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.61
+      value: 33.6
       objectReference: {fileID: 0}
     - target: {fileID: 4105130627287608, guid: bec645ac80ef68243913709fd6fc2f43, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -32.36
+      value: -36.5
       objectReference: {fileID: 0}
     - target: {fileID: 4105130627287608, guid: bec645ac80ef68243913709fd6fc2f43, type: 2}
       propertyPath: m_LocalPosition.z
