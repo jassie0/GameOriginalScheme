@@ -38,6 +38,7 @@ public class SoundManager : MonoSingleton<SoundManager>
     public AudioSource successBGM;
     public AudioSource failBGM;
     public AudioSource bossFightBGM;
+    public AudioSource buttonClick;
 
     private AudioClip m_tempAudioClip;
     //public AudioClip TempAudioClip{ get{ return m_tempAudioClip; } set{ m_tempAudioClip = value; }}
@@ -73,6 +74,7 @@ public class SoundManager : MonoSingleton<SoundManager>
             {"successBGM",successBGM},
             {"failBGM",failBGM},
             {"bossFightBGM",bossFightBGM},
+            {"buttonClick", buttonClick}
         };
     }
 
