@@ -25,8 +25,15 @@ public class CharacterHealth : MonoBehaviour {
 
     public float HealthPrecent { get { return healthPercent; } }
 
+	public bool EnemyGetHit;
+	//public GameObject enemyHurtAnim;
+	Animator enmeyAnim;
+
     void Start () {
 		health = maxHealth;
+		enmeyAnim = gameObject.GetComponentInChildren<Animator> ();
+		//hurtAnim = enemyHurtAnim.GetComponent<Animator> ();
+		//enemyHurtAnim.SetActive (false);
 	}
 
 	// Update is called once per frame
@@ -59,6 +66,7 @@ public class CharacterHealth : MonoBehaviour {
             }
 
         }
+			
 	}
 
 	public void TakeDamage (float damage) {
@@ -68,8 +76,13 @@ public class CharacterHealth : MonoBehaviour {
 			
 			if (gameObject.tag == "King") {
                 SoundManager.Instance().PlaySound ("kingActHurt");
-			} else {
+			} else if (gameObject.tag == "Player"){
                 SoundManager.Instance().PlaySound ("soldierActHurt");
+			} else if (gameObject.tag == "Enemy"){
+				//enemyHurtAnim.SetActive (true);
+				EnemyGetHit = true;
+				SoundManager.Instance().PlaySound ("hitEnemy");
+
 			}
 
 			if (health > 0 && gameObject.tag == "Player" || gameObject.tag == "King") {
@@ -97,4 +110,5 @@ public class CharacterHealth : MonoBehaviour {
 
 		invincible = false;
 	}
+		
 }

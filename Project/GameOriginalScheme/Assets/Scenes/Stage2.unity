@@ -4638,16 +4638,6 @@ Prefab:
       propertyPath: m_Name
       value: PurpleDoorH
       objectReference: {fileID: 0}
-    - target: {fileID: 212207721314718028, guid: f82da86f26f63804b8aef4e6f5b36a42,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212942100973768236, guid: f82da86f26f63804b8aef4e6f5b36a42,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f82da86f26f63804b8aef4e6f5b36a42, type: 2}
   m_IsPrefabAsset: 0

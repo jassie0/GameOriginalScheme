@@ -106,9 +106,9 @@ GameObject:
   - component: {fileID: 114866888025699910}
   - component: {fileID: 114137173812546276}
   - component: {fileID: 70763005533089440}
-  - component: {fileID: 114452867596917368}
-  - component: {fileID: 114756203179098094}
-  - component: {fileID: 114317168210193978}
+  - component: {fileID: 114583906420148292}
+  - component: {fileID: 114586242900281612}
+  - component: {fileID: 114854716064815118}
   m_Layer: 9
   m_Name: SwordEnemy
   m_TagString: Enemy
@@ -164,7 +164,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1766681647734650}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.7, y: 2.23, z: 0}
+  m_LocalPosition: {x: -17.039999, y: -19.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4465056273612158}
@@ -344,27 +344,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   attackRadius: 2
-  checkRadius: 8.57
+  checkRadius: 4.95
   hitForce: 2
   checkLayers:
     serializedVersion: 2
     m_Bits: 256
   enemySpeed: 1
   meleeAttack: {fileID: 1297315102005432}
---- !u!114 &114317168210193978
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1766681647734650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  target: {fileID: 0}
---- !u!114 &114452867596917368
+  enemyAttack: 0
+--- !u!114 &114583906420148292
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -390,6 +378,39 @@ MonoBehaviour:
   traversableTags: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask: -1
+--- !u!114 &114586242900281612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1766681647734650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  repathRate: 0.5
+  canSearch: 1
+  canMove: 1
+  maxSpeed: 2
+  gravity: {x: NaN, y: NaN, z: NaN}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  centerOffset: 1
+  orientation: 1
+  enableRotation: 1
+  targetCompatibility: {fileID: 0}
+  maxAcceleration: -2.5
+  rotationSpeed: 360
+  slowdownDistance: 0.6
+  pickNextWaypointDist: 0.5
+  endReachedDistance: 1.2
+  alwaysDrawGizmos: 0
+  slowWhenNotFacingTarget: 0
+  whenCloseToDestination: 0
+  constrainInsideGraph: 0
 --- !u!114 &114632788155947890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -424,7 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_enemyMelee: {fileID: 114137173812546276}
---- !u!114 &114756203179098094
+--- !u!114 &114854716064815118
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -432,31 +453,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1766681647734650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 2
-  repathRate: 0.5
-  canSearch: 1
-  canMove: 1
-  maxSpeed: 2
-  gravity: {x: NaN, y: NaN, z: NaN}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  centerOffset: 1
-  orientation: 1
-  enableRotation: 1
-  targetCompatibility: {fileID: 0}
-  maxAcceleration: -2.5
-  rotationSpeed: 360
-  slowdownDistance: 0.6
-  pickNextWaypointDist: 0.5
-  endReachedDistance: 1.2
-  alwaysDrawGizmos: 0
-  slowWhenNotFacingTarget: 0
-  whenCloseToDestination: 0
-  constrainInsideGraph: 0
+  version: 1
+  target: {fileID: 0}
 --- !u!114 &114866888025699910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -479,6 +480,7 @@ MonoBehaviour:
   characterSprite: {fileID: 0}
   barMask: {fileID: 4979238453919148}
   invincible: 0
+  EnemyGetHit: 0
 --- !u!212 &212475880465050238
 SpriteRenderer:
   m_ObjectHideFlags: 1
