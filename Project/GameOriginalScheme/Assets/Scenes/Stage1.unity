@@ -456,7 +456,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -8.96, y: -1.900182}
@@ -1637,6 +1637,11 @@ Prefab:
       propertyPath: arrowActivator.Array.data[0]
       value: 
       objectReference: {fileID: 92115110}
+    - target: {fileID: 212184526531909530, guid: 9450ae6ce69add341bf109851011389e,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9450ae6ce69add341bf109851011389e, type: 2}
   m_IsPrefabParent: 0
@@ -2225,7 +2230,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 5c085c9065e4b2845b62090bcd237945, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2760,6 +2765,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 51
       objectReference: {fileID: 0}
+    - target: {fileID: 114694465514137798, guid: 101a58b907dd4b244840a210efb57f33,
+        type: 2}
+      propertyPath: arrowActivator.Array.data[0]
+      value: 
+      objectReference: {fileID: 30468320}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 101a58b907dd4b244840a210efb57f33, type: 2}
   m_IsPrefabParent: 0
@@ -2844,7 +2854,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 5566cac2970c8424bbc61cfb21c55449, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3384,7 +3394,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -5.385027, y: 3.9607286}
@@ -3809,7 +3819,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 17c95f6bea246f4409cdaad7b9b43af6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4387,6 +4397,11 @@ Prefab:
       propertyPath: m_Name
       value: ArrowTrapFaceUp
       objectReference: {fileID: 0}
+    - target: {fileID: 114694465514137798, guid: 101a58b907dd4b244840a210efb57f33,
+        type: 2}
+      propertyPath: arrowActivator.Array.data[0]
+      value: 
+      objectReference: {fileID: 30468320}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 101a58b907dd4b244840a210efb57f33, type: 2}
   m_IsPrefabParent: 0
@@ -6738,6 +6753,11 @@ Prefab:
       propertyPath: speed
       value: 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114235115571021746, guid: e31f4c40b4ee0e04f9eb495c2316e66d,
+        type: 2}
+      propertyPath: m_radius
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e31f4c40b4ee0e04f9eb495c2316e66d, type: 2}
   m_IsPrefabParent: 0
@@ -7594,7 +7614,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: c3e1b6bf1e11db645a49c78567c399bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7738,6 +7758,11 @@ Prefab:
       propertyPath: arrowActivator.Array.data[0]
       value: 
       objectReference: {fileID: 1496404973}
+    - target: {fileID: 212184526531909530, guid: 9450ae6ce69add341bf109851011389e,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9450ae6ce69add341bf109851011389e, type: 2}
   m_IsPrefabParent: 0
@@ -10492,7 +10517,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 104dc2eae48bec449b266d3776f11bea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
