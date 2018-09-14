@@ -62,7 +62,7 @@ public class MeleeAttack : MonoBehaviour {
 //        }
         SoundManager.Instance().PlaySound("laserKnife");
 
-        StartCoroutine(SetAttackRange());
+        //StartCoroutine(SetAttackRange());
     }
 
 
@@ -131,7 +131,7 @@ public class MeleeAttack : MonoBehaviour {
 			Vector2 pushDir =   enemiesToDamage[i].transform.position - transform.position;
 			pushDir =- pushDir.normalized;
 			if (enemiesToDamage [i].tag == "Enemy") {
-				Debug.Log ("back");
+				//Debug.Log ("back");
 				enemiesToDamage [i].GetComponent<Rigidbody2D> ().AddForce (-pushDir * hitForce * 100000000);
             }
 

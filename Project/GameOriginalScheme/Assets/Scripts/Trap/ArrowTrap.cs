@@ -24,7 +24,30 @@ public class ArrowTrap : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		for (int i = 0; i < arrowActivator.Length; i++) {
-			if (arrowActivator[i].GetComponent<MachineTrigger> ().machineOn == true && checkRun == true) {
+            //以后别在Update里面循环GetComponent，而且Get之后需要判空防止报错
+            MachineTrigger arrowAct = arrowActivator[i].GetComponent<MachineTrigger>();
+            if (arrowAct != null)
+            {
+                if (arrowAct.machineOn)
+                {
+                    if (checkRun == true)
+                    {
+                        gameObject.GetComponent<SpriteRenderer>().sprite = trapOn;
+                        StartCoroutine(ShootArrow());
+                        checkRun = false;
+                    }
+                }
+                else
+                {
+                    gameObject.GetComponent<SpriteRenderer>().sprite = trapOff;
+                    StopAllCoroutines();
+                    checkRun = true;
+                }
+                 
+            }
+
+            /*
+            if (arrowActivator[i].GetComponent<MachineTrigger> ().machineOn == true && checkRun == true) {
 				gameObject.GetComponent<SpriteRenderer> ().sprite = trapOn;
 				StartCoroutine (ShootArrow());
 				//lastRoutine = StartCoroutine (ShootArrow());
@@ -33,7 +56,7 @@ public class ArrowTrap : MonoBehaviour {
 				gameObject.GetComponent<SpriteRenderer> ().sprite = trapOff;
 				StopAllCoroutines ();
 				checkRun = true;
-			}
+			}*/
 		}
 	}
 

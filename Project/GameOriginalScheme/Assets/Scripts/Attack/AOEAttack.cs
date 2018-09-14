@@ -83,7 +83,7 @@ public class AOEAttack : MonoBehaviour {
 
         coolDownTime = startTime;
 
-        StartCoroutine(SetAttackRange());
+        //StartCoroutine(SetAttackRange());
     }
 
 

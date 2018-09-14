@@ -168,8 +168,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1902017704408732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.10000001, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: 0.025, y: -0.166, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4333496151225994}
   m_RootOrder: 0
@@ -181,7 +181,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1813633381695374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.96, y: -1.42, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4138719467568578}
@@ -211,7 +211,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1566167242925382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.91, z: 0}
+  m_LocalPosition: {x: 0, y: 1.4, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 4641406604747450}
@@ -394,7 +394,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.67, y: 1.45}
+  m_Size: {x: 1, y: 2.3}
   m_Direction: 0
 --- !u!82 &82364779258604332
 AudioSource:
@@ -634,6 +634,7 @@ MonoBehaviour:
   originalHealth: 300
   healthPercent: 0
   maskOriginScale: 2.4
+  maskYScale: 0
   characterSprite: {fileID: 212902087203971224}
   barMask: {fileID: 4024629762634886}
   invincible: 0
@@ -648,8 +649,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c782952899b8b147a264544ad9b3432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 0.99999994, b: 0.16206896, a: 1}
-  outlineSize: 16
+  color: {r: 1, g: 1, b: 1, a: 1}
+  outlineSize: 0
 --- !u!114 &114946316393724026
 MonoBehaviour:
   m_ObjectHideFlags: 1
