@@ -25,6 +25,12 @@ public class ArrowTrap : MonoBehaviour {
 	void Update () {
 		for (int i = 0; i < arrowActivator.Length; i++) {
             //以后别在Update里面循环GetComponent，而且Get之后需要判空防止报错
+
+            if (arrowActivator[i] == null)
+            {
+                return;
+            }
+
             MachineTrigger arrowAct = arrowActivator[i].GetComponent<MachineTrigger>();
             if (arrowAct != null)
             {
