@@ -49,7 +49,7 @@ public class DieAndRespawnController : MonoBehaviour {
 		}
     }
 		
-
+    
     public void SetCheckpointTransform(Checkpoint checkPoint)
     {
   
