@@ -16,8 +16,9 @@ public class TrainingTrigger : MonoBehaviour
         if (other.gameObject.tag == "King")
         {
             SendMassage();
+            Destroy(gameObject);
         }
 
-        Destroy(gameObject);
+        
     }
 }

@@ -23,8 +23,8 @@ public class AOEAttack : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        coolDownTime = startTime;
         m_attackRange.gameObject.SetActive(false);
-		//charSprite.GetComponent<SpritesOutline> ().outlineSize = 16;
 		charSprite.GetComponent<SpriteRenderer> ().material = outlineMaterial;
 	}
 	
@@ -34,13 +34,10 @@ public class AOEAttack : MonoBehaviour {
         if (coolDownTime > 0)
         {
             coolDownTime -= Time.deltaTime;
-			//charSprite.GetComponent<SpritesOutline> ().outlineSize = 0;
 			charSprite.GetComponent<SpriteRenderer> ().material = defaultMaterial;
         }
 		else 
         {
-			//coolDownTime -= Time.deltaTime;
-			//charSprite.GetComponent<SpritesOutline> ().outlineSize = 16;
 			charSprite.GetComponent<SpriteRenderer> ().material = outlineMaterial;
 		} 
 	}
@@ -82,8 +79,6 @@ public class AOEAttack : MonoBehaviour {
         }
 
         coolDownTime = startTime;
-
-        //StartCoroutine(SetAttackRange());
     }
 
 
@@ -96,9 +91,6 @@ public class AOEAttack : MonoBehaviour {
 
     public void PlayAnimation(Direction curDirection)
     {
-        //Direction curDirection = GetCurrectDirection(m_defaultDirection, dir);
-
-
         if (curDirection == Direction.Up)
         {
             m_bingAni.SetFloat("AttackDirection", 0.66f);
@@ -133,12 +125,10 @@ public class AOEAttack : MonoBehaviour {
         else if (direction == Direction.Down)
         {
             transform.rotation = Quaternion.Euler(0, 0, -180);
-            //nubing.Rotate(0, 0, -180);
         }
         else if (direction == Direction.Left)
         {
             transform.rotation = Quaternion.Euler(0, 0, -270);
-            //nubing.Rotate(0, 0, -270);
         }
     }
 }

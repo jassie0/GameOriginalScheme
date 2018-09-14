@@ -65,19 +65,19 @@ public class ShieldAttack : MonoBehaviour {
     {
         if (curDirection == Direction.Up)
         {
-            m_bingAni.SetFloat("AttackDirection", 0.66f);
+            m_bingAni.SetFloat("UpAttack", 1f);
         }
         else if (curDirection == Direction.Right)
         {
-            m_bingAni.SetFloat("AttackDirection", 1f);
+            m_bingAni.SetFloat("RightAttack", 1f);
         }
         else if (curDirection == Direction.Down)
         {
-            m_bingAni.SetFloat("AttackDirection", 0.0f);
+            m_bingAni.SetFloat("DownAttack", 1f);
         }
         else if (curDirection == Direction.Left)
         {
-            m_bingAni.SetFloat("AttackDirection", 0.33f);
+            m_bingAni.SetFloat("LeftAttack", 1f);
         }
 
         m_bingAni.SetTrigger("Attacking");
