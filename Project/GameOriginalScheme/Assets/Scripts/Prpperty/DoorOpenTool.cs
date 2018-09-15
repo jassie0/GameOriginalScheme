@@ -22,7 +22,7 @@ public class DoorOpenTool : MonoBehaviour {
 				Destroy (gameObject);
 			} else if (gameObject.tag == "Key") {
 				SoundManager.Instance ().PlaySound ("getKey");
-				LevelToolValue.keyCount += 1;
+				LevelToolValue.keyCount += 2;
 				Destroy (gameObject);
 			} else if (gameObject.tag == "PurpleCard") {
 				LevelToolValue.purpleCardCount += 1;

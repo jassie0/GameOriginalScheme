@@ -71,10 +71,12 @@ public class AOEAttack : MonoBehaviour {
 
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-			if (enemiesToDamage[i].tag != "Bar") {
+			if (enemiesToDamage[i].tag == "Player" || enemiesToDamage[i].tag == "King") {
 				enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
-			} else {
+			} else if (enemiesToDamage[i].tag == "Bar") {
 				enemiesToDamage [i].GetComponent<MachineTrigger> ().StateChange ();
+			} else if (enemiesToDamage[i].tag == "Breakable") {
+				enemiesToDamage [i].GetComponent<BreakableWall> ().WallChange ();
 			}
         }
 
