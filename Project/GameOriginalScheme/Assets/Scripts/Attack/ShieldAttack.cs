@@ -84,6 +84,47 @@ public class ShieldAttack : MonoBehaviour {
 
     }
 
+    IEnumerator SetAnimation(Direction direction)
+    {
+        if (direction == Direction.Up)
+        {
+            m_bingAni.SetFloat("UpAttack", 1f);
+        }
+        else if (direction == Direction.Right)
+        {
+            m_bingAni.SetFloat("RightAttack", 1f);
+        }
+        else if (direction == Direction.Down)
+        {
+            m_bingAni.SetFloat("DownAttack", 1f);
+        }
+        else if (direction == Direction.Left)
+        {
+            m_bingAni.SetFloat("LeftAttack", 1f);
+        }
+        m_bingAni.SetTrigger("Attacking");
+
+        yield return new WaitForSeconds(duringTime);
+
+        if (direction == Direction.Up)
+        {
+            m_bingAni.SetFloat("UpAttack", 0f);
+        }
+        else if (direction == Direction.Right)
+        {
+            m_bingAni.SetFloat("RightAttack", 0f);
+        }
+        else if (direction == Direction.Down)
+        {
+            m_bingAni.SetFloat("DownAttack", 0f);
+        }
+        else if (direction == Direction.Left)
+        {
+            m_bingAni.SetFloat("LeftAttack", 0f);
+        }
+    }
+
+
     public void RotateAroundPivot(Direction direction, Transform nubing)
     {
         if (direction == Direction.Up)
