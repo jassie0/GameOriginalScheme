@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MoneyManger : MonoBehaviour {
 	public Text moneyText;
 	public int currentGold;
+	public int goldAddedinCurrentLevel = 0;
 	// Use this for initialization
 	void Start () {
 		//PlayerPrefs.SetInt ("CurrentMoney", 0);
@@ -25,7 +26,8 @@ public class MoneyManger : MonoBehaviour {
 	}
 
 	public void AddMoney (int goldToAdd) {
-		currentGold += goldToAdd;
+		goldAddedinCurrentLevel += goldToAdd;
+		currentGold += goldAddedinCurrentLevel;
 		PlayerPrefs.SetInt ("CurrentMoney", currentGold);
 		moneyText.text = "金币：" + currentGold;
 	}
