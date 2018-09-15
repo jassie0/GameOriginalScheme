@@ -26,14 +26,15 @@ public class CharacterHealth : MonoBehaviour {
     public float HealthPrecent { get { return healthPercent; } }
 
 	public bool EnemyGetHit;
-	//public GameObject enemyHurtAnim;
-	Animator enmeyAnim;
+	public bool EnemyExplode;
+	public bool EnemyDie = false;
+	public GameObject enemyHurtAnim;
+	Animator hurtAnim;
 
     void Start () {
 		health = maxHealth;
-		enmeyAnim = gameObject.GetComponentInChildren<Animator> ();
-		//hurtAnim = enemyHurtAnim.GetComponent<Animator> ();
-		//enemyHurtAnim.SetActive (false);
+		hurtAnim = enemyHurtAnim.GetComponent<Animator> ();
+		enemyHurtAnim.SetActive (false);
 	}
 
 	// Update is called once per frame
@@ -53,20 +54,23 @@ public class CharacterHealth : MonoBehaviour {
                 UIControl.Instance().EnemyDeadScore();
             }
 
-            SoundManager.Instance().PlaySound("soilderDie");
+            
             SkillBox skillBox = this.GetComponentInParent<SkillBox>();
             if(skillBox != null)
             {
                 skillBox.Relese();
             }
 
-            if (gameObject.tag != "King")
-            {
+            if (gameObject.tag == "Player")
+			{
+				SoundManager.Instance().PlaySound("soilderDie");
                 Destroy(gameObject);
-            }
+			} else if (gameObject.tag == "Enemy"){
+				enemyHurtAnim.SetActive (true);
+				StartCoroutine (EnemyGoToHell());
+			}
 
         }
-			
 	}
 
 	public void TakeDamage (float damage) {
@@ -79,10 +83,10 @@ public class CharacterHealth : MonoBehaviour {
 			} else if (gameObject.tag == "Player"){
                 SoundManager.Instance().PlaySound ("soldierActHurt");
 			} else if (gameObject.tag == "Enemy"){
-				//enemyHurtAnim.SetActive (true);
+				enemyHurtAnim.SetActive (true);
 				EnemyGetHit = true;
 				SoundManager.Instance().PlaySound ("hitEnemy");
-
+				hurtAnim.SetBool ("EnemyGetHit", EnemyGetHit);
 			}
 
 			if (health > 0 && gameObject.tag == "Player" || gameObject.tag == "King") {
@@ -110,5 +114,13 @@ public class CharacterHealth : MonoBehaviour {
 
 		invincible = false;
 	}
+
+	IEnumerator EnemyGoToHell () {
+		hurtAnim.SetBool ("EnemyGetHit", false);
+		hurtAnim.SetBool ("Explosion", true);
+		yield return new WaitForSeconds (1f);
+		SoundManager.Instance().PlaySound("soilderDie");
+		Destroy (gameObject);
+	} 
 		
 }

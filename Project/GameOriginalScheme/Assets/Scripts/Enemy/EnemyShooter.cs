@@ -21,7 +21,7 @@ public class EnemyShooter : MonoBehaviour {
 	private bool enemyMoving;
 	private Vector2 lastMove;
 	private Vector2 attackDir;
-	private bool enemyAttack;
+	public bool enemyAttack;
 	Animator animator;
 	GameObject player;
 

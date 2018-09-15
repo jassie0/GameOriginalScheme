@@ -18,6 +18,10 @@ public class EndEnemyHurtAnim : MonoBehaviour {
 
 	void EndAnim () {
 		enemy.GetComponent<CharacterHealth> ().EnemyGetHit = false;
-		//enemy.GetComponent<CharacterHealth> ().enemyHurtAnim.SetActive (false);
+		enemy.GetComponent<CharacterHealth> ().enemyHurtAnim.SetActive (false);
+	}
+
+	void GoToHell () {
+		enemy.GetComponent<CharacterHealth> ().EnemyDie = true;
 	}
 }
