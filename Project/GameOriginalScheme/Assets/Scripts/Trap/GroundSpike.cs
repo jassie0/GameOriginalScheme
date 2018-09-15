@@ -11,6 +11,9 @@ public class GroundSpike : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		interval = spikePrefab.GetComponent<DistoryThisAfterAWhile> ().m_Time * 2;
+		if (skikeActivator.Length == 0) {
+			StartCoroutine (SkikeShowUp());
+		}
 	}
 	
 	// Update is called once per frame

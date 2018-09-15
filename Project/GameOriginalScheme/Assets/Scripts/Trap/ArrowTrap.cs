@@ -16,8 +16,8 @@ public class ArrowTrap : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (arrowActivator.Length == 0) {
-			gameObject.GetComponent<SpriteRenderer> ().sprite = trapOn;
 			StartCoroutine (ShootArrow());
+			gameObject.GetComponent<SpriteRenderer> ().sprite = trapOn;
 		}
 	}
 	
@@ -67,9 +67,9 @@ public class ArrowTrap : MonoBehaviour {
 	}
 
 	IEnumerator ShootArrow() {
-		Transform arrow= Instantiate(arrowPrefab, arrowSpawnPoint.position, arrowPrefab.rotation, this.transform.parent);
-		arrow.GetComponent<EnemyArrow>().speed = arrowSpeed;
+		Instantiate(arrowPrefab, arrowSpawnPoint.position, arrowPrefab.rotation, this.transform.parent);
 		//SoundManager.Instance().PlaySound("arrowShoot");
+		arrowPrefab.GetComponent<EnemyArrow>().speed = arrowSpeed;
 		yield return new WaitForSeconds(interval);
 		StartCoroutine(ShootArrow());
 	}
