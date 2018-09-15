@@ -27,11 +27,12 @@ public class DoorOpenByPass : MonoBehaviour {
 				if (LevelToolValue.greenCardCount > 0) {
 					doorMoving = true;
 				} else {
-					tip.text = "需要房卡开门";
+					tip.text = "需要绿色房卡开门";
 				}
 			} else if (gameObject.tag == "KeyDoor") {
 				if (LevelToolValue.keyCount > 0) {
 					doorMoving = true;
+					LevelToolValue.keyCount -= 1;
 				} else {
 					tip.text = "需要钥匙开门";
 				}
@@ -39,16 +40,22 @@ public class DoorOpenByPass : MonoBehaviour {
 				if (LevelToolValue.purpleCardCount > 0) {
 					doorMoving = true;
 				} else {
-					tip.text = "需要钥匙开门";
+					tip.text = "需要紫色房卡开门";
 				}
 			} else if (gameObject.tag == "WhiteDoor") {
 				if (LevelToolValue.whiteCardCount > 0) {
 					doorMoving = true;
 				} else {
-					tip.text = "需要钥匙开门";
+					tip.text = "需要白色房卡开门";
 				}
 			} else if (gameObject.tag == "CommonDoor"){
 				doorMoving = true;
+			} else if (gameObject.tag == "BossDoor"){
+				if (LevelToolValue.whiteCardCount > 0 && LevelToolValue.purpleCardCount > 0 && LevelToolValue.greenCardCount > 0 ) {
+					doorMoving = true;
+				} else {
+					tip.text = "房卡未集齐";
+				}
 			}
 		}
 		if (doorMoving) {

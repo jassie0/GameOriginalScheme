@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 114428040534052600}
   m_Layer: 0
   m_Name: CommonDoorV
-  m_TagString: GreenDoor
+  m_TagString: CommonDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 4271846356267442}
   - component: {fileID: 212349203156336342}
   - component: {fileID: 61377680491191876}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 4492182771535952}
   - component: {fileID: 212884116010744352}
   - component: {fileID: 61341175299212940}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}

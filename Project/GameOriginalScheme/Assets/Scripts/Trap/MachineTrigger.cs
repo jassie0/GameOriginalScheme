@@ -32,10 +32,14 @@ public class MachineTrigger : MonoBehaviour {
 		machineOn = !machineOn;
 		if (gameObject.GetComponent<SpriteRenderer> ().sprite == state1) {
 			gameObject.GetComponent<SpriteRenderer> ().sprite = state2;
-			SoundManager.Instance().PlaySound("barMoving");
+			if (gameObject.name != "Target") {
+				SoundManager.Instance ().PlaySound ("barMoving");
+			} else if (gameObject.name == "Target"){
+				SoundManager.Instance ().PlaySound ("hitTarget");
+			}
 		} else if (canRestore == true){
 			gameObject.GetComponent<SpriteRenderer> ().sprite = state1;
-			SoundManager.Instance().PlaySound("barMoving");
+			SoundManager.Instance ().PlaySound ("barMoving");			
 		} else if (!canRestore) {
 			machineOn = !machineOn;
 		}

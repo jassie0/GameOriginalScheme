@@ -18,6 +18,7 @@ public class StairPortal : MonoBehaviour {
 
 	IEnumerator Teleport () {
 		yield return new WaitForSeconds (0.15f);
+		SoundManager.Instance ().PlaySound ("enterStaircase");
 		player.transform.position = new Vector2 (Portal.transform.position.x, Portal.transform.position.y);
 	}
 }

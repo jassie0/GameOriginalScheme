@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class EnemyShooter : MonoBehaviour {
 
@@ -55,9 +56,9 @@ public class EnemyShooter : MonoBehaviour {
 		}
 		if (closestPlayer != null) {
 			Vector2 dir = (closestPlayer.transform.position - transform.position).normalized;
-			//gameObject.GetComponent<IAstarAI> ();
-			Vector2 targetPos = enemy.position + dir * speed * Time.deltaTime;
-			enemy.MovePosition (targetPos);
+//			Vector2 targetPos = enemy.position + dir * speed * Time.deltaTime;
+//			enemy.MovePosition (targetPos);
+			gameObject.GetComponent<AIDestinationSetter> ().target = closestPlayer.transform;
 			float disToTarget = Vector2.Distance (closestPlayer.transform.position, this.transform.position);
 			//Debug.Log (disToTarget);
 
