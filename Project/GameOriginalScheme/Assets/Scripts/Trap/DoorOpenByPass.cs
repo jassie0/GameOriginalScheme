@@ -13,6 +13,8 @@ public class DoorOpenByPass : MonoBehaviour {
 	public GameObject textTip;
 	public GameObject doorOpenLight;
 	TextMesh tip;
+	public GameObject commonDoorActivator;
+	bool canOpen;
 	// Use this for initialization
 	void Start () {
 		currentPoint = points[pointSelection];
@@ -49,7 +51,15 @@ public class DoorOpenByPass : MonoBehaviour {
 					tip.text = "需要白色房卡开门";
 				}
 			} else if (gameObject.tag == "CommonDoor"){
-				doorMoving = true;
+				if (commonDoorActivator == null) {
+					doorMoving = true;
+				} else if (commonDoorActivator != null) {
+					if (commonDoorActivator.GetComponent<MachineTrigger> ().machineOn) {
+						doorMoving = true;
+					} else {
+						tip.text = "完成射靶开门";
+					}
+				}
 			} else if (gameObject.tag == "BossDoor"){
 				if (LevelToolValue.whiteCardCount > 0 && LevelToolValue.purpleCardCount > 0 && LevelToolValue.greenCardCount > 0 ) {
 					doorMoving = true;
@@ -59,7 +69,9 @@ public class DoorOpenByPass : MonoBehaviour {
 			}
 		}
 		if (doorMoving) {
-			door.transform.position = Vector3.MoveTowards (door.transform.position, points [0].position, Time.deltaTime * movingSpeed);
+			if (door != null) {
+				door.transform.position = Vector3.MoveTowards (door.transform.position, points [0].position, Time.deltaTime * movingSpeed);
+			}
 			textTip.SetActive (false);
 			doorOpenLight.SetActive (true);
 			//doorMoving = false;

@@ -8,8 +8,11 @@ public class GroundSpike : MonoBehaviour {
 	public bool checkRun = true;
 	public GameObject[] skikeActivator;
 
+	public float m_soundDistance = 12;
+	GameObject player;
 	// Use this for initialization
 	void Start () {
+		player = PlayerController.GetPlayerObject();
 		interval = spikePrefab.GetComponent<DistoryThisAfterAWhile> ().m_Time * 2;
 		if (skikeActivator.Length == 0) {
 			StartCoroutine (SkikeShowUp());
@@ -31,7 +34,14 @@ public class GroundSpike : MonoBehaviour {
 
 	IEnumerator SkikeShowUp() {
 		Instantiate(spikePrefab, transform.position, spikePrefab.rotation, this.transform.parent);
-		SoundManager.Instance().PlaySound("spikeOut");
+		if(player != null)
+		{
+			float Distance = Vector2.Distance((Vector2)transform.position, (Vector2)player.transform.position);
+			if(Distance < m_soundDistance)
+			{
+				SoundManager.Instance().PlaySound("spikeOut");
+			}
+		}
 		yield return new WaitForSeconds(interval);
 		StartCoroutine(SkikeShowUp());
 	}

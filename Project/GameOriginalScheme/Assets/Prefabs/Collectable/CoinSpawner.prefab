@@ -8,15 +8,15 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
+  m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1787296141070696}
-  m_IsPrefabParent: 1
+  m_IsPrefabAsset: 1
 --- !u!1 &1787296141070696
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4538798929222580}
   - component: {fileID: 114315111013290966}
@@ -30,11 +30,11 @@ GameObject:
 --- !u!4 &4538798929222580
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1787296141070696}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.37, y: -6.71, z: -0.234375}
+  m_LocalPosition: {x: 23.19, y: -7.94, z: -0.234375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -43,7 +43,7 @@ Transform:
 --- !u!114 &114315111013290966
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1787296141070696}
   m_Enabled: 1
@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c9352ef1cb76654da2a2de5b24f11cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSize: {x: 2, y: 2}
+  spawnSize: {x: 4, y: 4}
   coinPrefab: {fileID: 1577310728146914, guid: d3ab84c43784692418d706b21b7f498a, type: 2}
   maxCoins: 5
   spawnTime: 0

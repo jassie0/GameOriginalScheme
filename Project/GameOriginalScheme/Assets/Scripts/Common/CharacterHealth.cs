@@ -28,13 +28,18 @@ public class CharacterHealth : MonoBehaviour {
 	public bool EnemyGetHit;
 	public bool EnemyExplode;
 	public bool EnemyDie = false;
-	public GameObject enemyHurtAnim;
+	public Transform enemyHurtAnim;
 	Animator hurtAnim;
+
+
+	public GameObject coinSpawnPrefab;
 
     void Start () {
 		health = maxHealth;
-		hurtAnim = enemyHurtAnim.GetComponent<Animator> ();
-		enemyHurtAnim.SetActive (false);
+		if (enemyHurtAnim != null) {
+			//hurtAnim = enemyHurtAnim.GetComponent<Animator> ();
+			//enemyHurtAnim.SetActive (false);
+		}
 	}
 
 	// Update is called once per frame
@@ -66,8 +71,8 @@ public class CharacterHealth : MonoBehaviour {
 				SoundManager.Instance().PlaySound("soilderDie");
                 Destroy(gameObject);
 			} else if (gameObject.tag == "Enemy"){
-				enemyHurtAnim.SetActive (true);
-				StartCoroutine (EnemyGoToHell());
+				//enemyHurtAnim.SetActive (true);
+				//StartCoroutine (EnemyGoToHell());
 			}
 
         }
@@ -83,10 +88,11 @@ public class CharacterHealth : MonoBehaviour {
 			} else if (gameObject.tag == "Player"){
                 SoundManager.Instance().PlaySound ("soldierActHurt");
 			} else if (gameObject.tag == "Enemy"){
-				enemyHurtAnim.SetActive (true);
-				EnemyGetHit = true;
+				if (health > 0) {
+					Instantiate(enemyHurtAnim, transform.position, enemyHurtAnim.rotation, this.transform.parent);					
+				}
 				SoundManager.Instance().PlaySound ("hitEnemy");
-				hurtAnim.SetBool ("EnemyGetHit", EnemyGetHit);
+
 			}
 
 			if (health > 0 && gameObject.tag == "Player" || gameObject.tag == "King") {
@@ -120,6 +126,7 @@ public class CharacterHealth : MonoBehaviour {
 		hurtAnim.SetBool ("Explosion", true);
 		yield return new WaitForSeconds (1f);
 		SoundManager.Instance().PlaySound("soilderDie");
+		Instantiate (coinSpawnPrefab, transform.position, Quaternion.identity);
 		Destroy (gameObject);
 	} 
 		

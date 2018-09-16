@@ -38,6 +38,7 @@ public class EnemySpawner : MonoBehaviour {
 	void Update () {
 		if (spawnTime >= 2) {
 			stop = true;
+			Destroy (gameObject);
 		} 
 	}
 		

@@ -7,13 +7,14 @@ public class EnemyArrow : MonoBehaviour {
 	public float speed = 5;
 	public float damage;
 	public Rigidbody2D m_rigidbody;
-    public float m_soundDistance = 5;
+    public float m_soundDistance = 12;
+	GameObject player;
 
 	// Use this for initialization
 	void Start () {
 		m_rigidbody.velocity = this.transform.up * speed;
 
-        GameObject player = PlayerController.GetPlayerObject();
+        player = PlayerController.GetPlayerObject();
         if(player != null)
         {
             float Distance = Vector2.Distance((Vector2)transform.position, (Vector2)player.transform.position);
@@ -28,7 +29,7 @@ public class EnemyArrow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {

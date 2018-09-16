@@ -191,7 +191,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1192565805050714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.21238, y: -11.43052, z: 0}
+  m_LocalPosition: {x: 22.18, y: -13.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4038100150445762}
@@ -415,7 +415,11 @@ MonoBehaviour:
   barMask: {fileID: 4654681663054778}
   invincible: 0
   EnemyGetHit: 0
+  EnemyExplode: 0
+  EnemyDie: 0
   enemyHurtAnim: {fileID: 1282729747505624}
+  coinSpawnPrefab: {fileID: 1787296141070696, guid: 5da197f740725b54ba0c1a4c1a4a881e,
+    type: 2}
 --- !u!114 &114464837879922600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -438,6 +442,7 @@ MonoBehaviour:
   laserPrefab: {fileID: 1839962794150800, guid: 79ed87b1a828c2349b9b8f3765993abb,
     type: 2}
   laserSpeed: 5
+  enemyAttack: 0
 --- !u!114 &114514558062854210
 MonoBehaviour:
   m_ObjectHideFlags: 1

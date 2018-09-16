@@ -559,7 +559,11 @@ MonoBehaviour:
   barMask: {fileID: 4979238453919148}
   invincible: 0
   EnemyGetHit: 0
+  EnemyExplode: 0
+  EnemyDie: 0
   enemyHurtAnim: {fileID: 1545821091002126}
+  coinSpawnPrefab: {fileID: 1787296141070696, guid: 5da197f740725b54ba0c1a4c1a4a881e,
+    type: 2}
 --- !u!212 &212192307053873490
 SpriteRenderer:
   m_ObjectHideFlags: 1
