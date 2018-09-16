@@ -24,6 +24,9 @@ public class EnemyMelee : MonoBehaviour {
 	Animator animator;
 	GameObject player;
 
+	public float timeBtwAttack;
+	public float startTime;
+
 	// Use this for initialization
 	void Start () {
 		enemy = this.GetComponent<Rigidbody2D> ();
@@ -41,10 +44,12 @@ public class EnemyMelee : MonoBehaviour {
             DieAndRespawnController dieAndRespawnController = player.GetComponent<DieAndRespawnController>();
             if (dieAndRespawnController != null)
             {
-                if (dieAndRespawnController.Alive)
+				if (dieAndRespawnController.Alive &&  GetComponent<CharacterHealth> ().health > 0)
                 {
                     FindClosestEnemy();
-                }
+				} else  {
+					gameObject.GetComponent<AIDestinationSetter> ().target = null;
+				}
             }
         }
         else
@@ -76,7 +81,12 @@ public class EnemyMelee : MonoBehaviour {
 			float disToTarget = Vector2.Distance (closestPlayer.transform.position, this.transform.position);
             if (disToTarget < attackRadius)
             {
-				enemyAttack = true;
+				if (timeBtwAttack <= 0) {	
+					enemyAttack = true;
+					timeBtwAttack = startTime;
+				} else {
+					timeBtwAttack -= Time.deltaTime;
+				}
 				//meleeAttack.GetComponent<MeleeAttack> ().Attack ();
 				//player.GetComponent<PlayerController> ().knockbackCount = player.GetComponent<PlayerController> ().knockbackLength;
 			} else {
@@ -111,23 +121,25 @@ public class EnemyMelee : MonoBehaviour {
 
     public void EnemyMeleeDamage()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRadius, checkLayers);
+		if ( GetComponent<CharacterHealth> ().health > 0) {
+			Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRadius, checkLayers);
 
-        foreach (Collider2D p in colliders)
-        {
-            CharacterHealth health = p.GetComponent<CharacterHealth>();
-            if (health == null)
-            {
-                return;
-            }
-            health.GetComponent<CharacterHealth>().TakeDamage(damage);
-//			Vector2 pushDir =   p.transform.position - transform.position;
-//			pushDir =- pushDir.normalized;
-////			if (p.tag == "Player" || p.tag == "King") {
-////				player.GetComponent<Rigidbody2D> ().AddForce (-pushDir * hitForce * 100000000);
-////			}
-        }
+			foreach (Collider2D p in colliders)
+			{
+				CharacterHealth health = p.GetComponent<CharacterHealth>();
+				if (health == null)
+				{
+					return;
+				}
 
+				health.GetComponent<CharacterHealth> ().TakeDamage (damage);
+				//			Vector2 pushDir =   p.transform.position - transform.position;
+				//			pushDir =- pushDir.normalized;
+				////			if (p.tag == "Player" || p.tag == "King") {
+				////				player.GetComponent<Rigidbody2D> ().AddForce (-pushDir * hitForce * 100000000);
+				////			}
+			}
+		}
     }
 
 

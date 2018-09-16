@@ -13,4 +13,9 @@ public class SwordEnemyAttack : MonoBehaviour {
             m_enemyMelee.EnemyMeleeDamage();
         }
     }
+
+	void StopAttack () {
+		m_enemyMelee.GetComponent<EnemyMelee> ().enemyAttack = false;
+	}
+
 }

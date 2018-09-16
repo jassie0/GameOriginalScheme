@@ -13,7 +13,7 @@ public class EnemyShooter : MonoBehaviour {
 	private float closetDist;
 	public float attackRange;
 
-	private float timeBtwShoot;
+	public float timeBtwShoot;
 	public float startTime;
 	public GameObject laserPrefab;
 	public float laserSpeed;
@@ -32,13 +32,16 @@ public class EnemyShooter : MonoBehaviour {
 		//meleeAttack = GameObject.GetComponent <MeleeAttack> ();
 		timeBtwShoot = startTime;
 		player = GameObject.FindGameObjectWithTag("King");
+
 	}
 
 	// Update is called once per frame
 	void Update () {
 		DieAndRespawnController dieAndRespawnController = player.GetComponent<DieAndRespawnController> ();
-		if (dieAndRespawnController.Alive){
+		if (dieAndRespawnController.Alive && GetComponent<CharacterHealth> ().health > 0) {
 			FindClosestEnemy ();
+		} else {
+			gameObject.GetComponent<AIDestinationSetter> ().target = null;
 		}
 	}
 
@@ -67,7 +70,7 @@ public class EnemyShooter : MonoBehaviour {
 				transform.position = this.transform.position;
 				if (timeBtwShoot <= 0) {	
 					enemyAttack = true;
-					Instantiate (laserPrefab, this.transform.position, Quaternion.identity);
+					//Instantiate (laserPrefab, this.transform.position, Quaternion.identity);
 
 					timeBtwShoot = startTime;
 
@@ -75,7 +78,7 @@ public class EnemyShooter : MonoBehaviour {
 //						shootSource.Play ();
 //					}
                     SoundManager.Instance().PlaySound("laserGun");
-
+					//enemyAttack = false;
 					//SoundManager.PlaySound("laserGun");
 					//laser.GetComponent<Arrow> ().speed = laserSpeed;
 					//obj.transform.Rotate(closestPlayer.transform.position - transform.position);

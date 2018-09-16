@@ -5,7 +5,7 @@ using UnityEngine;
 public class EndEnemyHurtAnim : MonoBehaviour {
 
 	Animator anim;
-	//public GameObject enemy;
+	public GameObject enemy;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -24,6 +24,14 @@ public class EndEnemyHurtAnim : MonoBehaviour {
 	}
 
 	void GoToHell () {
-		//enemy.GetComponent<CharacterHealth> ().EnemyDie = true;
+		Destroy (transform.parent.gameObject);
+	}
+
+	void StopShoot () {
+		enemy.GetComponent<EnemyShooter> ().enemyAttack = false;
+	}
+
+	void ShootLaser () {
+		Instantiate (enemy.GetComponent<EnemyShooter> ().laserPrefab, this.transform.position, Quaternion.identity);
 	}
 }

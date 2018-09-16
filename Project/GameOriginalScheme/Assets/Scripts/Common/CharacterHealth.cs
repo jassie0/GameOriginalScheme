@@ -29,17 +29,13 @@ public class CharacterHealth : MonoBehaviour {
 	public bool EnemyExplode;
 	public bool EnemyDie = false;
 	public Transform enemyHurtAnim;
-	Animator hurtAnim;
+	public Transform enemyExplodeAnim;
 
 
 	public GameObject coinSpawnPrefab;
 
     void Start () {
 		health = maxHealth;
-		if (enemyHurtAnim != null) {
-			//hurtAnim = enemyHurtAnim.GetComponent<Animator> ();
-			//enemyHurtAnim.SetActive (false);
-		}
 	}
 
 	// Update is called once per frame
@@ -71,8 +67,9 @@ public class CharacterHealth : MonoBehaviour {
 				SoundManager.Instance().PlaySound("soilderDie");
                 Destroy(gameObject);
 			} else if (gameObject.tag == "Enemy"){
-				//enemyHurtAnim.SetActive (true);
-				//StartCoroutine (EnemyGoToHell());
+				Transform explodeAnim = Instantiate(enemyExplodeAnim, transform.position, enemyHurtAnim.rotation, this.transform.parent);
+				explodeAnim.parent = transform;
+
 			}
 
         }
@@ -89,7 +86,8 @@ public class CharacterHealth : MonoBehaviour {
                 SoundManager.Instance().PlaySound ("soldierActHurt");
 			} else if (gameObject.tag == "Enemy"){
 				if (health > 0) {
-					Instantiate(enemyHurtAnim, transform.position, enemyHurtAnim.rotation, this.transform.parent);					
+					Transform hurtAnim = Instantiate(enemyHurtAnim, transform.position, enemyHurtAnim.rotation, this.transform.parent);
+					hurtAnim.parent = transform;
 				}
 				SoundManager.Instance().PlaySound ("hitEnemy");
 
@@ -122,8 +120,8 @@ public class CharacterHealth : MonoBehaviour {
 	}
 
 	IEnumerator EnemyGoToHell () {
-		hurtAnim.SetBool ("EnemyGetHit", false);
-		hurtAnim.SetBool ("Explosion", true);
+		//hurtAnim.SetBool ("EnemyGetHit", false);
+		//hurtAnim.SetBool ("Explosion", true);
 		yield return new WaitForSeconds (1f);
 		SoundManager.Instance().PlaySound("soilderDie");
 		Instantiate (coinSpawnPrefab, transform.position, Quaternion.identity);
