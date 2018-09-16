@@ -448,9 +448,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_hurtSource: {fileID: 82117453736879070}
   health: 0
-  maxHealth: 120
-  healthPlus: 20
-  originalHealth: 120
+  maxHealth: 80
+  healthPlus: 30
+  originalHealth: 50
   healthPercent: 0
   maskOriginScale: 2.4
   maskYScale: 0.64
@@ -461,6 +461,7 @@ MonoBehaviour:
   EnemyExplode: 0
   EnemyDie: 0
   enemyHurtAnim: {fileID: 0}
+  enemyExplodeAnim: {fileID: 0}
   coinSpawnPrefab: {fileID: 0}
 --- !u!114 &114338541585789066
 MonoBehaviour:

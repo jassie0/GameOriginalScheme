@@ -739,7 +739,12 @@ Prefab:
     - target: {fileID: 114235115571021746, guid: e31f4c40b4ee0e04f9eb495c2316e66d,
         type: 2}
       propertyPath: m_radius
-      value: 2.2
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114564923046414046, guid: e31f4c40b4ee0e04f9eb495c2316e66d,
+        type: 2}
+      propertyPath: maxHealth
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e31f4c40b4ee0e04f9eb495c2316e66d, type: 2}
@@ -1243,6 +1248,26 @@ Prefab:
     - target: {fileID: 4788728390310174, guid: 4c3861872c2b6a34d8088e6585bf0a28, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114845807482260358, guid: 4c3861872c2b6a34d8088e6585bf0a28,
+        type: 2}
+      propertyPath: maxHealth
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 114845807482260358, guid: 4c3861872c2b6a34d8088e6585bf0a28,
+        type: 2}
+      propertyPath: health
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 114242101518108210, guid: 4c3861872c2b6a34d8088e6585bf0a28,
+        type: 2}
+      propertyPath: m_sweepDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114242101518108210, guid: 4c3861872c2b6a34d8088e6585bf0a28,
+        type: 2}
+      propertyPath: m_patDamage
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c3861872c2b6a34d8088e6585bf0a28, type: 2}

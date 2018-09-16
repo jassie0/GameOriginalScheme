@@ -149,7 +149,7 @@ Prefab:
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: skikeActivator.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4282201412430274, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -197,7 +197,7 @@ Prefab:
         type: 2}
       propertyPath: skikeActivator.Array.data[0]
       value: 
-      objectReference: {fileID: 1564057125}
+      objectReference: {fileID: 1182133975}
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: checkRun
@@ -621,7 +621,7 @@ Prefab:
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: skikeActivator.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4282201412430274, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -669,7 +669,7 @@ Prefab:
         type: 2}
       propertyPath: skikeActivator.Array.data[0]
       value: 
-      objectReference: {fileID: 1564057125}
+      objectReference: {fileID: 1182133975}
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: checkRun
@@ -2512,7 +2512,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.8043699}
+  m_Offset: {x: -0.09597874, y: -0.8043699}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2523,7 +2523,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 57.010002, y: 0.98145485}
+  m_Size: {x: 56.818047, y: 0.98145485}
   m_EdgeRadius: 0
 --- !u!1001 &506258784
 Prefab:
@@ -2711,6 +2711,11 @@ Prefab:
       propertyPath: skikeActivator.Array.data[1]
       value: 
       objectReference: {fileID: 1182133975}
+    - target: {fileID: 212285963696114618, guid: 7751e229c0c400e4abae682b84dce7b0,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
   m_IsPrefabAsset: 0
@@ -3340,7 +3345,7 @@ Prefab:
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: skikeActivator.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4282201412430274, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3388,7 +3393,7 @@ Prefab:
         type: 2}
       propertyPath: skikeActivator.Array.data[0]
       value: 
-      objectReference: {fileID: 1564057125}
+      objectReference: {fileID: 1182133975}
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: checkRun
@@ -3532,6 +3537,11 @@ Prefab:
       propertyPath: skikeActivator.Array.data[1]
       value: 
       objectReference: {fileID: 1182133975}
+    - target: {fileID: 212285963696114618, guid: 7751e229c0c400e4abae682b84dce7b0,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
   m_IsPrefabAsset: 0
@@ -4615,6 +4625,11 @@ Prefab:
       propertyPath: skikeActivator.Array.data[1]
       value: 
       objectReference: {fileID: 1182133975}
+    - target: {fileID: 212285963696114618, guid: 7751e229c0c400e4abae682b84dce7b0,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
   m_IsPrefabAsset: 0
@@ -5746,7 +5761,7 @@ Prefab:
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: skikeActivator.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4282201412430274, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5794,7 +5809,7 @@ Prefab:
         type: 2}
       propertyPath: skikeActivator.Array.data[0]
       value: 
-      objectReference: {fileID: 1564057125}
+      objectReference: {fileID: 1182133975}
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: checkRun
@@ -5879,7 +5894,7 @@ Prefab:
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: skikeActivator.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4282201412430274, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5927,7 +5942,7 @@ Prefab:
         type: 2}
       propertyPath: skikeActivator.Array.data[0]
       value: 
-      objectReference: {fileID: 1564057125}
+      objectReference: {fileID: 1182133975}
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: checkRun
@@ -6061,7 +6076,7 @@ Prefab:
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: skikeActivator.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4282201412430274, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -6109,7 +6124,7 @@ Prefab:
         type: 2}
       propertyPath: skikeActivator.Array.data[0]
       value: 
-      objectReference: {fileID: 1564057125}
+      objectReference: {fileID: 1182133975}
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: checkRun
@@ -6732,7 +6747,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.053198814, y: 0.34171867}
+  m_Offset: {x: 0.053198814, y: -0.33106995}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6743,7 +6758,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.8942547, y: 2.2420654}
+  m_Size: {x: 5.8942547, y: 0.8964882}
   m_EdgeRadius: 0
 --- !u!1 &1199688772
 GameObject:
@@ -6956,7 +6971,7 @@ Prefab:
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: skikeActivator.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4282201412430274, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -7004,7 +7019,7 @@ Prefab:
         type: 2}
       propertyPath: skikeActivator.Array.data[0]
       value: 
-      objectReference: {fileID: 1564057125}
+      objectReference: {fileID: 1182133975}
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: checkRun
@@ -7049,7 +7064,7 @@ Prefab:
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: skikeActivator.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4282201412430274, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -7097,7 +7112,7 @@ Prefab:
         type: 2}
       propertyPath: skikeActivator.Array.data[0]
       value: 
-      objectReference: {fileID: 1564057125}
+      objectReference: {fileID: 1182133975}
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: checkRun
@@ -7184,7 +7199,7 @@ Prefab:
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: skikeActivator.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4282201412430274, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -7232,7 +7247,7 @@ Prefab:
         type: 2}
       propertyPath: skikeActivator.Array.data[0]
       value: 
-      objectReference: {fileID: 1564057125}
+      objectReference: {fileID: 1182133975}
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: checkRun
@@ -7516,7 +7531,7 @@ Prefab:
     - target: {fileID: 212675814883966844, guid: b3ae1e4424c634062951246511cd4c11,
         type: 2}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1889938320851956, guid: b3ae1e4424c634062951246511cd4c11, type: 2}
       propertyPath: m_TagString
@@ -8967,7 +8982,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4158225709504106, guid: 7099b0b44c0c6354292812f8474bfb76, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 18.43
+      value: 18.81
       objectReference: {fileID: 0}
     - target: {fileID: 4158225709504106, guid: 7099b0b44c0c6354292812f8474bfb76, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9326,6 +9341,11 @@ Prefab:
       propertyPath: skikeActivator.Array.data[1]
       value: 
       objectReference: {fileID: 1182133975}
+    - target: {fileID: 212285963696114618, guid: 7751e229c0c400e4abae682b84dce7b0,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
   m_IsPrefabAsset: 0
@@ -9508,11 +9528,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4039933442919002, guid: 3996c87c58fb9aa43a158a4e2a86804e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -21.75
+      value: -21.49
       objectReference: {fileID: 0}
     - target: {fileID: 4039933442919002, guid: 3996c87c58fb9aa43a158a4e2a86804e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 24.19
+      value: 34.43
       objectReference: {fileID: 0}
     - target: {fileID: 4039933442919002, guid: 3996c87c58fb9aa43a158a4e2a86804e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9822,7 +9842,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4962807721652458, guid: 832cbbae73ecc0b4b83af136e2b924de, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.535
+      value: 4.89
       objectReference: {fileID: 0}
     - target: {fileID: 4962807721652458, guid: 832cbbae73ecc0b4b83af136e2b924de, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9972,7 +9992,7 @@ Prefab:
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: skikeActivator.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4282201412430274, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -10020,7 +10040,7 @@ Prefab:
         type: 2}
       propertyPath: skikeActivator.Array.data[0]
       value: 
-      objectReference: {fileID: 1564057125}
+      objectReference: {fileID: 1182133975}
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: checkRun
@@ -10159,7 +10179,7 @@ Prefab:
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: skikeActivator.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4282201412430274, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -10207,7 +10227,7 @@ Prefab:
         type: 2}
       propertyPath: skikeActivator.Array.data[0]
       value: 
-      objectReference: {fileID: 1564057125}
+      objectReference: {fileID: 1182133975}
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: checkRun
@@ -10373,7 +10393,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4962807721652458, guid: 832cbbae73ecc0b4b83af136e2b924de, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 8.09
+      value: 8.52
       objectReference: {fileID: 0}
     - target: {fileID: 4962807721652458, guid: 832cbbae73ecc0b4b83af136e2b924de, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10890,7 +10910,7 @@ Prefab:
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: skikeActivator.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4282201412430274, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -10938,7 +10958,7 @@ Prefab:
         type: 2}
       propertyPath: skikeActivator.Array.data[0]
       value: 
-      objectReference: {fileID: 1564057125}
+      objectReference: {fileID: 1182133975}
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: checkRun
@@ -11077,7 +11097,7 @@ Prefab:
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: skikeActivator.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4282201412430274, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -11125,7 +11145,7 @@ Prefab:
         type: 2}
       propertyPath: skikeActivator.Array.data[0]
       value: 
-      objectReference: {fileID: 1564057125}
+      objectReference: {fileID: 1182133975}
     - target: {fileID: 114485854620376364, guid: 7751e229c0c400e4abae682b84dce7b0,
         type: 2}
       propertyPath: checkRun
@@ -11750,6 +11770,11 @@ Prefab:
       propertyPath: skikeActivator.Array.data[1]
       value: 
       objectReference: {fileID: 1182133975}
+    - target: {fileID: 212285963696114618, guid: 7751e229c0c400e4abae682b84dce7b0,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7751e229c0c400e4abae682b84dce7b0, type: 2}
   m_IsPrefabAsset: 0

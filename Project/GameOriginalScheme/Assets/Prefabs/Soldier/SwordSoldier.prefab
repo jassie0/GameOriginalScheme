@@ -500,7 +500,7 @@ MonoBehaviour:
     m_Bits: 12800
   damage: 10
   attackRange: 1.8
-  hitForce: 6
+  hitForce: 0
 --- !u!114 &114410013329660880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -514,9 +514,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_hurtSource: {fileID: 82364779258604332}
   health: 0
-  maxHealth: 150
-  healthPlus: 10
-  originalHealth: 150
+  maxHealth: 100
+  healthPlus: 30
+  originalHealth: 70
   healthPercent: 0
   maskOriginScale: 2.4
   maskYScale: 0.64
@@ -527,6 +527,7 @@ MonoBehaviour:
   EnemyExplode: 0
   EnemyDie: 0
   enemyHurtAnim: {fileID: 0}
+  enemyExplodeAnim: {fileID: 0}
   coinSpawnPrefab: {fileID: 0}
 --- !u!114 &114570717632517130
 MonoBehaviour:

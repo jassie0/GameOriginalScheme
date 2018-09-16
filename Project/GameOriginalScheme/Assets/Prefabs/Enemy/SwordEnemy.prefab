@@ -448,7 +448,7 @@ MonoBehaviour:
   enemies:
     serializedVersion: 2
     m_Bits: 256
-  damage: 10
+  damage: 5
   attackRange: 1.5
   hitForce: 6
 --- !u!114 &114657446070740088

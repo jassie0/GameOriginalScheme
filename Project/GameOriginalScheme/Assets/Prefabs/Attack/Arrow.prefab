@@ -157,9 +157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ecd45479fa8bd4a91b2bab6d1826c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 15
   damage: 20
-  timeDuration: 3
+  timeDuration: 2
   attackPos: {fileID: 4978829855845886}
   enemies:
     serializedVersion: 2
