@@ -55,9 +55,9 @@ public class DoorOpenByPass : MonoBehaviour {
 					doorMoving = true;
 				} else if (commonDoorActivator != null) {
 					if (commonDoorActivator.GetComponent<MachineTrigger> ().machineOn) {
-						doorMoving = true;
+						//doorMoving = true;
 					} else {
-						tip.text = "完成射靶开门";
+						//tip.text = "完成射靶开门";
 					}
 				}
 			} else if (gameObject.tag == "BossDoor"){
@@ -81,7 +81,12 @@ public class DoorOpenByPass : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.tag == "King") {
 			textTip.SetActive (true);
-			tip.text = "按下 空格 开门";
+			if (commonDoorActivator == null) {
+				tip.text = "按下空格开门";
+			} else if (commonDoorActivator != null) {
+				tip.text = "完成射靶开门";
+			}
+
 			Debug.Log (LevelToolValue.doorCardCount);
 			OpenRange = true;
 		}

@@ -25,5 +25,9 @@ public class MovingTarget : MonoBehaviour {
 			}
 			currentPoint = points[pointSelection];
 		}
+
+		if (GetComponent<MachineTrigger> ().machineOn) {
+			movingSpeed = 0;
+		}
 	}
 }

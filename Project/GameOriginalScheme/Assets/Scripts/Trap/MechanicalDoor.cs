@@ -28,6 +28,12 @@ public class MechanicalDoor : MonoBehaviour {
 						doorMoving = false;
 					}
 				}
+				if (GetComponent<DoorOpenByPass> () != null){
+					GetComponent<DoorOpenByPass> ().textTip.SetActive (false);
+					GetComponent<DoorOpenByPass> ().doorOpenLight.SetActive (true);
+				}
+
+
 			} else {
 				if (doorMoving) {
 					door.transform.position = Vector3.MoveTowards (door.transform.position, points [1].position, Time.deltaTime * movingSpeed);

@@ -26,7 +26,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1022991609350908
 GameObject:
   m_ObjectHideFlags: 1
@@ -42,7 +42,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1049070503454290
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,8 +147,9 @@ GameObject:
   - component: {fileID: 4533570839296962}
   - component: {fileID: 212458724606933474}
   - component: {fileID: 61820421237203850}
-  - component: {fileID: 114140726610089242}
   - component: {fileID: 114920111642464120}
+  - component: {fileID: 114135831747375512}
+  - component: {fileID: 114688422332666802}
   m_Layer: 0
   m_Name: BlueCommonDoorH
   m_TagString: CommonDoor
@@ -187,7 +188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1772800440606454
 GameObject:
   m_ObjectHideFlags: 1
@@ -293,7 +294,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1574602297035386}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.6299973, y: 2.59, z: 0}
+  m_LocalPosition: {x: 11.883789, y: 0.14983702, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4856695765426024}
@@ -530,7 +531,7 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
---- !u!114 &114140726610089242
+--- !u!114 &114135831747375512
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -538,21 +539,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 1574602297035386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a8fb7903e72b1942a9ac99f045eb645, type: 3}
+  m_Script: {fileID: 11500000, guid: fb7e31fe06b4d6d49bb56c6e44f25a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OpenRange: 0
-  doorMoving: 0
+  activator:
+  - {fileID: 0}
   currentPoint: {fileID: 0}
   movingSpeed: 5
+  doorMoving: 0
+  checkChange: 0
+  pointSelection: 0
+  points:
+  - {fileID: 4812661296894468}
+  - {fileID: 4324492541668074}
+  door: {fileID: 1572347097267602}
+--- !u!114 &114688422332666802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1574602297035386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7e31fe06b4d6d49bb56c6e44f25a18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activator:
+  - {fileID: 0}
+  currentPoint: {fileID: 0}
+  movingSpeed: 5
+  doorMoving: 0
+  checkChange: 0
   pointSelection: 0
   points:
   - {fileID: 4874491196252390}
   - {fileID: 4966543597161500}
   door: {fileID: 1142726171648058}
-  textTip: {fileID: 1692993471127058}
-  doorOpenLight: {fileID: 1019262481939710}
-  commonDoorActivator: {fileID: 0}
 --- !u!114 &114920111642464120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -567,14 +589,13 @@ MonoBehaviour:
   OpenRange: 0
   doorMoving: 0
   currentPoint: {fileID: 0}
-  movingSpeed: 5
+  movingSpeed: 0
   pointSelection: 0
   points:
-  - {fileID: 4812661296894468}
   - {fileID: 4324492541668074}
-  door: {fileID: 1572347097267602}
+  door: {fileID: 0}
   textTip: {fileID: 1692993471127058}
-  doorOpenLight: {fileID: 1022991609350908}
+  doorOpenLight: {fileID: 1718276240875992}
   commonDoorActivator: {fileID: 0}
 --- !u!212 &212112628831907516
 SpriteRenderer:
