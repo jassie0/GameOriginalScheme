@@ -66,9 +66,9 @@ public class CharacterHealth : MonoBehaviour {
 			{
 				SoundManager.Instance().PlaySound("soilderDie");
                 Destroy(gameObject);
-			} else if (gameObject.tag == "Enemy"){
-				Transform explodeAnim = Instantiate(enemyExplodeAnim, transform.position, enemyHurtAnim.rotation, this.transform.parent);
-				explodeAnim.parent = transform;
+			} else if (gameObject.tag == "Enemy" && EnemyDie == false){
+				StartCoroutine(EnemyGoToHell ());
+				EnemyDie = true;
 
 			}
 
@@ -120,12 +120,10 @@ public class CharacterHealth : MonoBehaviour {
 	}
 
 	IEnumerator EnemyGoToHell () {
-		//hurtAnim.SetBool ("EnemyGetHit", false);
-		//hurtAnim.SetBool ("Explosion", true);
-		yield return new WaitForSeconds (1f);
+		Transform explodeAnim = Instantiate(enemyExplodeAnim, transform.position, enemyExplodeAnim.rotation, this.transform.parent);
+		explodeAnim.parent = transform;
 		SoundManager.Instance().PlaySound("soilderDie");
-		Instantiate (coinSpawnPrefab, transform.position, Quaternion.identity);
-		Destroy (gameObject);
+		yield return null;
 	} 
 		
 }
