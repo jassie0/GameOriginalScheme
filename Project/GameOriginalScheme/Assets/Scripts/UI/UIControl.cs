@@ -64,7 +64,11 @@ public class UIControl : MonoSingleton<UIControl>
 
     public void OpenSingleWindow(UI_TYPE type)
     {
-        if (!m_windowDict.ContainsKey(type))
+        if (m_windowDict.ContainsKey(type))
+        {
+            m_windowDict[type].Open();
+        }
+        else
         {
             UIWindow win = CreateWindow(type);
             if (win != null)
@@ -234,6 +238,20 @@ public class UIControl : MonoSingleton<UIControl>
         if (endlessWin.isShow())
         {
             m_windowDict[UI_TYPE.Endless].SetWindow();
+        }
+    }
+
+    public void SetScore(int money)
+    {
+        UIWindow endlessWin = GetWindow(UI_TYPE.Endless);
+        if (endlessWin == null)
+        {
+            return;
+        }
+
+        if (endlessWin.isShow())
+        {
+            m_windowDict[UI_TYPE.Endless].SetWindow(money.ToString());
         }
     }
 

@@ -140,7 +140,7 @@ public class SoundManager : MonoSingleton<SoundManager>
 
     public void SetBgMusicVolume(float volume)
     {
-        bgMusic.volume = volume;
+        AudioListener.volume = volume;
         SetMusicVolumePrefs(volume);
     }
 

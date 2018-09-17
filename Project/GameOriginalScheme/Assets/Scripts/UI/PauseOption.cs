@@ -28,4 +28,5 @@ public class PauseOption : UIWindow {
     {
         UIControl.Instance().OpenSingleWindow(UI_TYPE.PauseMain);
     }
+     
 }

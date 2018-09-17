@@ -10,10 +10,10 @@ public class EndlessScore : UIWindow {
 
     private int m_totalScore = 0;
 
-    public override void SetWindow()
+    public override void SetWindow(string data)
     {
         base.SetWindow();
-        AddScore();
+        m_scoreText.text = "金币：" + data;
     }
 
     public void AddScore()

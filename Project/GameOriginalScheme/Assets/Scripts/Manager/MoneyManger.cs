@@ -17,7 +17,11 @@ public class MoneyManger : MonoBehaviour {
 			PlayerPrefs.SetInt ("CurrentMoney", 0);
 		}
 
-		moneyText.text = "金币：" + currentGold;
+		if(moneyText != null)
+		{
+			moneyText.text = "金币：" + currentGold;
+		}
+		UIControl.Instance().SetScore(goldAddedinCurrentLevel);
 	}
 	
 	// Update is called once per frame
@@ -29,6 +33,10 @@ public class MoneyManger : MonoBehaviour {
 		goldAddedinCurrentLevel += goldToAdd;
 		currentGold += goldAddedinCurrentLevel;
 		PlayerPrefs.SetInt ("CurrentMoney", currentGold);
-		moneyText.text = "金币：" + currentGold;
+		if(moneyText != null)
+		{
+			moneyText.text = "金币：" + currentGold;
+		}
+		UIControl.Instance().SetScore(goldAddedinCurrentLevel);
 	}
 }
