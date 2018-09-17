@@ -43,5 +43,11 @@ public class LoadingScreen : UIWindow
     private void OnDisable()
     {
         slider.value = 0f;
+        SoundManager.Instance().PlayBGM();        
+    }
+
+    private void OnEnable()
+    {
+        SoundManager.Instance().PauseBGM();
     }
 }

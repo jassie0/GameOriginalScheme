@@ -313,8 +313,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1171878511745506}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.41, y: -13.49, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.74, y: -28.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4748849455535468}
@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_playerRigidbody: {fileID: 50787039973976290}
-  speed: 3.5
+  speed: 4
   rotateSpeed: 90
   moveDes: {fileID: 1898993879821140, guid: 88eafe142d6a09446a4567f566f0f54b, type: 2}
   m_skillBox:
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_hurtSource: {fileID: 82264181966129160}
   health: 0
-  maxHealth: 500
+  maxHealth: 100
   healthPlus: 0
   originalHealth: 0
   healthPercent: 1
@@ -665,6 +665,9 @@ MonoBehaviour:
   EnemyExplode: 0
   EnemyDie: 0
   enemyHurtAnim: {fileID: 1765164388811700}
+  enemyExplodeAnim: {fileID: 0}
+  coinSpawnPrefab: {fileID: 0}
+  m_soldierAnim: {fileID: 0}
 --- !u!114 &114582307492252676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1130,7 +1133,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ff06ac37b95142c4da2d5d738810e5b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

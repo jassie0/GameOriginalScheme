@@ -79,7 +79,7 @@ public class MonsterManager : MonoBehaviour
         {
             return;
         }
-        dis.SetTime(180);
+        dis.SetTime(120);
 
     }
 

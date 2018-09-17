@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SoundManager : MonoSingleton<SoundManager>
 {
-    //public static SoundManager instance;
-
     private void Awake()
     {
         //instance = this;
@@ -43,10 +41,7 @@ public class SoundManager : MonoSingleton<SoundManager>
 	public AudioSource enterStaircase;
 	public AudioSource hitEnemy;
 	public AudioSource getKey;
-
     private AudioClip m_tempAudioClip;
-    //public AudioClip TempAudioClip{ get{ return m_tempAudioClip; } set{ m_tempAudioClip = value; }}
-
     static Dictionary<string, AudioSource> dict;
 
     void Start()
@@ -87,7 +82,19 @@ public class SoundManager : MonoSingleton<SoundManager>
         };
     }
 
+    public void PauseBGM()
+    {
+        AudioListener.volume = 0f;
+    }
 
+    public void PlayBGM()
+    {
+        AudioListener.volume = 1f;
+        if(bgMusic.clip != null)
+        {
+            bgMusic.Play();
+        }
+    }
 
     public void PlayBGM(string bgmName,bool isLoop = true)
     {
