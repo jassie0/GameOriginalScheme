@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MoneyManger : MonoBehaviour {
+public class MoneyManger : MonoSingleton<MoneyManger> {
 	public Text moneyText;
 	public int currentGold;
 	public int goldAddedinCurrentLevel = 0;

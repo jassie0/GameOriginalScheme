@@ -8,7 +8,6 @@ public class GameOver : UIWindow
 {
     public GameObject m_Win;
     public GameObject m_Lose;
-    public GameObject m_Over;
     public Text m_Score;
 
     public override void SetWindow(string data)
@@ -18,21 +17,13 @@ public class GameOver : UIWindow
         {
             m_Win.SetActive(true);
             m_Lose.SetActive(false);
-            m_Over.SetActive(false);
         }
         else if(data == "Lose")
         {
             m_Win.SetActive(false);
             m_Lose.SetActive(true);
-            m_Over.SetActive(false);
         }
-        else
-        {
-            m_Win.SetActive(false);
-            m_Lose.SetActive(false);
-            m_Over.SetActive(true);
-            m_Score.text = "分数：" + data;
-        }
+
     }
 
     public void OnClick_Replay()
@@ -47,11 +38,17 @@ public class GameOver : UIWindow
         UIControl.Instance().OpenSingleWindow(UI_TYPE.StartPlay);
         GameController.Instance().SetInFightScene(false);
         SoundManager.Instance().PlayBGM("startSceneBGM");
-        Close();
+        Close();        // else
+        // {
+        //     m_Win.SetActive(false);
+        //     m_Lose.SetActive(false);
+        //     m_Score.text = "分数：0";
+        // }
     }
 
     private void OnEnable()
     {
+        m_Score.text = "金币：" + MoneyManger.Instance().currentGold.ToString();
         Time.timeScale = 0;
     }
 
