@@ -173,7 +173,7 @@ MonoBehaviour:
   speed: 5
   damage: 20
   m_rigidbody: {fileID: 50203466066708760}
-  m_soundDistance: 12
+  m_soundDistance: 10
 --- !u!212 &212458578969411372
 SpriteRenderer:
   m_ObjectHideFlags: 1
