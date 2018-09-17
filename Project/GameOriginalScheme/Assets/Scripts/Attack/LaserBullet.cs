@@ -46,6 +46,8 @@ public class LaserBullet : MonoBehaviour {
         else if (other.tag == "Shield")
         {
             Destroy(gameObject);
-        }
+		} else if (other.tag == "Wall") {
+			Destroy(gameObject);
+		}
 	}
 }

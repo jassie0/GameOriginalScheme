@@ -50,7 +50,9 @@ public class Arrow : MonoBehaviour {
         {
             other.GetComponent<MachineTrigger>().StateChange();
             Destroy(gameObject);
-        }
+		} else if (other.tag == "Wall") {
+			Destroy(gameObject);
+		}
         //		enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
         //	}else {
         //		enemiesToDamage [i].GetComponent<MachineTrigger> ().StateChange ();
