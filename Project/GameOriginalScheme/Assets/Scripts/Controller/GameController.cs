@@ -17,7 +17,7 @@ public class GameController : MonoSingleton<GameController>
     {
         instance = this;
         InitLevel();
-
+        AudioListener.volume = SoundManager.Instance().GetMusicVolumePrefs();
     }
 
     private void Start()

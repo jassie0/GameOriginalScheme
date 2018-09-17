@@ -27,9 +27,8 @@ public class StartPlay : UIWindow
             if (Input.anyKeyDown)
             {
                 AudioSource.PlayClipAtPoint(sfxButton, Vector3.zero);
-                UIControl.Instance().OpenSingleWindow(UI_TYPE.SelectMode);
-                //StartCoroutine (LoadAsyn());
                 oneshotSfx = false;
+                UIControl.Instance().OpenSingleWindow(UI_TYPE.SelectMode);
             }
         }
 	}
