@@ -25,6 +25,10 @@ public class LayerController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
         }
+        else if (gameObject.tag == "Spike")
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
+        }
     }
 	
 	void Update ()

@@ -508,7 +508,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 7.8}
+  m_Size: {x: 4, y: 7.8}
   m_EdgeRadius: 0
 --- !u!102 &102521694500653804
 TextMesh:
@@ -568,7 +568,7 @@ MonoBehaviour:
   OpenRange: 0
   doorMoving: 0
   currentPoint: {fileID: 0}
-  movingSpeed: 5
+  movingSpeed: 10
   pointSelection: 0
   points:
   - {fileID: 4328682545293494}

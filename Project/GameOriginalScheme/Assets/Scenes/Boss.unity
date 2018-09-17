@@ -739,12 +739,17 @@ Prefab:
     - target: {fileID: 114235115571021746, guid: e31f4c40b4ee0e04f9eb495c2316e66d,
         type: 2}
       propertyPath: m_radius
-      value: 2
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 114564923046414046, guid: e31f4c40b4ee0e04f9eb495c2316e66d,
         type: 2}
       propertyPath: maxHealth
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235115571021746, guid: e31f4c40b4ee0e04f9eb495c2316e66d,
+        type: 2}
+      propertyPath: speed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e31f4c40b4ee0e04f9eb495c2316e66d, type: 2}
