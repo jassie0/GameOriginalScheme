@@ -14,4 +14,9 @@ public class ArcherSoldierAttack : MonoBehaviour {
         }
 
     }
+    
+	void DistoryThisAfterDeath()
+	{
+		Destroy(gameObject);
+	}    
 }

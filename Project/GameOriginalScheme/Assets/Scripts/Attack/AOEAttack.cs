@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class AOEAttack : MonoBehaviour {
 
-    public Animator m_bingAni;
+    public SoldierAnim m_soldierAnim;
     public AudioSource m_attackSource;
     public SpriteRenderer m_attackRange;
 	public float coolDownTime;
-
 	public float startTime;
-
 	public Transform startPos;
 	public Transform endPos;
 	public LayerMask enemies;
@@ -19,26 +17,41 @@ public class AOEAttack : MonoBehaviour {
 	public GameObject charSprite;
 	public Material defaultMaterial;
 	public Material outlineMaterial;
+    private SpriteRenderer m_spriteRenderer;
 
+    void Start () {
+        if(m_attackRange != null)
+        {
+            m_attackRange.gameObject.SetActive(false);
+        }
 
-	// Use this for initialization
-	void Start () {
-        coolDownTime = startTime;
-        m_attackRange.gameObject.SetActive(false);
-		charSprite.GetComponent<SpriteRenderer> ().material = outlineMaterial;
+        m_spriteRenderer = charSprite.GetComponent<SpriteRenderer>();
+        m_spriteRenderer.material = outlineMaterial;
 	}
 	
-	// Update is called once per frame
 	void Update () {
+
+        if(coolDownTime < 0)
+        {
+            return;
+        }
 
         if (coolDownTime > 0)
         {
             coolDownTime -= Time.deltaTime;
-			charSprite.GetComponent<SpriteRenderer> ().material = defaultMaterial;
+            if(m_spriteRenderer.material != defaultMaterial)
+            {
+                m_spriteRenderer.material = defaultMaterial;
+            }
+
         }
 		else 
         {
-			charSprite.GetComponent<SpriteRenderer> ().material = outlineMaterial;
+            if(m_spriteRenderer.material != outlineMaterial)
+            {
+                m_spriteRenderer.material = outlineMaterial;
+            }
+
 		} 
 	}
 
@@ -52,14 +65,16 @@ public class AOEAttack : MonoBehaviour {
 		if (coolDownTime > 0) {
 			return;
 		} 
+
+        coolDownTime = startTime;
        
         RotateAroundPivot(direction, transform);
 
         SoundManager.Instance().PlaySound("generalAttack");
 
-        if(m_bingAni)
+        if(m_soldierAnim != null)
         {
-            PlayAnimation(m_direction);
+            m_soldierAnim.AttackAnim(m_direction);
         }
 
     }
@@ -71,12 +86,30 @@ public class AOEAttack : MonoBehaviour {
 
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-			if (enemiesToDamage[i].tag == "Player" || enemiesToDamage[i].tag == "King") {
-				enemiesToDamage [i].GetComponent<CharacterHealth> ().TakeDamage (damage);
-			} else if (enemiesToDamage[i].tag == "Bar") {
-				enemiesToDamage [i].GetComponent<MachineTrigger> ().StateChange ();
-			} else if (enemiesToDamage[i].tag == "Breakable") {
-				enemiesToDamage [i].GetComponent<BreakableWall> ().WallChange ();
+			if (enemiesToDamage[i].tag == "Player" || enemiesToDamage[i].tag == "King" || enemiesToDamage[i].tag == "Boss" || 
+            enemiesToDamage[i].tag == "Hand" || enemiesToDamage[i].tag == "Enemy" ) 
+            {
+                CharacterHealth characterHealth = enemiesToDamage [i].GetComponent<CharacterHealth> ();
+                if(characterHealth != null)
+                {
+                    characterHealth.TakeDamage (damage);
+                }
+			} 
+            else if (enemiesToDamage[i].tag == "Bar") 
+            {
+                MachineTrigger machineTrigger = enemiesToDamage [i].GetComponent<MachineTrigger> ();
+                if(machineTrigger != null)
+                {
+                    machineTrigger.StateChange ();
+                }
+			} 
+            else if (enemiesToDamage[i].tag == "Breakable") 
+            {
+                BreakableWall breakableWall = enemiesToDamage [i].GetComponent<BreakableWall> ();
+                if(breakableWall != null)
+                {
+                    breakableWall.WallChange ();
+                }
 			}
         }
 
@@ -86,32 +119,17 @@ public class AOEAttack : MonoBehaviour {
 
     IEnumerator SetAttackRange()
     {
-        m_attackRange.gameObject.SetActive(true);
+        if(m_attackRange != null)
+        {
+            m_attackRange.gameObject.SetActive(true);
+        }
+        
         yield return new WaitForSeconds(0.2f);
-        m_attackRange.gameObject.SetActive(false);
-    }
 
-    public void PlayAnimation(Direction curDirection)
-    {
-        if (curDirection == Direction.Up)
+        if(m_attackRange != null)
         {
-            m_bingAni.SetFloat("AttackDirection", 0.66f);
+            m_attackRange.gameObject.SetActive(false);
         }
-        else if (curDirection == Direction.Right)
-        {
-            m_bingAni.SetFloat("AttackDirection", 1f);
-        }
-        else if (curDirection == Direction.Down)
-        {
-            m_bingAni.SetFloat("AttackDirection", 0.0f);
-        }
-        else if (curDirection == Direction.Left)
-        {
-            m_bingAni.SetFloat("AttackDirection", 0.33f);
-        }
-
-        m_bingAni.SetTrigger("Attacking");
-
     }
 
     public void RotateAroundPivot(Direction direction, Transform nubing)

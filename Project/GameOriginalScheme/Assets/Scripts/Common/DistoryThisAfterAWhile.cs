@@ -4,6 +4,22 @@ using UnityEngine;
 
 public class DistoryThisAfterAWhile : MonoBehaviour {
 
-    public float m_Time = 10f;      // Use this for initialization     void Start () 
-    {              }        // Update is called once per frame     void Update ()      {         if(m_Time > 0)         {             m_Time -= Time.deltaTime;         }         else         {             Destroy(this.gameObject);         }     } 
+    public float m_Time = 10f;
+
+    public void SetTime(float time)
+    {
+        m_Time = time;
+    }
+
+    void Update () 
+    {
+        if(m_Time > 0)
+        {
+            m_Time -= Time.deltaTime;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

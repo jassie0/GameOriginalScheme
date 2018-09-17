@@ -6,12 +6,13 @@ public class ShieldAttack : MonoBehaviour {
 
     public Animator m_bingAni;
     public AudioSource m_attackSource;
-    public SpriteRenderer m_attackRange;
+    public GameObject m_attackRange;
     private float coolDownTime;
     private float startTime;
     public LayerMask enemies;
     public float damage;
     public float duringTime = 1.5f;
+    public SoldierAnim m_soldierAnim;
 
     private Direction m_direction = Direction.Up;
 
@@ -56,74 +57,14 @@ public class ShieldAttack : MonoBehaviour {
 
     IEnumerator SetAttackRange()
     {
+        if(m_soldierAnim != null)
+        {
+            m_soldierAnim.AttackAnim(m_direction);
+        }
         m_attackRange.gameObject.SetActive(true);
         yield return new WaitForSeconds(duringTime);
         m_attackRange.gameObject.SetActive(false);
     }
-
-    public void PlayAnimation(Direction curDirection)
-    {
-        if (curDirection == Direction.Up)
-        {
-            m_bingAni.SetFloat("UpAttack", 1f);
-        }
-        else if (curDirection == Direction.Right)
-        {
-            m_bingAni.SetFloat("RightAttack", 1f);
-        }
-        else if (curDirection == Direction.Down)
-        {
-            m_bingAni.SetFloat("DownAttack", 1f);
-        }
-        else if (curDirection == Direction.Left)
-        {
-            m_bingAni.SetFloat("LeftAttack", 1f);
-        }
-
-        m_bingAni.SetTrigger("Attacking");
-
-    }
-
-    IEnumerator SetAnimation(Direction direction)
-    {
-        if (direction == Direction.Up)
-        {
-            m_bingAni.SetFloat("UpAttack", 1f);
-        }
-        else if (direction == Direction.Right)
-        {
-            m_bingAni.SetFloat("RightAttack", 1f);
-        }
-        else if (direction == Direction.Down)
-        {
-            m_bingAni.SetFloat("DownAttack", 1f);
-        }
-        else if (direction == Direction.Left)
-        {
-            m_bingAni.SetFloat("LeftAttack", 1f);
-        }
-        m_bingAni.SetTrigger("Attacking");
-
-        yield return new WaitForSeconds(duringTime);
-
-        if (direction == Direction.Up)
-        {
-            m_bingAni.SetFloat("UpAttack", 0f);
-        }
-        else if (direction == Direction.Right)
-        {
-            m_bingAni.SetFloat("RightAttack", 0f);
-        }
-        else if (direction == Direction.Down)
-        {
-            m_bingAni.SetFloat("DownAttack", 0f);
-        }
-        else if (direction == Direction.Left)
-        {
-            m_bingAni.SetFloat("LeftAttack", 0f);
-        }
-    }
-
 
     public void RotateAroundPivot(Direction direction, Transform nubing)
     {

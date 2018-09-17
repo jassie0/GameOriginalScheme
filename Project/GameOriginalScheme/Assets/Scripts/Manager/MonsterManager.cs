@@ -39,14 +39,13 @@ public class MonsterManager : MonoBehaviour
 				Debug.LogError ("Create monster error");
 			}
 
-			//MonsterController monster = monsterObj.GetComponent<MonsterController> ();
-			//if (monster == null) 
-			//{
-			//	Debug.LogError ("Create monster error");
-			//}
-				
-			//monster.InitMonster (player);
-		}
+            DistoryThisAfterAWhile dis = monsterObj.AddComponent<DistoryThisAfterAWhile>();
+            if(dis == null)
+            {
+                return;
+            }
+            dis.SetTime(180);
+        }
 	}
 
 	IEnumerator CreatingMonster()
@@ -70,7 +69,18 @@ public class MonsterManager : MonoBehaviour
         int randomDing = Random.Range(0, _dingPerfab.Count);
         int randomSpawn = Random.Range(0, _dingSpawner.Count);
 
-        Instantiate(_dingPerfab[randomDing], _dingSpawner[randomSpawn].transform.position, Quaternion.identity);
+        GameObject ding = Instantiate(_dingPerfab[randomDing], _dingSpawner[randomSpawn].transform.position, Quaternion.identity);
+        if(ding == null)
+        {
+            return;
+        }
+        DistoryThisAfterAWhile dis = ding.AddComponent<DistoryThisAfterAWhile>();
+        if(dis == null)
+        {
+            return;
+        }
+        dis.SetTime(180);
+
     }
 
     IEnumerator CreatingDing()

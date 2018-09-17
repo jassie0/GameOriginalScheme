@@ -5,12 +5,13 @@ using UnityEngine;
 public class ArcherSoldier : BaseSoldier {
 
     public GameObject m_arrowPrefab;
-    public Animator m_soldierAnimator;
     public AudioSource m_attackSource;
     public float m_cdTime = 1.5f;
     private float m_cdCount = 0;
     private Direction m_dir;
     public Direction Direction{ get { return m_dir; }}
+
+    public SoldierAnim m_soldierAnimator;
 
     public ArcherSoldier()
     {
@@ -38,9 +39,9 @@ public class ArcherSoldier : BaseSoldier {
 
         SoundManager.Instance().PlaySound("archorAttack");
 
-        if (m_soldierAnimator)
+        if (m_soldierAnimator != null)
         {
-            PlayAnimation(m_nowDirection);
+            m_soldierAnimator.AttackAnim(m_nowDirection);
         }
     }
 
@@ -56,29 +57,6 @@ public class ArcherSoldier : BaseSoldier {
         base.Init(dir);
         m_dir = dir;
     }
-
-    public void PlayAnimation(Direction curDirection)
-    {
-        if (curDirection == Direction.Up)
-        {
-            m_soldierAnimator.SetFloat("AttackDirection", 0.66f);
-        }
-        else if (curDirection == Direction.Right)
-        {
-            m_soldierAnimator.SetFloat("AttackDirection", 1f);
-        }
-        else if (curDirection == Direction.Down)
-        {
-            m_soldierAnimator.SetFloat("AttackDirection", 0.0f);
-        }
-        else if (curDirection == Direction.Left)
-        {
-            m_soldierAnimator.SetFloat("AttackDirection", 0.33f);
-        }
-
-        m_soldierAnimator.SetTrigger("Attacking");
-    }
-
 
     public void RotateAroundPivot(Direction direction, Transform nubing)
     {
