@@ -33,6 +33,7 @@ public class CharacterHealth : MonoBehaviour {
 
 
 	public GameObject coinSpawnPrefab;
+	public SoldierAnim m_soldierAnim;
 
     void Start () {
 		health = maxHealth;
@@ -43,6 +44,11 @@ public class CharacterHealth : MonoBehaviour {
 		healthPercent = health/maxHealth;
 		barMask.localScale = new Vector3 (healthPercent * maskOriginScale, maskYScale ,1);
 		if (health <= 0 ) {
+
+			if(EnemyDie == true)
+			{
+				return;
+			}
 
             if(gameObject.tag == "King")
             {
@@ -64,14 +70,13 @@ public class CharacterHealth : MonoBehaviour {
 
             if (gameObject.tag == "Player")
 			{
-				SoundManager.Instance().PlaySound("soilderDie");
-                Destroy(gameObject);
-			} else if (gameObject.tag == "Enemy" && EnemyDie == false){
+				StartCoroutine(SoldierGoToHell());
+			} else if (gameObject.tag == "Enemy")
+			{
 				StartCoroutine(EnemyGoToHell ());
-				EnemyDie = true;
-
 			}
 
+			EnemyDie = true;
         }
 	}
 
@@ -126,4 +131,15 @@ public class CharacterHealth : MonoBehaviour {
 		yield return null;
 	} 
 		
+	IEnumerator SoldierGoToHell()
+	{
+		if(m_soldierAnim != null)
+		{
+			m_soldierAnim.SetDieAnim();
+			SoundManager.Instance().PlaySound("soilderDie");
+		}
+		yield return new WaitForSeconds (1f);
+		
+		Destroy(gameObject);
+	}
 }

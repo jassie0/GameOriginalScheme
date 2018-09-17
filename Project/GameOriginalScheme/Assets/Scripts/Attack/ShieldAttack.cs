@@ -18,7 +18,11 @@ public class ShieldAttack : MonoBehaviour {
 
     void Start()
     {
-        m_attackRange.gameObject.SetActive(false);
+        if(m_attackRange !=null)
+        {
+            m_attackRange.gameObject.SetActive(false);
+        }
+
     }
 
     void Update()
@@ -61,9 +65,17 @@ public class ShieldAttack : MonoBehaviour {
         {
             m_soldierAnim.AttackAnim(m_direction);
         }
-        m_attackRange.gameObject.SetActive(true);
+        if(m_attackRange != null)
+        {
+            m_attackRange.gameObject.SetActive(true);
+        }
+
         yield return new WaitForSeconds(duringTime);
-        m_attackRange.gameObject.SetActive(false);
+        if (m_attackRange != null)
+        {
+            m_attackRange.gameObject.SetActive(false);
+        }
+        
     }
 
     public void RotateAroundPivot(Direction direction, Transform nubing)

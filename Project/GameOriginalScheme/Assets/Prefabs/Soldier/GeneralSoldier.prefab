@@ -551,6 +551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d790107ab9e9247abeb19ae2d1e49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_soldier: {fileID: 1813633381695374}
 --- !u!114 &114495168387786426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -592,6 +593,7 @@ MonoBehaviour:
   enemyHurtAnim: {fileID: 0}
   enemyExplodeAnim: {fileID: 0}
   coinSpawnPrefab: {fileID: 0}
+  m_soldierAnim: {fileID: 114201979470242654}
 --- !u!114 &114771180798720680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -615,11 +617,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0986be953d0b22469cff48a7404e1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_bingAni: {fileID: 95814578256495388}
+  m_soldierAnim: {fileID: 114201979470242654}
   m_attackSource: {fileID: 82945696469702540}
   m_attackRange: {fileID: 212223793890224018}
-  coolDownTime: 2
-  startTime: 20
+  coolDownTime: 0
+  startTime: 2
   startPos: {fileID: 4360366800187506}
   endPos: {fileID: 4681858469026924}
   enemies:

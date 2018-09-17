@@ -432,9 +432,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_arrowPrefab: {fileID: 1078766680536524, guid: ecae5d1cd543bd943910d6005410c04c,
     type: 2}
-  m_soldierAnimator: {fileID: 95578363183184402}
   m_attackSource: {fileID: 82623488133479824}
   m_cdTime: 1.5
+  m_soldierAnimator: {fileID: 114500890480671340}
 --- !u!114 &114295898666784790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -463,6 +463,7 @@ MonoBehaviour:
   enemyHurtAnim: {fileID: 0}
   enemyExplodeAnim: {fileID: 0}
   coinSpawnPrefab: {fileID: 0}
+  m_soldierAnim: {fileID: 114500890480671340}
 --- !u!114 &114338541585789066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -486,6 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d790107ab9e9247abeb19ae2d1e49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_soldier: {fileID: 1813633381695374}
 --- !u!212 &212430681058225402
 SpriteRenderer:
   m_ObjectHideFlags: 1
