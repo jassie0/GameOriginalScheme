@@ -34,10 +34,14 @@ public class PlayerController : MonoSingleton<PlayerController>
 	public bool playerMoving;
 	public Vector2 lastMove;
 	public bool PlayerAlive;
+    public float h;
+    public float v;
 
 	public GameObject animSprite;
 	Animator animator;
     static GameObject _player;
+
+
 
 	void Awake()
 	{
@@ -113,8 +117,8 @@ public class PlayerController : MonoSingleton<PlayerController>
 			isMoving = false;
 		}*/
 
-			float h = Input.GetAxisRaw ("Horizontal");
-			float v = Input.GetAxisRaw ("Vertical");
+			h = Input.GetAxisRaw ("Horizontal");
+			v = Input.GetAxisRaw ("Vertical");
 
 			if (h > 0.5f || v > 0.5f || h < -0.5f || v < -0.5f) {
 				m_playerRigidbody.MovePosition ((Vector2)transform.position + new Vector2 (h, v) * speed * Time.deltaTime);
