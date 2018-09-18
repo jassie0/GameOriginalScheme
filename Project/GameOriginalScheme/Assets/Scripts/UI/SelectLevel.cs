@@ -33,6 +33,7 @@ public class SelectLevel : UIWindow
 
     public void OnClick_LoadLevel(int i)
     {
+        MoneyManger.Instance().ResetGold();
         UIControl.Instance().LoadScene("Stage" + i.ToString());
         UIControl.Instance().CloseWindow(UI_TYPE.SelectLevel);
         if(0 == i)
@@ -51,6 +52,7 @@ public class SelectLevel : UIWindow
 
     public void OnClick_LoadLevel1()
     {
+        MoneyManger.Instance().ResetGold();
         UIControl.Instance().LoadScene("SampleScene");
         UIControl.Instance().CloseWindow(UI_TYPE.SelectLevel);
         UIControl.Instance().OpenWindow(UI_TYPE.Training);

@@ -38,6 +38,7 @@ public class PauseMain : UIWindow
 
     public void OnClick_Restart()
     {
+        MoneyManger.Instance().ResetGold();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         UIControl.Instance().CloseAllWindow();
         GameController.Instance().SetInFightScene(true);

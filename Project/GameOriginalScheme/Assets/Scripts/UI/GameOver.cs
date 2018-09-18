@@ -28,6 +28,7 @@ public class GameOver : UIWindow
 
     public void OnClick_Replay()
     {
+        MoneyManger.Instance().ResetGold();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         SoundManager.Instance().PlayTempBGM();
         Close();
@@ -48,7 +49,7 @@ public class GameOver : UIWindow
 
     private void OnEnable()
     {
-        m_Score.text = "金币：" + MoneyManger.Instance().currentGold.ToString();
+        m_Score.text = "金币：" + MoneyManger.Instance().GetCurrentGold().ToString();
         Time.timeScale = 0;
     }
 

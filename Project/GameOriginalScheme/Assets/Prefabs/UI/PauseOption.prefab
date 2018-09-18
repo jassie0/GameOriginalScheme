@@ -437,9 +437,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'BACK
-
-'
+  m_Text: "\u8FD4\u56DE"
 --- !u!114 &114193903096078732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -507,7 +505,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MUSIC
+  m_Text: "\u97F3\u91CF"
 --- !u!114 &114509278526972150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -594,7 +592,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: OPTION
+  m_Text: 
 --- !u!114 &114761441535035480
 MonoBehaviour:
   m_ObjectHideFlags: 1

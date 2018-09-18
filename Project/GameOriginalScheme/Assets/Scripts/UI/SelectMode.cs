@@ -16,6 +16,7 @@ public class SelectMode : UIWindow
         GameController.Instance().SetInFightScene(true);
         SoundManager.Instance().PlaySound("buttonClick");
         SoundManager.Instance().PlayBGM("bossFightBGM");
+        MoneyManger.Instance().ResetGold();
         UIControl.Instance().OpenSingleWindow(UI_TYPE.Endless);
     }
 
