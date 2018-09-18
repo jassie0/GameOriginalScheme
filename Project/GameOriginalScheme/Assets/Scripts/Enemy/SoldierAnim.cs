@@ -18,9 +18,9 @@ public class SoldierAnim : MonoBehaviour {
 	void Update () {
 		animator.SetFloat ("WalkX", playerController.h);
 		animator.SetFloat ("WalkY", playerController.v);
-		animator.SetBool ("PlayerMoving", PlayerController.GetPlayerObject().GetComponent<PlayerController>().playerMoving);
-		animator.SetFloat ("LastMoveX", PlayerController.GetPlayerObject().GetComponent<PlayerController>().lastMove.x);
-		animator.SetFloat ("LastMoveY", PlayerController.GetPlayerObject().GetComponent<PlayerController>().lastMove.y);     
+		animator.SetBool ("PlayerMoving", playerController.playerMoving);
+		animator.SetFloat ("LastMoveX", playerController.lastMove.x);
+		animator.SetFloat ("LastMoveY", playerController.lastMove.y);     
 	}
 
 	void DistoryThisAfterDeath()
