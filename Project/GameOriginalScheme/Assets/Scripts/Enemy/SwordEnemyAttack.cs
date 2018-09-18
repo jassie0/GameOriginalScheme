@@ -11,6 +11,7 @@ public class SwordEnemyAttack : MonoBehaviour {
         if (m_enemyMelee != null)
         {
             m_enemyMelee.EnemyMeleeDamage();
+            SoundManager.Instance().PlaySound("laserKnife");
         }
     }
 

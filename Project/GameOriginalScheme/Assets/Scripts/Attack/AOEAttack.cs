@@ -70,7 +70,7 @@ public class AOEAttack : MonoBehaviour {
        
         RotateAroundPivot(direction, transform);
 
-        SoundManager.Instance().PlaySound("generalAttack");
+        //SoundManager.Instance().PlaySound("generalAttack");
 
         if(m_soldierAnim != null)
         {

@@ -12,6 +12,7 @@ public class SwordSoldierAttack : MonoBehaviour {
         {
             //Debug.Log("SwordAttack");
             m_MeleeAttack.TakeDamage();
+            SoundManager.Instance().PlaySound("soldierAttack");
         }
 
         //Debug.Log("SwordAttack");

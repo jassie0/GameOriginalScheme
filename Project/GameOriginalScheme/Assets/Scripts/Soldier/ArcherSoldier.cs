@@ -37,7 +37,7 @@ public class ArcherSoldier : BaseSoldier {
 
         m_cdCount = m_cdTime;
 
-        SoundManager.Instance().PlaySound("archorAttack");
+        //SoundManager.Instance().PlaySound("archorAttack");
 
         if (m_soldierAnimator != null)
         {

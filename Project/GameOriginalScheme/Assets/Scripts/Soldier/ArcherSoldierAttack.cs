@@ -11,6 +11,7 @@ public class ArcherSoldierAttack : MonoBehaviour {
         if (m_archerSoldier != null)
         {
             m_archerSoldier.SendArrow();
+            SoundManager.Instance().PlaySound("archorAttack");
         }
 
     }

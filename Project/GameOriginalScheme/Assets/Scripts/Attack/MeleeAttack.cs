@@ -40,7 +40,7 @@ public class MeleeAttack : MonoBehaviour {
 
         timeBtwAttack = startTime;
 
-        SoundManager.Instance().PlaySound("laserKnife");
+        //SoundManager.Instance().PlaySound("laserKnife");
     }
 
 
@@ -51,7 +51,7 @@ public class MeleeAttack : MonoBehaviour {
             return;
         }
 
-        SoundManager.Instance().PlaySound("soldierAttack");
+       // SoundManager.Instance().PlaySound("soldierAttack");
 
         if (m_soldierAnim != null)
         {

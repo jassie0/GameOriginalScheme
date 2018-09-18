@@ -11,6 +11,7 @@ public class GeneralSoldierAttack : MonoBehaviour {
         if (m_AOEAttack != null)
         {
             m_AOEAttack.TakeAttackRange();
+            SoundManager.Instance().PlaySound("generalAttack");
         }
     }
 }
