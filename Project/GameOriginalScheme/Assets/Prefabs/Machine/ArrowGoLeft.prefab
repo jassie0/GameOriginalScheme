@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4058764850050690}
   - component: {fileID: 50343305151313268}
-  - component: {fileID: 61591225180629554}
   - component: {fileID: 114816748367087478}
   - component: {fileID: 114125502978909868}
+  - component: {fileID: 58795223181200098}
   m_Layer: 0
   m_Name: ArrowGoLeft
   m_TagString: Arrow
@@ -81,8 +81,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126490396144412}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 11.552729, y: -11.292785, z: 0}
-  m_LocalScale: {x: 0.14, y: 0.14, z: 0.14}
+  m_LocalPosition: {x: 28.54844, y: -35.313374, z: 0}
+  m_LocalScale: {x: 0.35, y: 0.2, z: 0.14}
   m_Children:
   - {fileID: 4023612748000450}
   - {fileID: 4757417388625982}
@@ -122,8 +122,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &61591225180629554
-BoxCollider2D:
+--- !u!58 &58795223181200098
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -134,19 +134,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03027606, y: 0.12109792}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 34.16, y: 3.08}
-    newSize: {x: 1.66, y: 7.94}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 3.4}
   serializedVersion: 2
-  m_Size: {x: 0.8728601, y: 7.5363283}
-  m_EdgeRadius: 0
+  m_Radius: 0.36
 --- !u!114 &114125502978909868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -173,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a66d1473853f24192b290e4cd90a6f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Time: 2
+  m_Time: 10
 --- !u!212 &212951122630865284
 SpriteRenderer:
   m_ObjectHideFlags: 1

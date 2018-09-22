@@ -47,7 +47,7 @@ public class ArcherSoldier : BaseSoldier {
 
     public void SendArrow()
     {
-        Transform arrow = Instantiate(m_arrowPrefab, this.transform.position, this.transform.rotation).transform;
+        Transform arrow = Instantiate(m_arrowPrefab, transform.position , this.transform.rotation).transform;
         RotateAroundPivot(m_nowDirection, arrow);
     }
 

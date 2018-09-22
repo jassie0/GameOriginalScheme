@@ -86,5 +86,4 @@ public class SkillBox : MonoBehaviour
             m_soldier.Init(m_nowDirection);
         }
     }
-
 }

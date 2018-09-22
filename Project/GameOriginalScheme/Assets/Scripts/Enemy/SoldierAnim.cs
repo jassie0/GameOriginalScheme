@@ -7,6 +7,7 @@ public class SoldierAnim : MonoBehaviour {
 	public GameObject m_soldier;
 	PlayerController playerController;
 	Animator animator;
+
 	// Use this for initialization
 	void Start () {
 		//player = GameController.instance.Player;
@@ -41,7 +42,7 @@ public class SoldierAnim : MonoBehaviour {
         switch (curDirection)
         {
             case Direction.Up:
-            {
+            {                
                 animator.SetFloat("AttackX", 0f);
                 animator.SetFloat("AttackY", 1f);
                 break;

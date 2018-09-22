@@ -156,7 +156,8 @@ public class PlayerController : MonoSingleton<PlayerController>
 			animator.SetFloat ("WalkY", v);
 			animator.SetBool ("PlayerMoving", playerMoving);
 			animator.SetFloat ("LastMoveX", lastMove.x);
-			animator.SetFloat ("LastMoveY", lastMove.y);     
+			animator.SetFloat ("LastMoveY", lastMove.y);
+
 		}
 	}
 
