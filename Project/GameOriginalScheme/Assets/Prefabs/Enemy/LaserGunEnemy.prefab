@@ -161,7 +161,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1192565805050714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.28, y: -15.35, z: 0}
+  m_LocalPosition: {x: 36.74, y: -28.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4038100150445762}
@@ -387,14 +387,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootSource: {fileID: 82899359747724126}
-  checkRadius: 8
+  checkRadius: 12
   checkLayers:
     serializedVersion: 2
     m_Bits: 256
   speed: 0
-  attackRange: 7
+  attackRange: 8
   timeBtwShoot: 0
-  startTime: 2
+  startTime: 4
   laserPrefab: {fileID: 1839962794150800, guid: 79ed87b1a828c2349b9b8f3765993abb,
     type: 2}
   laserSpeed: 5
@@ -439,7 +439,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 2
+  maxSpeed: 3
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -452,7 +452,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0.6
   pickNextWaypointDist: 0.3
-  endReachedDistance: 7
+  endReachedDistance: 8
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 0
   whenCloseToDestination: 0
