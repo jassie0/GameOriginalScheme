@@ -41,12 +41,12 @@ public class ShotGun : MonoBehaviour {
 
                 if (hit.collider != null) {
                     GameObject newBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-                    newBullet.transform.parent = gameObject.transform;
+                    //newBullet.transform.parent = gameObject.transform;
                     newBullet.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0f, bulletForce));
                     foreach (Transform b in childGun) {
                         GameObject otherBullet = Instantiate(bulletPrefab, b.position, b.rotation);
                         otherBullet.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0f, bulletForce));
-                        otherBullet.transform.parent = b;
+                        //otherBullet.transform.parent = b;
                     }
                     lastAttackTime = Time.time;
                 }
