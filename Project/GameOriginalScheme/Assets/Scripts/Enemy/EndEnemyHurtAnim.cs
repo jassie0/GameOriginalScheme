@@ -34,7 +34,7 @@ public class EndEnemyHurtAnim : MonoBehaviour {
 
 	void ShootLaser () {
 		Instantiate (enemy.GetComponent<EnemyShooter> ().laserPrefab, this.transform.position, Quaternion.identity);
-	}
+    }
 
 	void SpawnCoins(){
 		Instantiate (enemy.GetComponent<CharacterHealth> ().coinSpawnPrefab, transform.position, Quaternion.identity);

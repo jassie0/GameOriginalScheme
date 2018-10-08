@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4431279179135520}
   - component: {fileID: 212957566168930710}
   - component: {fileID: 95673813038845592}
-  - component: {fileID: 114052345440056026}
   m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
@@ -135,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1693128605226328
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +300,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1171878511745506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.04, y: -33.79, z: 0}
+  m_LocalPosition: {x: 41.99, y: -32.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4970901756197216}
@@ -604,21 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b239d784ee1b8824a8a8348c4baf609e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114052345440056026
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1106828085926234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 238f5d0fd1bbf4745a6dd0512f7e378c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WalkDownEffect: {fileID: 0}
-  WalkUpEffect: {fileID: 0}
-  WalkLeftEffect: {fileID: 0}
-  WalkRightEffect: {fileID: 0}
+  soldierSprite: {fileID: 0}
 --- !u!114 &114235115571021746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1103,7 +1088,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: ff06ac37b95142c4da2d5d738810e5b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
