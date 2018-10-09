@@ -30,7 +30,7 @@ public class EnemyShooter : MonoBehaviour {
 		animator = gameObject.GetComponentInChildren<Animator> ();
 		enemy = this.GetComponent<Rigidbody2D> ();
 		//meleeAttack = GameObject.GetComponent <MeleeAttack> ();
-		timeBtwShoot = 0;
+		//timeBtwShoot = 0;
 		player = GameObject.FindGameObjectWithTag("King");
 
 	}

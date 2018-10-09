@@ -33,7 +33,10 @@ public class EndEnemyHurtAnim : MonoBehaviour {
 	}
 
 	void ShootLaser () {
-		Instantiate (enemy.GetComponent<EnemyShooter> ().laserPrefab, this.transform.position, Quaternion.identity);
+        if (enemy.GetComponent<EnemyShooter>().laserPrefab != null) {
+            Instantiate(enemy.GetComponent<EnemyShooter>().laserPrefab, this.transform.position, Quaternion.identity);
+        }
+		
     }
 
 	void SpawnCoins(){
