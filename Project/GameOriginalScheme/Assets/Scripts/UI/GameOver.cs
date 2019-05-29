@@ -36,10 +36,12 @@ public class GameOver : UIWindow
 
     public void OnClick_BackTo()
     {
-        UIControl.Instance().OpenSingleWindow(UI_TYPE.StartPlay);
+        //UIControl.Instance().OpenSingleWindow(UI_TYPE.StartPlay);
         GameController.Instance().SetInFightScene(false);
         SoundManager.Instance().PlayBGM("startSceneBGM");
-        Close();        // else
+        Close();
+        SceneManager.LoadScene(0);
+        // else
         // {
         //     m_Win.SetActive(false);
         //     m_Lose.SetActive(false);
